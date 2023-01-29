@@ -1,1 +1,1 @@
-import testliberary
+print('саня лох')
