@@ -1,5 +1,5 @@
 from django.shortcuts import  render, redirect
-from .forms import NewUserForm
+from .forms import CustomUserCreationForm  
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
@@ -9,14 +9,14 @@ def homepage(request):
 
 def register_request(request):
 	if request.method == "POST":
-		form = NewUserForm(request.POST)
+		form = CustomUserCreationForm(request.POST)
 		if form.is_valid():
 			user = form.save()
 			login(request, user)
-			messages.success(request, "Registration successful." )
-			return redirect("/login")
-		messages.error(request, "Unsuccessful registration. Invalid information.")
-	form = NewUserForm()
+			messages.success(request, "Регистрация успешна." )
+			return redirect("homepage")
+		messages.error(request, "Регистрация не была завершена. Неверно введена информация.")
+	form = CustomUserCreationForm()
 	return render (request=request, template_name="main/register.html", context={"register_form":form})
 
 def login_request(request):
@@ -28,16 +28,16 @@ def login_request(request):
 			user = authenticate(username=username, password=password)
 			if user is not None:
 				login(request, user)
-				messages.info(request, f"You are now logged in as {username}.")
+				messages.info(request, f"Вы вошли как {username}.")
 				return redirect("homepage")
 			else:
-				messages.error(request,"Invalid username or password.")
+				messages.error(request,"Неправильное имя пользователя или пароль.")
 		else:
-			messages.error(request,"Invalid username or password.")
+			messages.error(request,"Неправильное имя пользователя или пароль.")
 	form = AuthenticationForm()
 	return render(request=request, template_name="main/login.html", context={"login_form":form})
 
 def logout_request(request):
 	logout(request)
-	messages.info(request, "You have successfully logged out.") 
+	messages.info(request, "Вы успешно вышли из аккаунта.") 
 	return redirect("homepage")	
