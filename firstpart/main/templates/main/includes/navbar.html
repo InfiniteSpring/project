@@ -4,11 +4,11 @@
       {% if user.is_authenticated %}
       
       <li class="nav-item">
-        <a class="nav-link" href="/logout">Выйти из аккаунта</a>
+        <a class="nav-link" href="#">Вы вошли как {{user.username}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Добро пожаловать, {{user.username}}</a>
-      </li>
+        <a class="nav-link" href="/logout">Выйти из аккаунта</a>
+      </li>      
 
       {% else %}
 

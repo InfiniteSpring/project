@@ -6,11 +6,11 @@
 
 <!--Login--> 
 <div class="container py-5">
-  <h1>Login</h1>
+  <h1>Вход</h1>
   <form method="POST">
     {% csrf_token %}
     {{ login_form|crispy }}
-    <button class="btn btn-primary" type="submit">Войти</button>
+    <button class="btn btn-primary" type="submit">Вход</button>
   </form>
   <p class="text-center">Ещё нет аккаунта? <a href="/register">Создайте прямо сейчас!</a>.</p>
 </div>

@@ -4,9 +4,31 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError  
 from django.forms.fields import EmailField  
 from django.forms.forms import Form
+from django.contrib.auth import authenticate, get_user_model
 
 
 # Create your forms here.
+
+class UserLoginForm(forms.Form):
+    email=forms.EmailField()
+    password=forms.CharField()
+
+    def clean(self,*args,**kwargs):
+        email=self.cleaned_data.get('email')
+        password=self.cleaned_data.get('password')
+
+        if email and password:
+            user=authenticate(email=email,password=password)
+
+            if not user:
+                raise forms.ValidationError('Такого пользователя не существует')
+            
+            if not user.check_password(password):
+                raise forms.ValidationError('Неправильный пароль')
+        
+        return super(UserLoginForm, self).clean(*args,**kwargs)
+
+user = get_user_model()
 
 class CustomUserCreationForm(UserCreationForm):  
     username = forms.CharField(label='ФИО', min_length=5, max_length=150)  
