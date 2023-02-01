@@ -15,4 +15,4 @@ class Orders(models.Model):
     def __str__(self):              #не уверен
         return self.title
 
-#в терминале сделать makemigrations
+#в терминале сделать makemigrations 123
