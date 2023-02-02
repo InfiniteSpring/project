@@ -3,6 +3,10 @@ from django.db import models
 
 class Orders(models.Model):
 
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+
     name = models.CharField('Имя клиента', max_length= 50, default= '')
     address = models.CharField('Адресс', max_length= 50)
     employee = models.CharField('Имя сотрудника', max_length= 100, default= '')
@@ -12,12 +16,8 @@ class Orders(models.Model):
     date = models.DateField('Дата')
     note = models.CharField('Примечания', max_length= 250, default= '')
 
+
     def __str__(self):              #не уверен
         return self.name
-
-
-    class Meta:
-        verbose_name = 'Заказ'
-        verbose_name_plural = 'Заказы'
 
 #в терминале сделать makemigrations 123
