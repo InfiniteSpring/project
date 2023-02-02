@@ -1,3 +1,4 @@
+#10011101010100100010110101110010010101010111011101110001010
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, UserLoginForm
 from django.contrib.auth import login, authenticate, logout
