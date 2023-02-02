@@ -13,6 +13,11 @@ class Orders(models.Model):
     note = models.CharField('Примечания', max_length= 250, default= '')
 
     def __str__(self):              #не уверен
-        return self.title
+        return self.name
+
+
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
 
 #в терминале сделать makemigrations 123
