@@ -18,7 +18,7 @@ input {
 }
 input:focus {
     outline: none;
-    border: 2px solid #c1d9;
+    border: 2px solid rgba(63, 146, 248, 0.6);
 }
 main {
     background: #F1F5FE;
@@ -28,6 +28,15 @@ main {
     justify-content: center;
     align-items: center;
 
+}
+.circle {
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #f7faff;
+    box-shadow: 0px 4px 70px 6px rgba(217, 229, 225, 0.7);
 }
 .register-form-container {
     position: relative;
@@ -57,6 +66,7 @@ main {
     font-size: 14px;
     display: block;
     height: 35px;
+    width: 100%;
     background: #247FFF;
     border-radius: 5px;
     color: #fff;
@@ -67,6 +77,13 @@ main {
 }
 .button:hover {
     background-color: #0d6cf2;
+}
+.text-center {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    padding-top: 8px;
+    text-align: center;
 }
 a.button {
     text-decoration: none;
