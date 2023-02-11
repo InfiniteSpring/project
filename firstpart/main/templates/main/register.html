@@ -1,18 +1,41 @@
-{% extends 'main/header.html' %}
-
-{% block content %} 
-
-{% load crispy_forms_tags %}         
-
-<!--Register--> 
-<div class="container py-5">
-	<h1>Регистрация</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{ register_form|crispy }}                    
-		<button class="btn btn-primary" type="submit">Регистрация</button>
-	</form>
-	<p class="text-center">Если у вас уже есть аккаунт, <a href="/login">ввойдите</a> прямо сейчас.</p>
-</div>
-
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+	<title>register</title>
+</head>
+<body>
+	<main>
+		<div class="circle"></div>
+		<div class="register-form-container">
+			<h1 class="form-title">
+				Регистрация
+			</h1>
+			<div class="form-fields">
+				<div class="form-field">
+					<input type="text" placeholder="Фамилия и инициалы">
+				</div>
+				<div class="form-field">
+					<input type="text" placeholder="Почта">
+				</div>
+				<div class="form-field">
+					<input type="text" placeholder="Пароль">
+				</div>
+				<div class="form-field">
+					<input type="text" placeholder="Позиция(бухгалтер или менеджер)">
+				</div>
+			</div>
+			<div class="form-buttons">
+				<button class="button">Зарегестрироваться</button>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
