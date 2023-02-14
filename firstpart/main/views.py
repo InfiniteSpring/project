@@ -8,8 +8,8 @@ from .models import Orders
 
 
 def homepage(request):
-	info = Orders.object.all()
-    return render(request, 'main/homepage.html')
+	#info = Orders.object.all()
+	return render(request, 'main/homepage.html')
 
 
 def register_request(request):
