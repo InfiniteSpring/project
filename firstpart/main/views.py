@@ -4,9 +4,11 @@ from .forms import CustomUserCreationForm, UserLoginForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+from .models import Orders
 
 
 def homepage(request):
+	info = Orders.object.all()
     return render(request, 'main/homepage.html')
 
 
