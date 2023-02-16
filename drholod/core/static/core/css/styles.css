@@ -32,8 +32,8 @@ main {
 .circle {
     position: absolute;
     z-index: 1;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     border-radius: 50%;
     background: #f7faff;
     box-shadow: 0px 4px 70px 6px rgba(217, 229, 225, 0.7);
@@ -60,8 +60,8 @@ main {
         width: 1000px;
         height: 1000px;    }
     100% {
-        width: 500px;
-        height: 500px;
+        width: 550px;
+        height: 550px;
     }
 }
 .register-form-container {
@@ -110,7 +110,7 @@ main {
 .form-field {
     margin-bottom: 15px;
 }
-.button {
+.btn-primary {
     font-weight: bold;
     font-size: 14px;
     display: block;
@@ -136,4 +136,7 @@ main {
 }
 a.button {
     text-decoration: none;
+}
+.selection-group {
+    margin-bottom: 10px;
 }
