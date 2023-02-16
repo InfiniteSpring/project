@@ -103,6 +103,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#user
+AUTH_USER_MODEL = 'main.CustomUser'
+AUTHENTICATION_BACKENDS = ['main.backends.EmailBackend']
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 class Orders(models.Model):
@@ -21,3 +22,12 @@ class Orders(models.Model):
         return self.name
 
 #в терминале сделать makemigrations 123
+
+class CustomUser(AbstractUser):
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователи'
+
+    username = models.CharField('Имя пользователя', max_length=255, unique=True)
+    fio = models.CharField('ФИО сотрудника', max_length=255, unique=True)
+    email = models.EmailField('Электронная почта', unique=True)
