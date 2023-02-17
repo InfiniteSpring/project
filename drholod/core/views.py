@@ -5,8 +5,10 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm, LoginForm
+from django.contrib.auth.decorators import login_required
 
 
+@login_required(login_url='/login/')
 def homepage(request):
     return render(request, 'core/homepage.html')
 
@@ -36,3 +38,10 @@ class SignUpView(CreateView):
 class LoginView(auth_views.LoginView):
     form_class = LoginForm
     template_name = 'core/login.html'
+    redirect_field_name = 'homepage'
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
