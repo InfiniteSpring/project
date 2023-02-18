@@ -7,7 +7,12 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm, LoginForm
 from django.contrib.auth.decorators import login_required
 from .models import Orders
+from django.contrib import messages
 
+
+
+def activateEmail(request, user):
+    messages.success(request, f'Уважаемый {user.fio}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
 
 @login_required(login_url='/login/')
 def homepage(request):
@@ -23,14 +28,11 @@ class SignUpView(CreateView):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
+            user.is_active=False
             user.save()
             user_group = Group.objects.get(name=form.cleaned_data['groups'])
-            user.groups.add(user_group)          
-            logout(request)
-            new_user = authenticate(username=form.cleaned_data['username'],
-                                    password=form.cleaned_data['password1'],
-                                    )
-            login(request, new_user)
+            user.groups.add(user_group)
+            activateEmail(request, user)
 
             return redirect('homepage')
         else:
