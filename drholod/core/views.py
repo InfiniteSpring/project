@@ -6,11 +6,13 @@ from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate, login, logout
 from .forms import CustomUserCreationForm, LoginForm
 from django.contrib.auth.decorators import login_required
+from .models import Orders
 
 
 @login_required(login_url='/login/')
 def homepage(request):
-    return render(request, 'core/homepage.html')
+    info = Orders.objects.all()
+    return render(request, 'core/homepage.html', {'info': info})
 
 class SignUpView(CreateView):
     form_class = CustomUserCreationForm
