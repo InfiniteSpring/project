@@ -4,11 +4,19 @@ body {
 aside {
     float: left;
     background: #181818;
-    width: 20vw;
-    padding: 2.5%;
+    width: 15vw;
+    padding: 0.5%;
     height: 100vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
+}
+aside img {
+    width: 140px;
+    float: left;
+}aside ul {
+    margin-top: 20px;
+    list-style: none;
+    float: left;
 }
 main {
     color: #fff
