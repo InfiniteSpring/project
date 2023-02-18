@@ -3,16 +3,51 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.models import Group
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from .forms import CustomUserCreationForm, LoginForm
 from django.contrib.auth.decorators import login_required
 from .models import Orders
 from django.contrib import messages
+from django.template.loader import render_to_string
+from django.contrib.sites.shortcuts import get_current_site
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_str
+from django.core.mail import EmailMessage
+
+from .tokens import account_activation_token
 
 
+def activate(request, uidb64, token):
+    User = get_user_model()
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except:
+        user = None
 
-def activateEmail(request, user):
-    messages.success(request, f'Уважаемый {user.fio}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
+    if user is not None and account_activation_token.check_token(user, token):
+        user.is_active = True
+        user.save()
+
+        messages.success(request, "Администратор подтвердил регистрацию. Теперь войдите в ваш аккаунт.")
+        return redirect('login')
+    else:
+        messages.error(request, "Аккаунт не был подтверждён.")
+
+    return redirect('homepage')
+
+def activateEmail(request, user, to_email):
+    mail_subject = "Activate user account."
+    message = render_to_string("core/template_activate_account.html", {
+        'user': user.username,
+        'domain': get_current_site(request).domain,
+        'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+        'token': account_activation_token.make_token(user),
+        "protocol": 'https' if request.is_secure() else 'http'
+    })
+    email = EmailMessage(mail_subject, message, to=[to_email])
+    if email.send():
+        messages.success(request, f'Уважаемый {user.fio}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
 
 @login_required(login_url='/login/')
 def homepage(request):
@@ -32,7 +67,7 @@ class SignUpView(CreateView):
             user.save()
             user_group = Group.objects.get(name=form.cleaned_data['groups'])
             user.groups.add(user_group)
-            activateEmail(request, user)
+            activateEmail(request, user, form.cleaned_data.get('email'))
 
             return redirect('homepage')
         else:
