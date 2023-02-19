@@ -45,6 +45,7 @@ aside ul li:hover, aside ul a:hover {
 }
 main .table-form {
     float: left;
+    margin-left: 10px;
     color: #fff;
     margin-top: 10px;
     text-align: center;

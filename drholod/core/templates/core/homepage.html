@@ -24,11 +24,20 @@
     <main>
         <div class="table-form">
             <h1 class="table-title">Таблица заказов</h1>
-            { for el in info }
-                <div class="alert alert-warning">
-                    <h3>{{ el.name }}</h3>
-                </div>
-            { endfor }
+            {% if info %}
+                {% for el in info %}
+                    <div class="alert alert-warning">
+                        <div class="query-string">
+                            {{ el.name }} {{ el.address }}  
+                            {{ el.employee }} {{ el.equipment }}
+                            {{ el.breaking }} {{ el.status }}
+                            {{ el.date }} {{ el.note }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>В данной таблице отсутствуют заказы</p>
+            {% endif %}
         </div>
     </main>
 </body>
