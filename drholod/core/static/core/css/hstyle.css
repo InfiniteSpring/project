@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     background: #2c2c2c;
 }
@@ -13,11 +17,36 @@ aside {
 aside img {
     width: 140px;
     float: left;
-}aside ul {
+}
+aside ul {
     margin-top: 20px;
     list-style: none;
     float: left;
 }
-main {
-    color: #fff
+aside ul li {
+    margin-top: 10px;
+    display: block;
+    color: #fff;
+    transition: transform 0.14s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: rgb(111, 184, 247);
+    text-decoration: none;
+    transform: scale(1.05);
+}
+.fio-on-page {
+    font-size: 24px;
+    color: #fff;
+}
+.table-title {
+    float: top;
+    font-size: 30px;
+    
+}
+main .table-form {
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    width: 75%;
 }
