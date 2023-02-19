@@ -30,7 +30,7 @@ aside ul li {
     transition: transform 0.14s ease;
 }
 aside ul li:hover, aside ul a:hover {
-    color: rgb(111, 184, 247);
+    color: rgb(142, 195, 242);
     text-decoration: none;
     transform: scale(1.05);
 }
@@ -48,5 +48,5 @@ main .table-form {
     color: #fff;
     margin-top: 10px;
     text-align: center;
-    width: 75%;
+    width: 80%;
 }

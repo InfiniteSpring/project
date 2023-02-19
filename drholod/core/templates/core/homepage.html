@@ -24,7 +24,11 @@
     <main>
         <div class="table-form">
             <h1 class="table-title">Таблица заказов</h1>
-            <div class="information">{{ info }}</div>
+            { for el in info }
+                <div class="alert alert-warning">
+                    <h3>{{ el.name }}</h3>
+                </div>
+            { endfor }
         </div>
     </main>
 </body>
