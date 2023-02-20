@@ -51,7 +51,7 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('date')[::-1]
+    info = Orders.objects.order_by('date')
     return render(request, 'core/homepage.html', {'info': info})
 
 class SignUpView(CreateView): 

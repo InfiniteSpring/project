@@ -1,0 +1,98 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'core/css/hstyle.css' %}">
+    <title>ДОКТОР ХОЛОДА</title>
+</head>     
+<body>
+    <aside>
+        <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" ><br><br><br><br><br>
+            <div class="fio-on-page"> {{user.fio}} </div>
+        </div>
+        <h3 class="line">____________</h3>
+        <ul>
+            <a href="/admin"><li><i class="fa-regular fa-folder-gear"></i> Администрирование</li></a>
+        </ul>
+    </aside>
+    <main>
+        <div class="table-form">
+            <h1 class="table-title">Добавление заказа</h1>
+            <form method="POST" action="create/">
+                {% csrf_token %}
+                <tr>
+                    <td>
+                        <input type="text" name="name" placeholder="Имя клиента"/>
+                    </td><td>
+                        <input type="text" name="address" placeholder="Адресс"/>
+                    </td><td>
+                        <input type="text" name="employee" placeholder="Имя сотрудника"/>
+                    </td><td>
+                        <input type="text" name="equipment" placeholder="Оборудование"/>
+                    </td><td>
+                        <input type="text" name="breaking" placeholder="Поломка"/>
+                    </td><td>
+                        <input type="text" name="status" placeholder="Статус"/>
+                    </td><td>
+                        <input type="date" name="date" placeholder="Дата"/>
+                    </td><td>
+                        <input type="text" name="note" placeholder="Примечания"/>
+                    </td><br>
+                </tr>
+                <input type="submit" value="Сохранить" class="butt">
+            </form>
+            {% if info.count > 0 %}
+            <h2>Таблица заказов</h2>
+            <table>
+                <thead class="alert alert-warning"><th>Имя</th><th>Адресс</th>
+                <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
+                <th>Статус</th><th>Дата</th><th>Примечания</th><th></th></thead>
+                {% for inf in info %}
+                <tr class="alert alert-warning">
+                    <td>{{ inf.name }}</td><td>{{ inf.address }}</td>
+                    <td>{{ inf.employee }}</td><td>{{ inf.equipment }}</td>
+                    <td>{{ inf.breaking }}</td><td>{{ inf.status }}</td>
+                    <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
+                    <td><a href="edit/{{inf.id}}" class="redacte">Изменить</a>
+                        <a href="delete/{{inf.id}}" class="redactd">Удалить</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+
+
+            <!--{% if info %}
+            <table>
+                <thead><th>Id</th><th>Имя</th><th>Адресс</th><th>Сотрудник</th>
+                    <th>Оборудование</th><th>Поломка</th><th>Статус</th>
+                    <th>Дата</th><th>Примечания</th><th></th></thead>
+                {% for el in info %}
+                    <tr>
+                        <td>{{ info.id }}</td>
+                        <td>{{ info.name }}</td>
+                        <td>{{ info.address }}</td>
+                        <td>{{ info.employee }}</td>
+                        <td>{{ info.equipment }}</td>
+                        <td>{{ info.breaking }}</td>
+                        <td>{{ info.status }}</td>
+                        <td>{{ info.date }}</td>
+                        <td>{{ info.note }}</td>
+                        <td><a href="edit/{{info.id}}">Изменить</a> | <a href="delete/{{info.id}}">Удалить</a></td>
+                    </tr>
+                </table>
+                {% endfor %}
+            </table>
+            {% else %}
+                <p>В данной таблице отсутствуют заказы</p>
+            {% endif %}-->
+
+
+        </div>
+    </main>
+</body>
+</html>

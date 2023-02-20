@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+    <link rel="stylesheet" href="{% static 'core/css/estyle.css' %}">
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <label>Введите имя</label><br>
+            <input type="text" name="name" value="{{inf.name}}" />
+        </p>
+        <p>
+            <label>Введите адресс</label><br>
+            <input type="text" name="address" value="{{inf.address}}" />
+        </p>
+        <p>
+            <label>Введите имя сотрудника</label><br>
+            <input type="text" name="employee" value="{{inf.employee}}" />
+        </p>
+        <p>
+            <label>Введите тип оборутования</label><br>
+            <input type="text" name="equipment" value="{{inf.equipment}}" />
+        </p>
+        <p>
+            <label>Введите тип поломки</label><br>
+            <input type="text" name="breaking" value="{{inf.breaking}}" />
+        </p>
+        <p>
+            <label>Введите статус заказа</label><br>
+            <input type="text" name="status" value="{{inf.status}}" />
+        </p>
+        <p>
+            <label>Дата</label><br>
+            <input type="date" name="date" value="{{inf.date}}" />
+        </p>
+        <p>
+            <label>Примечания</label><br>
+            <input type="text" name="note" value="{{inf.note}}" />
+        </p>
+        <input type="submit" value="Сохранить" class="butt">
+    </form>
+</body>
+</html>
