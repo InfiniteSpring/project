@@ -24,7 +24,7 @@ aside ul {
     float: left;
 }
 aside ul li {
-    margin-top: 10px;
+    margin-top: 73vh;
     display: block;
     color: #fff;
     transition: transform 0.14s ease;
@@ -86,4 +86,8 @@ main .table-form {
 }
 input {
     width: 133px;
+}
+table {
+    width: 80vw;
+    max-width: 80vw;
 }

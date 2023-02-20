@@ -15,7 +15,6 @@
         <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" ><br><br><br><br><br>
             <div class="fio-on-page"> {{user.fio}} </div>
         </div>
-        <h3 class="line">____________</h3>
         <ul>
             <a href="/admin"><li><i class="fa-regular fa-folder-gear"></i> Администрирование</li></a>
         </ul>
@@ -29,7 +28,7 @@
                     <td>
                         <input type="text" name="name" placeholder="Имя клиента"/>
                     </td><td>
-                        <input type="text" name="address" placeholder="Адресс"/>
+                        <input type="text" name="address" placeholder="Адрес"/>
                     </td><td>
                         <input type="text" name="employee" placeholder="Имя сотрудника"/>
                     </td><td>
@@ -42,14 +41,14 @@
                         <input type="date" name="date" placeholder="Дата"/>
                     </td><td>
                         <input type="text" name="note" placeholder="Примечания"/>
-                    </td><br>
+                    </td>
                 </tr>
                 <input type="submit" value="Сохранить" class="butt">
             </form>
             {% if info.count > 0 %}
-            <h2>Таблица заказов</h2>
+            <br><h2>Таблица заказов</h2>
             <table>
-                <thead class="alert alert-warning"><th>Имя</th><th>Адресс</th>
+                <thead class="alert alert-warning"><th>Имя</th><th>Адрес</th>
                 <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
                 <th>Статус</th><th>Дата</th><th>Примечания</th><th></th></thead>
                 {% for inf in info %}
@@ -64,34 +63,6 @@
                 {% endfor %}
             </table>
             {% endif %}
-
-
-            <!--{% if info %}
-            <table>
-                <thead><th>Id</th><th>Имя</th><th>Адресс</th><th>Сотрудник</th>
-                    <th>Оборудование</th><th>Поломка</th><th>Статус</th>
-                    <th>Дата</th><th>Примечания</th><th></th></thead>
-                {% for el in info %}
-                    <tr>
-                        <td>{{ info.id }}</td>
-                        <td>{{ info.name }}</td>
-                        <td>{{ info.address }}</td>
-                        <td>{{ info.employee }}</td>
-                        <td>{{ info.equipment }}</td>
-                        <td>{{ info.breaking }}</td>
-                        <td>{{ info.status }}</td>
-                        <td>{{ info.date }}</td>
-                        <td>{{ info.note }}</td>
-                        <td><a href="edit/{{info.id}}">Изменить</a> | <a href="delete/{{info.id}}">Удалить</a></td>
-                    </tr>
-                </table>
-                {% endfor %}
-            </table>
-            {% else %}
-                <p>В данной таблице отсутствуют заказы</p>
-            {% endif %}-->
-
-
         </div>
     </main>
 </body>

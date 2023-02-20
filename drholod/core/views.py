@@ -13,6 +13,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 
 from .tokens import account_activation_token
 
@@ -51,8 +52,53 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('date')
-    return render(request, 'core/homepage.html', {'info': info})
+    info = Orders.objects.all()
+    return render(request, "homepage.html", {"info": info})
+
+# сохранение данных в бд
+def create(request):
+    if request.method == "POST":
+        info = Orders()
+        info.name = request.POST.get("name")
+        info.address = request.POST.get("address")
+        info.employee = request.POST.get("employee")
+        info.equipment = request.POST.get("equipment")
+        info.breaking = request.POST.get("breaking")
+        info.status = request.POST.get("status")
+        info.date = request.POST.get("date")
+        info.note = request.POST.get("note")
+        info.save()
+    return HttpResponseRedirect("/")
+
+# изменение данных в бд
+def edit(request, id):
+    try:
+        info = Orders.objects.get(id=id)
+
+        if request.method == "POST":
+            info.name = request.POST.get("name")
+            info.address = request.POST.get("address")
+            info.employee = request.POST.get("employee")
+            info.equipment = request.POST.get("equipment")
+            info.breaking = request.POST.get("breaking")
+            info.status = request.POST.get("status")
+            info.date = request.POST.get("date")
+            info.note = request.POST.get("note")
+            info.save()
+            return HttpResponseRedirect("/")
+        else:
+            return render(request, "edit.html", {"info": info})
+    except Orders.DoesNotExist:
+        return HttpResponseNotFound("<h2>Orders not found</h2>")
+
+# удаление данных из бд
+def delete(request, id):
+    try:
+        info = Orders.objects.get(id=id)
+        info.delete()
+        return HttpResponseRedirect("/")
+    except Orders.DoesNotExist:
+        return HttpResponseNotFound("<h2>Orders not found</h2>")
 
 class SignUpView(CreateView): 
     form_class = CustomUserCreationForm
