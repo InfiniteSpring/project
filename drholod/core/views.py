@@ -51,10 +51,10 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('date')
+    info = Orders.objects.order_by('date')[::-1]
     return render(request, 'core/homepage.html', {'info': info})
 
-class SignUpView(CreateView):
+class SignUpView(CreateView): 
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('homepage')
     template_name = 'core/signup.html'
