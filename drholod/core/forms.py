@@ -19,4 +19,4 @@ class CustomUserCreationForm(UserCreationForm):
         fields = ('username', 'fio', 'email',)
 
 class LoginForm(AuthenticationForm):
-    email = forms.CharField(label='Электронная почта')    
+    username = forms.CharField(label='Электронная почта')    
