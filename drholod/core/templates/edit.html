@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>METANIT.COM</title>
+    <link rel="stylesheet" href="{% static 'core/css/estyle.css' %}">
 </head>
 <body>
     <form method="POST">
@@ -39,7 +41,7 @@
             <label>Примечания</label><br>
             <input type="text" name="note" value="{{inf.note}}" />
         </p>
-        <input type="submit" value="Сохранить" >
+        <input type="submit" value="Сохранить" class="butt">
     </form>
 </body>
 </html>

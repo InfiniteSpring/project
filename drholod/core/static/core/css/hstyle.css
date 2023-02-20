@@ -55,8 +55,35 @@ main .table-form {
     background: #181818;
     border-color: #fff;
     color: #fff;
-    max-lines: 1;
 }
 .name-col {
     padding-left: 10px;
+}
+.butt{
+    width: 100px;
+    height: 30px;
+    background: rgb(142, 195, 242);
+    border-radius: 7px;
+    color: #181818;
+    font-weight: 500;
+}
+.redacte, .redactd {
+    padding-right: 5px;
+    display: block; 
+    color: #fff;
+    transition: transform 0.14s ease;
+    text-decoration: dashed;
+}
+.redacte:hover {
+    color: rgb(142, 195, 242);
+    text-decoration: none;
+    transform: scale(1.05);
+}
+.redactd:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    transform: scale(1.05);
+}
+input {
+    width: 133px;
 }
