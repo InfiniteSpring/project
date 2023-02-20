@@ -50,12 +50,11 @@ def activateEmail(request, user, to_email):
     if email.send():
         messages.success(request, f'Уважаемый {user.username}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
 
-
 @login_required(login_url='/login/')
 def homepage(request):
     info = Orders.objects.all()
     return render(request, "homepage.html", {"info": info})
- 
+
 # сохранение данных в бд
 def create(request):
     if request.method == "POST":
@@ -70,12 +69,12 @@ def create(request):
         info.note = request.POST.get("note")
         info.save()
     return HttpResponseRedirect("/")
- 
+
 # изменение данных в бд
 def edit(request, id):
     try:
         info = Orders.objects.get(id=id)
- 
+
         if request.method == "POST":
             info.name = request.POST.get("name")
             info.address = request.POST.get("address")
@@ -91,7 +90,7 @@ def edit(request, id):
             return render(request, "edit.html", {"info": info})
     except Orders.DoesNotExist:
         return HttpResponseNotFound("<h2>Orders not found</h2>")
-     
+
 # удаление данных из бд
 def delete(request, id):
     try:
@@ -101,8 +100,7 @@ def delete(request, id):
     except Orders.DoesNotExist:
         return HttpResponseNotFound("<h2>Orders not found</h2>")
 
-
-class SignUpView(CreateView):
+class SignUpView(CreateView): 
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('homepage')
     template_name = 'core/signup.html'
