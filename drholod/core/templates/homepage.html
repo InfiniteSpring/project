@@ -15,38 +15,63 @@
         <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" ><br><br><br><br><br>
             <div class="fio-on-page"> {{user.fio}} </div>
         </div>
+        <div class="red">
+            <h5>Редактирование</h5>
+            <form method="POST" class="red-inputs">
+                {% csrf_token %}
+                <p>
+                    <input type="text" name="name" value="{{inf.name}}" placeholder="Имя клиента"/>
+                </p><p>
+                    <input type="text" name="address" value="{{inf.address}}" placeholder="Адресс"/>
+                </p><p>
+                    <input type="text" name="employee" value="{{inf.employee}}" placeholder="Сотрудник"/>
+                </p><p>
+                    <input type="text" name="equipment" value="{{inf.equipment}}" placeholder="Оборудование"/>
+                </p><p>
+                    <input type="text" name="breaking" value="{{inf.breaking}}" placeholder="Поломка"/>
+                </p><p>
+                    <input type="text" name="status" value="{{inf.status}}" placeholder="Статус"/>
+                </p><p>
+                    <input type="date" name="date" value="{{inf.date}}" placeholder="Дата"/>
+                </p><p>
+                    <input type="text" name="note" value="{{inf.note}}" placeholder="Примечания"/>
+                </p>
+                <input type="submit" value="Изменить" class="butt">
+            </form>
+        </div>
         <ul>
             <a href="/admin"><li><i class="fa-regular fa-folder-gear"></i> Администрирование</li></a>
         </ul>
     </aside>
     <main>
         <div class="table-form">
-            <h1 class="table-title">Добавление заказа</h1>
-            <form method="POST" action="create/">
-                {% csrf_token %}
-                <tr>
-                    <td>
-                        <input type="text" name="name" placeholder="Имя клиента"/>
-                    </td><td>
-                        <input type="text" name="address" placeholder="Адрес"/>
-                    </td><td>
-                        <input type="text" name="employee" placeholder="Имя сотрудника"/>
-                    </td><td>
-                        <input type="text" name="equipment" placeholder="Оборудование"/>
-                    </td><td>
-                        <input type="text" name="breaking" placeholder="Поломка"/>
-                    </td><td>
-                        <input type="text" name="status" placeholder="Статус"/>
-                    </td><td>
-                        <input type="date" name="date" placeholder="Дата"/>
-                    </td><td>
-                        <input type="text" name="note" placeholder="Примечания"/>
-                    </td>
-                </tr>
-                <input type="submit" value="Сохранить" class="butt">
-            </form>
+            <div class="title-add">
+                <h1 class="table-title">Таблица заказов</h1>
+                <form method="POST" action="create/">
+                    {% csrf_token %}
+                    <tr>
+                        <td>
+                            <input type="text" name="name" placeholder="Имя клиента"/>
+                        </td><td>
+                            <input type="text" name="address" placeholder="Адрес"/>
+                        </td><td>
+                            <input type="text" name="employee" placeholder="Сотрудник"/>
+                        </td><td>
+                            <input type="text" name="equipment" placeholder="Оборудование"/>
+                        </td><td>
+                            <input type="text" name="breaking" placeholder="Поломка"/>
+                        </td><td>
+                            <input type="text" name="status" placeholder="Статус"/>
+                        </td><td>
+                            <input type="date" name="date" placeholder="Дата"/>
+                        </td><td>
+                            <input type="text" name="note" placeholder="Примечания"/>
+                        </td>
+                    </tr>
+                    <input type="submit" value="Добавить" class="butt">
+                </form>
+            </div>
             {% if info.count > 0 %}
-            <br><h2>Таблица заказов</h2>
             <table>
                 <thead class="alert alert-warning"><th>Имя</th><th>Адрес</th>
                 <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
