@@ -1,14 +1,24 @@
 *{
-    padding: 5px;
+    padding: 3px;
     margin: 5px;
     background: #181818;
     color: #fff
 }
+body {
+    margin: auto 20vw;
+}
+h5 {
+    margin-left: 17px;
+    font-size: 20px;
+}
 input {
     background: #fff;
+    width: 200px;
+    height: 25px;
     color: #181818;
 }
 .butt{
+    margin-left: 70px;
     width: 100px;
     height: 30px;
     background: rgb(142, 195, 242);

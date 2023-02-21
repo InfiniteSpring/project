@@ -5,7 +5,12 @@
 body {
     background: #2c2c2c;
 }
+main {
+    margin-left: 15vw;
+    float: top;
+}
 aside {
+    position: fixed;
     float: left;
     background: #181818;
     width: 15vw;
@@ -15,6 +20,7 @@ aside {
     border-right: 5px solid #4d4d4d;
 }
 aside img {
+    margin-left: 20px;
     width: 140px;
     float: left;
 }
@@ -24,7 +30,8 @@ aside ul {
     float: left;
 }
 aside ul li {
-    margin-top: 73vh;
+    margin-left: 13px;
+    margin-top: 670px;
     display: block;
     color: #fff;
     transition: transform 0.14s ease;
@@ -85,9 +92,33 @@ main .table-form {
     transform: scale(1.05);
 }
 input {
-    width: 133px;
+    width: 117px;
+    background: #fff;
+    color: black;
+    font-weight: 500;
 }
 table {
+    margin-top: 100px;
     width: 80vw;
     max-width: 80vw;
+    z-index: 1;
+    padding-bottom: 100px;
+}
+td {
+    max-width: 120px;
+}
+.red {
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.red-inputs {
+    margin-left: 20px;
+}
+.title-add {
+    z-index: 2;
+    position: fixed;
+    background: #2c2c2c;
+    width: 80vw;
+    float: top;
+    padding-bottom: 15px;
 }

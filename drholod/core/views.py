@@ -14,6 +14,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
 from django.http import HttpResponseRedirect, HttpResponseNotFound
+from django.views.generic import UpdateView
 
 from .tokens import account_activation_token
 
@@ -52,7 +53,7 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.all()
+    info = Orders.objects.order_by('date')
     return render(request, "homepage.html", {"info": info})
 
 # сохранение данных в бд
@@ -89,7 +90,7 @@ def edit(request, id):
         else:
             return render(request, "edit.html", {"info": info})
     except Orders.DoesNotExist:
-        return HttpResponseNotFound("<h2>Orders not found</h2>")
+        return HttpResponseNotFound("<h2>Order not found</h2>")
 
 # удаление данных из бд
 def delete(request, id):

@@ -21,32 +21,33 @@
     </aside>
     <main>
         <div class="table-form">
-            <h1 class="table-title">Добавление заказа</h1>
-            <form method="POST" action="create/">
-                {% csrf_token %}
-                <tr>
-                    <td>
-                        <input type="text" name="name" placeholder="Имя клиента"/>
-                    </td><td>
-                        <input type="text" name="address" placeholder="Адрес"/>
-                    </td><td>
-                        <input type="text" name="employee" placeholder="Имя сотрудника"/>
-                    </td><td>
-                        <input type="text" name="equipment" placeholder="Оборудование"/>
-                    </td><td>
-                        <input type="text" name="breaking" placeholder="Поломка"/>
-                    </td><td>
-                        <input type="text" name="status" placeholder="Статус"/>
-                    </td><td>
-                        <input type="date" name="date" placeholder="Дата"/>
-                    </td><td>
-                        <input type="text" name="note" placeholder="Примечания"/>
-                    </td>
-                </tr>
-                <input type="submit" value="Сохранить" class="butt">
-            </form>
+            <div class="title-add">
+                <h1 class="table-title">Таблица заказов</h1>
+                <form method="POST" action="create/">
+                    {% csrf_token %}
+                    <tr>
+                        <td>
+                            <input type="text" name="name" placeholder="Имя клиента"/>
+                        </td><td>
+                            <input type="text" name="address" placeholder="Адрес"/>
+                        </td><td>
+                            <input type="text" name="employee" placeholder="Сотрудник"/>
+                        </td><td>
+                            <input type="text" name="equipment" placeholder="Оборудование"/>
+                        </td><td>
+                            <input type="text" name="breaking" placeholder="Поломка"/>
+                        </td><td>
+                            <input type="text" name="status" placeholder="Статус"/>
+                        </td><td>
+                            <input type="date" name="date" placeholder="Дата"/>
+                        </td><td>
+                            <input type="text" name="note" placeholder="Примечания"/>
+                        </td>
+                    </tr>
+                    <input type="submit" value="Добавить" class="butt">
+                </form>
+            </div>
             {% if info.count > 0 %}
-            <br><h2>Таблица заказов</h2>
             <table>
                 <thead class="alert alert-warning"><th>Имя</th><th>Адрес</th>
                 <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
