@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>METANIT.COM</title>
+    <link rel="stylesheet" href="{% static 'core/css/estyle.css' %}">
+</head>
+<body>
+    <h5>Редактирование заказа</h5>
+    <form method="POST">
+        {% csrf_token %}
+        <p>
+            <input type="text" name="name" value="{{inf.name}}" placeholder="Имя клиента"/>
+        </p>
+        <p>
+            <input type="text" name="address" value="{{inf.address}}" placeholder="Адрес"/>
+        </p>
+        <p>
+            <input type="text" name="employee" value="{{inf.employee}}" placeholder="Сотрудник"/>
+        </p>
+        <p>
+            <input type="text" name="equipment" value="{{inf.equipment}}" placeholder="Оборудование"/>
+        </p>
+        <p>
+            <input type="text" name="breaking" value="{{inf.breaking}}" placeholder="Поломка"/>
+        </p>
+        <p>
+            <input type="text" name="status" value="{{inf.status}}" placeholder="Статус"/>
+        </p>
+        <p>
+            <input type="date" name="date" value="{{inf.date}}" placeholder="Дата"/>
+        </p>
+        <p>
+            <input type="text" name="note" value="{{inf.note}}" placeholder="Примечания"/>
+        </p>
+        <input type="submit" value="Изменить" class="butt">
+    </form>
+</body>
+</html>

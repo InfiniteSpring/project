@@ -15,30 +15,6 @@
         <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" ><br><br><br><br><br>
             <div class="fio-on-page"> {{user.fio}} </div>
         </div>
-        <div class="red">
-            <h5>Редактирование</h5>
-            <form method="POST" class="red-inputs">
-                {% csrf_token %}
-                <p>
-                    <input type="text" name="name" value="{{inf.name}}" placeholder="Имя клиента"/>
-                </p><p>
-                    <input type="text" name="address" value="{{inf.address}}" placeholder="Адресс"/>
-                </p><p>
-                    <input type="text" name="employee" value="{{inf.employee}}" placeholder="Сотрудник"/>
-                </p><p>
-                    <input type="text" name="equipment" value="{{inf.equipment}}" placeholder="Оборудование"/>
-                </p><p>
-                    <input type="text" name="breaking" value="{{inf.breaking}}" placeholder="Поломка"/>
-                </p><p>
-                    <input type="text" name="status" value="{{inf.status}}" placeholder="Статус"/>
-                </p><p>
-                    <input type="date" name="date" value="{{inf.date}}" placeholder="Дата"/>
-                </p><p>
-                    <input type="text" name="note" value="{{inf.note}}" placeholder="Примечания"/>
-                </p>
-                <input type="submit" value="Изменить" class="butt">
-            </form>
-        </div>
         <ul>
             <a href="/admin"><li><i class="fa-regular fa-folder-gear"></i> Администрирование</li></a>
         </ul>

@@ -20,6 +20,7 @@ aside {
     border-right: 5px solid #4d4d4d;
 }
 aside img {
+    margin-left: 20px;
     width: 140px;
     float: left;
 }
@@ -29,7 +30,8 @@ aside ul {
     float: left;
 }
 aside ul li {
-    margin-top: 190px;
+    margin-left: 13px;
+    margin-top: 670px;
     display: block;
     color: #fff;
     transition: transform 0.14s ease;
