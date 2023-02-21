@@ -40,13 +40,13 @@ def activate(request, uidb64, token):
 def activateEmail(request, user, to_email):
     mail_subject = "Activate user account."
     message = render_to_string("core/template_activate_account.html", {
-        'user': user.user,
+        'user': user,
         'domain': get_current_site(request).domain,
         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
         'token': account_activation_token.make_token(user),
         "protocol": 'https' if request.is_secure() else 'http'
     })
-    email = EmailMessage(mail_subject, message, to=[to_email])
+    email = EmailMessage(mail_subject, message, to=['den1ssapon4ik@gmail.com'])
     if email.send():
         messages.success(request, f'Уважаемый {user.username}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
 
