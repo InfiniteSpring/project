@@ -7,8 +7,8 @@ class CustomUser(AbstractUser):
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
 
-    username = models.CharField('Имя пользователя', max_length=255, unique=True)
-    fio = models.CharField('ФИО сотрудника', max_length=255, unique=True)
+    fio = models.CharField('Замечания', max_length=100)
+    username = models.CharField('Электронная почта', max_length=255, unique=True)
     email = models.EmailField('Электронная почта', unique=True)
 
 

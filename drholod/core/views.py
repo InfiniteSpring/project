@@ -14,6 +14,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
 from django.http import HttpResponseRedirect, HttpResponseNotFound
+from django.views.generic import UpdateView
 
 from .tokens import account_activation_token
 
@@ -40,19 +41,19 @@ def activate(request, uidb64, token):
 def activateEmail(request, user, to_email):
     mail_subject = "Activate user account."
     message = render_to_string("core/template_activate_account.html", {
-        'user': user.user,
+        'user': user,
         'domain': get_current_site(request).domain,
         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
         'token': account_activation_token.make_token(user),
         "protocol": 'https' if request.is_secure() else 'http'
     })
-    email = EmailMessage(mail_subject, message, to=[to_email])
+    email = EmailMessage(mail_subject, message, to=['den1ssapon4ik@gmail.com'])
     if email.send():
         messages.success(request, f'Уважаемый {user.username}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.all()
+    info = Orders.objects.order_by('date')
     return render(request, "homepage.html", {"info": info})
 
 # сохранение данных в бд
@@ -89,7 +90,7 @@ def edit(request, id):
         else:
             return render(request, "edit.html", {"info": info})
     except Orders.DoesNotExist:
-        return HttpResponseNotFound("<h2>Orders not found</h2>")
+        return HttpResponseNotFound("<h2>Order not found</h2>")
 
 # удаление данных из бд
 def delete(request, id):

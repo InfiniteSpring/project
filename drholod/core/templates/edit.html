@@ -7,41 +7,34 @@
     <link rel="stylesheet" href="{% static 'core/css/estyle.css' %}">
 </head>
 <body>
+    <h5>Редактирование заказа</h5>
     <form method="POST">
         {% csrf_token %}
         <p>
-            <label>Введите имя</label><br>
-            <input type="text" name="name" value="{{inf.name}}" />
+            <input type="text" name="name" value="{{inf.name}}" placeholder="Имя клиента"/>
         </p>
         <p>
-            <label>Введите адресс</label><br>
-            <input type="text" name="address" value="{{inf.address}}" />
+            <input type="text" name="address" value="{{inf.address}}" placeholder="Адрес"/>
         </p>
         <p>
-            <label>Введите имя сотрудника</label><br>
-            <input type="text" name="employee" value="{{inf.employee}}" />
+            <input type="text" name="employee" value="{{inf.employee}}" placeholder="Сотрудник"/>
         </p>
         <p>
-            <label>Введите тип оборутования</label><br>
-            <input type="text" name="equipment" value="{{inf.equipment}}" />
+            <input type="text" name="equipment" value="{{inf.equipment}}" placeholder="Оборудование"/>
         </p>
         <p>
-            <label>Введите тип поломки</label><br>
-            <input type="text" name="breaking" value="{{inf.breaking}}" />
+            <input type="text" name="breaking" value="{{inf.breaking}}" placeholder="Поломка"/>
         </p>
         <p>
-            <label>Введите статус заказа</label><br>
-            <input type="text" name="status" value="{{inf.status}}" />
+            <input type="text" name="status" value="{{inf.status}}" placeholder="Статус"/>
         </p>
         <p>
-            <label>Дата</label><br>
-            <input type="date" name="date" value="{{inf.date}}" />
+            <input type="date" name="date" value="{{inf.date}}" placeholder="Дата"/>
         </p>
         <p>
-            <label>Примечания</label><br>
-            <input type="text" name="note" value="{{inf.note}}" />
+            <input type="text" name="note" value="{{inf.note}}" placeholder="Примечания"/>
         </p>
-        <input type="submit" value="Сохранить" class="butt">
+        <input type="submit" value="Изменить" class="butt">
     </form>
 </body>
 </html>

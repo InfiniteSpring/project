@@ -5,34 +5,17 @@
 body {
     background: #2c2c2c;
 }
-aside {
-    float: left;
-    background: #181818;
-    width: 15vw;
-    padding: 0.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
+main {
+    margin-left: .5vw;
+    float: top;
 }
-aside img {
-    width: 140px;
-    float: left;
-}
-aside ul {
-    margin-top: 20px;
-    list-style: none;
-    float: left;
-}
-aside ul li {
-    margin-top: 73vh;
-    display: block;
-    color: #fff;
-    transition: transform 0.14s ease;
-}
-aside ul li:hover, aside ul a:hover {
-    color: rgb(142, 195, 242);
-    text-decoration: none;
-    transform: scale(1.05);
+.curtain {
+    text-align: center;
+    z-index: 2;
+    background: #2c2c2c;
+    position: fixed;
+    width: 98vw;
+    border-bottom: 5px solid rgb(142, 195, 242);
 }
 .fio-on-page {
     font-size: 24px;
@@ -41,7 +24,7 @@ aside ul li:hover, aside ul a:hover {
 .table-title {
     float: top;
     font-size: 30px;
-    
+    color: #fff;
 }
 main .table-form {
     float: left;
@@ -49,7 +32,7 @@ main .table-form {
     color: #fff;
     margin-top: 10px;
     text-align: center;
-    width: 80%;
+    width: 87vw;
 }
 .alert {
     background: #181818;
@@ -85,9 +68,23 @@ main .table-form {
     transform: scale(1.05);
 }
 input {
-    width: 133px;
+    width: 117px;
+    background: #fff;
+    color: black;
+    font-weight: 500;
 }
 table {
-    width: 80vw;
-    max-width: 80vw;
+    margin-top: 100px;
+    width: 98vw;
+    max-width: 98vw;
+    z-index: 1;
+}
+td {
+    max-width: 120px;
+}
+.red-inputs {
+    margin-left: 20px;
+}
+.page-logo {
+    float: left;
 }
