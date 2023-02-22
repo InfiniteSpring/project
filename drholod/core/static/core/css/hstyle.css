@@ -17,7 +17,7 @@ aside {
     padding: 0.5%;
     height: 100vh;
     color: #fff;
-    border-right: 5px solid #4d4d4d;
+    border-right: 5px solid rgb(142, 195, 242);
 }
 aside img {
     margin-left: 20px;
@@ -121,4 +121,6 @@ td {
     width: 80vw;
     float: top;
     padding-bottom: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
