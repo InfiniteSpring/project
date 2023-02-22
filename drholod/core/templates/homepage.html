@@ -1,69 +1,141 @@
-{% load static %}  
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="{% static 'core/css/hstyle.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="{% static 'core/css/hstyle.css' %}" />
     <title>ДОКТОР ХОЛОДА</title>
-</head>     
-<body>
+  </head>
+  <body>
     <aside>
-        <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" ><br><br><br><br><br>
-            <div class="fio-on-page"> {{user.fio}} </div>
-        </div>
-        <ul>
-            <a href="/admin"><li><i class="fa-regular fa-folder-gear"></i> Администрирование</li></a>
-        </ul>
+      <div class="page-logo">
+        <img
+          src="static/core/images/logo1.png"
+          alt="ДОКТОР ХОЛОДА"
+        /><br /><br /><br /><br /><br />
+        <div class="fio-on-page">{{user.fio}}</div>
+      </div>
+      <ul>
+        <a href="/admin"
+          ><li>
+            <i class="fa-regular fa-folder-gear"></i> Администрирование
+          </li></a
+        >
+      </ul>
     </aside>
     <main>
-        <div class="table-form">
-            <h1 class="table-title">Добавление заказа</h1>
-            <form method="POST" action="create/">
-                {% csrf_token %}
-                <tr>
-                    <td>
-                        <input type="text" name="name" placeholder="Имя клиента"/>
-                    </td><td>
-                        <input type="text" name="address" placeholder="Адрес"/>
-                    </td><td>
-                        <input type="text" name="employee" placeholder="Имя сотрудника"/>
-                    </td><td>
-                        <input type="text" name="equipment" placeholder="Оборудование"/>
-                    </td><td>
-                        <input type="text" name="breaking" placeholder="Поломка"/>
-                    </td><td>
-                        <input type="text" name="status" placeholder="Статус"/>
-                    </td><td>
-                        <input type="date" name="date" placeholder="Дата"/>
-                    </td><td>
-                        <input type="text" name="note" placeholder="Примечания"/>
-                    </td>
-                </tr>
-                <input type="submit" value="Сохранить" class="butt">
-            </form>
-            {% if info.count > 0 %}
-            <br><h2>Таблица заказов</h2>
-            <table>
-                <thead class="alert alert-warning"><th>Имя</th><th>Адрес</th>
-                <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
-                <th>Статус</th><th>Дата</th><th>Примечания</th><th></th></thead>
-                {% for inf in info %}
-                <tr class="alert alert-warning">
-                    <td>{{ inf.name }}</td><td>{{ inf.address }}</td>
-                    <td>{{ inf.employee }}</td><td>{{ inf.equipment }}</td>
-                    <td>{{ inf.breaking }}</td><td>{{ inf.status }}</td>
-                    <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
-                    <td><a href="edit/{{inf.id}}" class="redacte">Изменить</a>
-                        <a href="delete/{{inf.id}}" class="redactd">Удалить</a></td>
-                </tr>
-                {% endfor %}
-            </table>
-            {% endif %}
-        </div>
+      <div class="table-form">
+        <h1 class="table-title">Добавление заказа</h1>
+        <form method="POST" action="create/">
+          {% csrf_token %}
+          <tr>
+            <td>
+              <input type="text" name="name" placeholder="Имя клиента" />
+            </td>
+
+            <td>
+              <input type="text" name="address" placeholder="Адрес" />
+            </td>
+
+            <td>
+              <input type="text" name="employee" placeholder="Имя сотрудника" />
+            </td>
+
+            <td>
+              <form action="formdata" method="post" id="data"></form>
+              <p>
+                <select name="list1" form="data">
+                  <option>Оборудование</option>
+                  <option>Холодильник без морозильника</option>
+                  <option>Холодильник с морозильником</option>
+                  <option>Морозильный шкаф</option>
+                  <option>Морозильный ларь</option>
+                  <option>Винный шкаф</option>
+                </select>
+              </p>
+            </td>
+
+            <td>
+              <form action="formdata" method="post" id="data"></form>
+              <p>
+                <select name="list1" form="data">
+                  <option>Поломка</option>
+                  <option>Не включается</option>
+                  <option>Протекает</option>
+                  <option>Не морозит и не охлаждает</option>
+                  <option>Неприятный запах</option>
+                  <option>Не горит лампочка</option>
+                  <option>Сильно морозит и возникает иней</option>
+                  <option>Сильный шум</option>
+                </select>
+              </p>
+            </td>
+
+            <td>
+              <form action="formdata" method="post" id="data"></form>
+              <p>
+                <select name="list1" form="data">
+                  <option>Статус</option>
+                  <option>Выполнен</option>
+                  <option>В обработке</option>
+                </select>
+              </p>
+            </td>
+
+            <td>
+              <input type="date" name="date" placeholder="Дата" />
+            </td>
+
+            <td>
+              <input type="text" name="note" placeholder="Примечания" />
+            </td>
+          </tr>
+          <input type="submit" value="Сохранить" class="butt" />
+        </form>
+        {% if info.count > 0 %}
+        <br />
+        <h2>Таблица заказов</h2>
+        <table>
+          <thead class="alert alert-warning">
+            <th>Имя</th>
+            <th>Адрес</th>
+            <th>Сотрудник</th>
+            <th>Оборудование</th>
+            <th>Поломка</th>
+            <th>Статус</th>
+            <th>Дата</th>
+            <th>Примечания</th>
+            <th></th>
+          </thead>
+          {% for inf in info %}
+          <tr class="alert alert-warning">
+            <td>{{ inf.name }}</td>
+            <td>{{ inf.address }}</td>
+            <td>{{ inf.employee }}</td>
+            <td>{{ inf.equipment }}</td>
+            <td>{{ inf.breaking }}</td>
+            <td>{{ inf.status }}</td>
+            <td>{{ inf.date }}</td>
+            <td>{{ inf.note }}</td>
+            <td>
+              <a href="edit/{{inf.id}}" class="redacte">Изменить</a>
+              <a href="delete/{{inf.id}}" class="redactd">Удалить</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+        {% endif %}
+      </div>
     </main>
-</body>
+  </body>
 </html>
