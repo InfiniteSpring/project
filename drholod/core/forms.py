@@ -16,7 +16,7 @@ class CustomUserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         count = 0
-        placeholders = ['Имя пользователя', 'Электронная почта', 'Пароль', 'Подтверждение пароля', 'Должность']
+        placeholders = ['ФИО', 'Электронная почта', 'Пароль', 'Подтверждение пароля', 'Должность']
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'
             visible.field.widget.attrs['placeholder'] = placeholders[count]

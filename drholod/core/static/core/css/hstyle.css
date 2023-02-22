@@ -6,40 +6,16 @@ body {
     background: #2c2c2c;
 }
 main {
-    margin-left: 15vw;
+    margin-left: .5vw;
     float: top;
 }
-aside {
+.curtain {
+    text-align: center;
+    z-index: 2;
+    background: #2c2c2c;
     position: fixed;
-    float: left;
-    background: #181818;
-    width: 15vw;
-    padding: 0.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid rgb(142, 195, 242);
-}
-aside img {
-    margin-left: 20px;
-    width: 140px;
-    float: left;
-}
-aside ul {
-    margin-top: 20px;
-    list-style: none;
-    float: left;
-}
-aside ul li {
-    margin-left: 13px;
-    margin-top: 670px;
-    display: block;
-    color: #fff;
-    transition: transform 0.14s ease;
-}
-aside ul li:hover, aside ul a:hover {
-    color: rgb(142, 195, 242);
-    text-decoration: none;
-    transform: scale(1.05);
+    width: 98vw;
+    border-bottom: 5px solid rgb(142, 195, 242);
 }
 .fio-on-page {
     font-size: 24px;
@@ -48,7 +24,7 @@ aside ul li:hover, aside ul a:hover {
 .table-title {
     float: top;
     font-size: 30px;
-    
+    color: #fff;
 }
 main .table-form {
     float: left;
@@ -56,7 +32,7 @@ main .table-form {
     color: #fff;
     margin-top: 10px;
     text-align: center;
-    width: 80%;
+    width: 87vw;
 }
 .alert {
     background: #181818;
@@ -99,28 +75,16 @@ input {
 }
 table {
     margin-top: 100px;
-    width: 80vw;
-    max-width: 80vw;
+    width: 98vw;
+    max-width: 98vw;
     z-index: 1;
-    padding-bottom: 100px;
 }
 td {
     max-width: 120px;
 }
-.red {
-    margin-top: 60px;
-    margin-left: 10px;
-}
 .red-inputs {
     margin-left: 20px;
 }
-.title-add {
-    z-index: 2;
-    position: fixed;
-    background: #2c2c2c;
-    width: 80vw;
-    float: top;
-    padding-bottom: 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.page-logo {
+    float: left;
 }
