@@ -2,29 +2,55 @@
     margin: 0;
     padding: 0;
 }
+html {
+    border-left: 1px solid rgb(142, 195, 242);
+}
 body {
     background: #2c2c2c;
 }
 main {
-    margin-left: .5vw;
     float: top;
 }
-.curtain {
-    text-align: center;
+aside {
     z-index: 2;
-    background: #2c2c2c;
     position: fixed;
-    width: 98vw;
+    float: left;
+    background: #2c2c2c;
+    width: 100vw;
+    padding: 0.5%;
+    height: 22vh;
+    color: #fff;
     border-bottom: 5px solid rgb(142, 195, 242);
+}
+aside img {
+    margin-left: 20px;
+    width: 140px;
+    float: left;
+}
+aside ul {
+    float: right;
+    margin-right: 50px;
+}
+aside ul li {
+    margin-left: 13px;
+    display: block;
+    color: #fff;
+    transition: transform 0.14s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: rgb(142, 195, 242);
+    text-decoration: none;
+    transform: scale(1.05);
 }
 .fio-on-page {
     font-size: 24px;
     color: #fff;
 }
 .table-title {
+    text-align: center;
     float: top;
     font-size: 30px;
-    color: #fff;
+    
 }
 main .table-form {
     float: left;
@@ -32,7 +58,7 @@ main .table-form {
     color: #fff;
     margin-top: 10px;
     text-align: center;
-    width: 87vw;
+    width: 98%;
 }
 .alert {
     background: #181818;
@@ -68,23 +94,34 @@ main .table-form {
     transform: scale(1.05);
 }
 input {
-    width: 117px;
+    width: 200px;
     background: #fff;
     color: black;
     font-weight: 500;
 }
 table {
-    margin-top: 100px;
+    margin-top: 190px;
     width: 98vw;
     max-width: 98vw;
     z-index: 1;
+    padding-bottom: 100px;
 }
 td {
     max-width: 120px;
 }
+.red {
+    margin-top: 60px;
+    margin-left: 10px;
+}
 .red-inputs {
     margin-left: 20px;
 }
-.page-logo {
-    float: left;
+.title-add {
+    z-index: 3;
+    position: fixed;
+    background: #2c2c2c;
+    width: 80vw;
+    margin-left: 200px;
+    float: top;
+    padding-bottom: 15px;
 }
