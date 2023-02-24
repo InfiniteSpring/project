@@ -17,9 +17,12 @@
                 <a href="/logout" class="btn btn-warning">Выйти</a> 
             </ul>
         </div>
+        {%  if user.is_superuser %}
         <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
-        <div class="fio-on-page"> {{user.fio}} </div> 
-          <div class="title-add">
+        {% endif %}
+        <div class="fio-on-page"> {{user.fio}} </div>
+        {% if perms.core.can_add_order %}
+        <div class="title-add">
             <form method="POST" action="create/">
                 {% csrf_token %}
                 <tr>
@@ -44,6 +47,7 @@
                 <input type="submit" value="Добавить заказ" class="butt">
             </form>
         </div>
+        {% endif %}
   </aside>
   <main>
       <div class="table-form">
@@ -59,8 +63,10 @@
                   <td>{{ inf.employee }}</td><td>{{ inf.equipment }}</td>
                   <td>{{ inf.breaking }}</td><td>{{ inf.status }}</td>
                   <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
-                  <td><a href="edit/{{inf.id}}" class="redacte">Изменить</a>
+                  {% if perms.core.can_edit_order %}
+                  <td><a href="edit/{{inf.id}}" class="redacte">Изменить</a>                    
                       <a href="delete/{{inf.id}}" class="redactd">Удалить</a></td>
+                  {% endif %}
               </tr>
               {% endfor %}
           </table>

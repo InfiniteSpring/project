@@ -16,6 +16,7 @@ class Orders(models.Model):
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
+        permissions = (("can_delete_order", "Удаление заказа"), ("can_edit_order", "Редактирование заказа"), ("can_add_order", "Добавление заказа"),)
 
     name = models.CharField('Имя клиента', max_length= 50, default= '')
     address = models.CharField('Адресс', max_length= 50)
