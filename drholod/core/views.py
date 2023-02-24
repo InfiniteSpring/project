@@ -3,9 +3,9 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.models import Group
-from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth import logout, get_user_model
 from .forms import CustomUserCreationForm, LoginForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from .models import Orders
 from django.contrib import messages
 from django.template.loader import render_to_string

@@ -69,6 +69,10 @@ main .table-form {
     background: #181818;
     border-color: #fff;
     color: #fff;
+    height: 50px;
+}
+.thead {
+    height: 40px;
 }
 .name-col {
     padding-left: 10px;
