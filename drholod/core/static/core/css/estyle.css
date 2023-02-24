@@ -5,7 +5,7 @@
     color: #fff
 }
 body {
-    margin: 20vh 75vw;
+    margin: 10vh 65vw;
 }
 h5 {
     margin-left: 17px;
@@ -30,4 +30,13 @@ input {
 .butt:hover {
     transform: scale(1.05);
     background: greenyellow;
+}
+a {
+    margin-top: 20px;
+    margin-left: 80px;
+}
+a.hover {
+    text-decoration: none;
+    transform: scale(1.05);
+    color: yellow;
 }

@@ -15,6 +15,7 @@ from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
 from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.views.generic import UpdateView
+from .forms import OrderForm
 
 from .tokens import account_activation_token
 
@@ -53,7 +54,7 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('date')
+    info = Orders.objects.order_by('-date')
     return render(request, "homepage.html", {"info": info})
 
 # сохранение данных в бд
@@ -72,7 +73,15 @@ def create(request):
     return HttpResponseRedirect("/")
 
 # изменение данных в бд
-def edit(request, id):
+def edit(request, id):    
+    '''template = 'edit.html'
+    get_order = Orders.objects.get(id=id)
+    context = {
+        'get_order': get_order,
+        'update': True,
+        'form': OrderForm(instance=get_order),
+    }
+    return render(request, template, context)'''
     try:
         info = Orders.objects.get(id=id)
 
