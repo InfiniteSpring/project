@@ -3,7 +3,7 @@
     padding: 0;
 }
 html {
-    border-left: 1px solid rgb(142, 195, 242);
+    border-left: 3px solid rgb(142, 195, 242);
 }
 body {
     background: #2c2c2c;
@@ -18,7 +18,7 @@ aside {
     background: #2c2c2c;
     width: 100vw;
     padding: 0.5%;
-    height: 22vh;
+    height: 15vh;
     color: #fff;
     border-bottom: 5px solid rgb(142, 195, 242);
 }
@@ -29,10 +29,14 @@ aside img {
 }
 aside ul {
     float: right;
-    margin-right: 50px;
+    margin-right: 2.2vw;
+    padding-left: 10px;
 }
 aside ul li {
-    margin-left: 13px;
+    float: right;
+    z-index: 4;
+    margin-left: 40px;
+    margin-bottom: 10px;
     display: block;
     color: #fff;
     transition: transform 0.14s ease;
@@ -45,6 +49,7 @@ aside ul li:hover, aside ul a:hover {
 .fio-on-page {
     font-size: 24px;
     color: #fff;
+    width: 500px;
 }
 .table-title {
     text-align: center;
@@ -69,12 +74,16 @@ main .table-form {
     padding-left: 10px;
 }
 .butt{
-    width: 100px;
-    height: 30px;
+    border: none;
+    width: 150px;
+    height: 25px;
     background: rgb(142, 195, 242);
-    border-radius: 7px;
+    border-radius: 3px;
     color: #181818;
     font-weight: 500;
+}
+.butt:hover {
+    transform: scale(1.05);
 }
 .redacte, .redactd {
     padding-right: 5px;
@@ -100,7 +109,7 @@ input {
     font-weight: 500;
 }
 table {
-    margin-top: 190px;
+    margin-top: 15vh;
     width: 98vw;
     max-width: 98vw;
     z-index: 1;
@@ -118,10 +127,19 @@ td {
 }
 .title-add {
     z-index: 3;
+    margin-top: 20px;
     position: fixed;
     background: #2c2c2c;
     width: 80vw;
     margin-left: 200px;
     float: top;
-    padding-bottom: 15px;
+}
+.btn{
+    background: rgb(142, 195, 242);
+    height: auto;
+    width: auto;
+    border: none;
+}
+.btn:hover {
+    background: rgb(223, 10, 10);
 }
