@@ -13,8 +13,13 @@
 <body>
     <aside>
         <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" >
+            <ul>
+                <a href="/logout" class="btn btn-warning">Выйти</a> 
+            </ul>
+        </div>
+        <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
+        <div class="fio-on-page"> {{user.fio}} </div> 
           <div class="title-add">
-            <h1 class="table-title">Таблица заказов</h1>
             <form method="POST" action="create/">
                 {% csrf_token %}
                 <tr>
@@ -36,15 +41,9 @@
                         <input type="text" name="note" placeholder="Примечания"/>
                     </td>
                 </tr>
-                <input type="submit" value="Добавить" class="butt">
+                <input type="submit" value="Добавить заказ" class="butt">
             </form>
         </div>
-          <br><br><br><br><br>
-            <div class="fio-on-page"> {{user.fio}} </div><ul>
-                <a href="/logout" class="btn btn-warning">Выйти</a> 
-            </ul>
-        </div>
-        <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
   </aside>
   <main>
       <div class="table-form">

@@ -3,7 +3,7 @@
     padding: 0;
 }
 html {
-    border-left: 1px solid rgb(142, 195, 242);
+    border-left: 3px solid rgb(142, 195, 242);
 }
 body {
     background: #2c2c2c;
@@ -18,7 +18,7 @@ aside {
     background: #2c2c2c;
     width: 100vw;
     padding: 0.5%;
-    height: 22.5vh;
+    height: 15vh;
     color: #fff;
     border-bottom: 5px solid rgb(142, 195, 242);
 }
@@ -74,10 +74,11 @@ main .table-form {
     padding-left: 10px;
 }
 .butt{
-    width: 100px;
-    height: 30px;
+    border: none;
+    width: 150px;
+    height: 25px;
     background: rgb(142, 195, 242);
-    border-radius: 7px;
+    border-radius: 3px;
     color: #181818;
     font-weight: 500;
 }
@@ -108,7 +109,7 @@ input {
     font-weight: 500;
 }
 table {
-    margin-top: 190px;
+    margin-top: 15vh;
     width: 98vw;
     max-width: 98vw;
     z-index: 1;
@@ -126,6 +127,7 @@ td {
 }
 .title-add {
     z-index: 3;
+    margin-top: 20px;
     position: fixed;
     background: #2c2c2c;
     width: 80vw;
@@ -139,18 +141,5 @@ td {
     border: none;
 }
 .btn:hover {
-    background: rgb(255, 0, 0);
-}
-.btn1 {
-    background: rgb(142, 195, 242);
-    color: black;
-    border-radius: 5px;
-    height: 30px;
-    width: 150px;
-}
-.btn1:hover {
-    background: #fff;
-    height: 200px;
-    color: black;
-    transform: scale(1.05);
+    background: rgb(223, 10, 10);
 }
