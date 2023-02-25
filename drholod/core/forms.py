@@ -1,10 +1,21 @@
 from django import forms
 from django.contrib.auth.models import Group
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-
-
+from django.forms import ModelForm
+from .models import Orders
 from .models import CustomUser
  
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Orders
+        fields = '__all__'
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'form-control'
+
+
 
 class CustomUserCreationForm(UserCreationForm):
     username = forms.CharField(label='')
