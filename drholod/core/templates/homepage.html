@@ -1,77 +1,155 @@
-{% load static %}  
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="{% static 'core/css/hstyle.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="{% static 'core/css/hstyle.css' %}" />
     <title>ДОКТОР ХОЛОДА</title>
-</head>     
-<body>
+  </head>
+  <body>
     <aside>
-        <div class="page-logo"><img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" >
-            <ul>
-                <a href="/logout" class="btn btn-warning">Выйти</a> 
-            </ul>
-        </div>
-        {%  if user.is_superuser %}
-        <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
-        {% endif %}
-        <div class="fio-on-page"> {{user.fio}} </div>
-        {% if perms.core.can_add_order %}
-        <div class="title-add">
-            <form method="POST" action="create/">
-                {% csrf_token %}
-                <tr>
-                    <td>
-                        <input type="text" name="name" placeholder="Имя клиента"/>
-                    </td><td>
-                        <input type="text" name="address" placeholder="Адрес"/>
-                    </td><td>
-                        <input type="text" name="employee" placeholder="Сотрудник"/>
-                    </td><td>
-                        <input type="text" name="equipment" placeholder="Оборудование"/>
-                    </td><td>
-                        <input type="text" name="breaking" placeholder="Поломка"/>
-                    </td><td>
-                        <input type="text" name="status" placeholder="Статус"/>
-                    </td><td>
-                        <input type="date" name="date" placeholder="Дата"/>
-                    </td><td>
-                        <input type="text" name="note" placeholder="Примечания"/>
-                    </td>
-                </tr>
-                <input type="submit" value="Добавить заказ" class="butt">
-            </form>
-        </div>
-        {% endif %}
-  </aside>
-  <main>
-      <div class="table-form">
-          
-          {% if info.count > 0 %}
-          <table>
-              <thead class="alert alert-warning"><th>Имя</th><th>Адрес</th>
-              <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
-              <th>Статус</th><th>Дата</th><th>Примечания</th><th></th></thead>
-              {% for inf in info %}
-              <tr class="alert alert-warning">
-                  <td>{{ inf.name }}</td><td>{{ inf.address }}</td>
-                  <td>{{ inf.employee }}</td><td>{{ inf.equipment }}</td>
-                  <td>{{ inf.breaking }}</td><td>{{ inf.status }}</td>
-                  <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
-                  {% if perms.core.can_edit_order %}
-                  <td><a href="edit/{{inf.id}}" class="redacte">Изменить</a>                    
-                      <a href="delete/{{inf.id}}" class="redactd">Удалить</a></td>
-                  {% endif %}
-              </tr>
-              {% endfor %}
-          </table>
-          {% endif %}
+      <div class="page-logo">
+        <img src="static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" />
+        <ul>
+          <a href="/logout" class="btn btn-warning">Выйти</a>
+        </ul>
       </div>
-  </main>
-</body>
+      {% if user.is_superuser %}
+      <ul>
+        <a href="/admin" class="btn btn-warning">Администрирование</a>
+      </ul>
+      {% endif %}
+      <div class="fio-on-page">{{user.fio}}</div>
+      {% if perms.core.can_add_order %}
+      <div class="title-add">
+        <form method="POST" action="create/">
+          {% csrf_token %}
+          <tr>
+            <td>
+              <input type="text" name="name" placeholder="Имя клиента" />
+            </td>
+            <td>
+              <input type="text" name="address" placeholder="Адрес" />
+            </td>
+            <td>
+              <input type="text" name="employee" placeholder="Сотрудник" />
+            </td>
+            <td>
+                  <select name="equipment" class="spisok">
+                    <option>Оборудование</option>
+                    <option>Низкотемпературная с/c (моноблок)</option>
+                    <option>Среднетемпературная с/ c(моноблок)</option>
+                    <option>Линия начинения</option>
+                    <option>Стол холодильный</option>
+                    <option>Стол морозильный</option>
+                    <option>Шкаф холодильный</option>
+                    <option>Шкаф морозильный</option>
+                    <option>Витрина холодильная</option>
+                    <option>Горка холодильная</option>
+                    <option>Ларь морозильный</option>
+                    <option>Камера холодильная</option>
+                    <option>Камера холодильная</option>
+                    <option>Лёдогенератор</option>
+                    <option>Холодильник кофемашины</option>
+                    <option>Кондиционер настенный</option>
+                    <option>Кондиционер кассетный</option>
+                    <option>Кондиционер иное</option>
+                    <option>Ларь морозильный</option>
+                    <option>Вытяжка</option>
+                    <option>Иное</option>
+                  </select>
+            </td>
+            <td>
+                  <select name="breaking" class="spisok">
+                    <option>Поломка</option>
+                    <option>Высокая температура</option>
+                    <option>Выдает ошибку</option>
+                    <option>Течет вода</option>
+                    <option>Посторонний шум</option>
+                    <option>Моргает контроллер</option>
+                    <option>Не(плохо) открывается дверь</option>
+                    <option>Порван уплотнитель</option>
+                    <option>Отвалилась дверь</option>
+                    <option>Требуется ТО</option>
+                    <option>Замена ручки</option>
+                    <option>Нужна шторка</option>
+                    <option>Не горит свет</option>
+                    <option>Перемерзает</option>
+                    <option>Образовался лёд</option>
+                    <option>Не включается</option>
+                    <option>Не работает</option>
+                    <option>Проводка</option>
+                    <option>Жалоба РПН</option>
+                    <option>Выбивает автомат</option>
+                    <option>Иное</option>
+                  </select>
+            </td>
+            <td>
+                  <select name="status" class="spisok">
+                    <option>Статус</option>
+                    <option>Выполнен</option>
+                    <option>В обработке</option>
+                  </select>
+                   <td>
+                    <input type="date" name="date" placeholder="Дата" />
+                  </td>
+                  <td>
+                    <input type="text" name="note" placeholder="Примечания" />
+                  </td>
+                <input type="submit" value="Добавить заказ" class="butt" />
+              </form>
+            </td>
+          </tr>
+        </form>
+      </div>
+      {% endif %}
+    </aside>
+    <main>
+      <div class="table-form">
+        {% if info.count > 0 %}
+        <table>
+          <thead class="alert alert-warning">
+            <th>Имя</th>
+            <th>Адрес</th>
+            <th>Сотрудник</th>
+            <th>Оборудование</th>
+            <th>Поломка</th>
+            <th>Статус</th>
+            <th>Дата</th>
+            <th>Примечания</th>
+            <th></th>
+          </thead>
+          {% for inf in info %}
+          <tr class="alert alert-warning">
+            <td>{{ inf.name }}</td>
+            <td>{{ inf.address }}</td>
+            <td>{{ inf.employee }}</td>
+            <td>{{ inf.equipment }}</td>
+            <td>{{ inf.breaking }}</td>
+            <td>{{ inf.status }}</td>
+            <td>{{ inf.date }}</td>
+            <td>{{ inf.note }}</td>
+            {% if perms.core.can_edit_order %}
+            <td>
+              <a href="edit/{{inf.id}}" class="redacte">Изменить</a>
+              <a href="delete/{{inf.id}}" class="redactd">Удалить</a>
+            </td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </table>
+        {% endif %}
+      </div>
+    </main>
+  </body>
 </html>
