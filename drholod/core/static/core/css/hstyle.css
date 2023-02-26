@@ -19,6 +19,9 @@ aside {
   height: 15vh;
   color: #fff;
 }
+.page-logo {
+  margin-top: 15px;
+}
 aside img {
   margin-left: 20px;
   width: 140px;
