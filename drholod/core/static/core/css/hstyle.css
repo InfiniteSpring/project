@@ -12,10 +12,12 @@ aside {
   z-index: 2;
   position: fixed;
   border-bottom: 2px solid rgb(142, 195, 242);
+  border-left: 2px solid rgb(142, 195, 242);
   float: left;
-  background: rgb(114, 110, 110);
+  background: #dcccb3;
   width: 100vw;
   padding-bottom: 0.5%;
+  border-bottom-left-radius: 22px;
   height: 16vh;
   color: black;
 }
@@ -87,6 +89,7 @@ main .table-form {
 }
 .butt:hover {
   transform: scale(1.05);
+  background: yellowgreen;
 }
 .redacte,
 .redactd {
@@ -107,7 +110,7 @@ main .table-form {
 }
 input {
   width: 12vw;
-  background: #fff;
+  background: #e3e5f1;
   color: black;
   font-weight: 500;
 }
@@ -125,7 +128,7 @@ td {
   z-index: 3;
   margin-top: 20px;
   position: fixed;
-  background: rgb(114, 110, 110);
+  background: #dcccb3;
   width: 60vw;
   margin-left: 22vw;
   float: top;
@@ -185,7 +188,7 @@ td {
 }
 */
 th {
-  background: rgb(114, 110, 110);
+  background: #dcccb3;
   color: #fff;
 }
 .spisok {
