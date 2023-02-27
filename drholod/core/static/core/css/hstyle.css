@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: #9b9797;
+  background: #e3e5f1;
 }
 main {
   float: top;
@@ -13,7 +13,7 @@ aside {
   position: fixed;
   border-bottom: 2px solid rgb(142, 195, 242);
   float: left;
-  background: #363636;
+  background: rgb(114, 110, 110);
   width: 100vw;
   padding-bottom: 0.5%;
   height: 16vh;
@@ -65,7 +65,7 @@ main .table-form {
   width: 100%;
 }
 .alert {
-  background: #eedede;
+  background: #e3e5f1;
   border-top: 1px solid #4e4a4a;
   border-color: #232222;
   border-width: 1px;
@@ -125,7 +125,7 @@ td {
   z-index: 3;
   margin-top: 20px;
   position: fixed;
-  background: #363636;
+  background: rgb(114, 110, 110);
   width: 60vw;
   margin-left: 22vw;
   float: top;
