@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: #898484;
+  background: #9b9797;
 }
 main {
   float: top;
@@ -11,9 +11,9 @@ main {
 aside {
   z-index: 2;
   position: fixed;
-  border-bottom: 1px solid rgb(142, 195, 242);
+  border-bottom: 2px solid rgb(142, 195, 242);
   float: left;
-  background: #a18b8b;
+  background: #363636;
   width: 100vw;
   padding-bottom: 0.5%;
   height: 16vh;
@@ -125,7 +125,7 @@ td {
   z-index: 3;
   margin-top: 20px;
   position: fixed;
-  background: #a18b8b;
+  background: #363636;
   width: 60vw;
   margin-left: 22vw;
   float: top;
