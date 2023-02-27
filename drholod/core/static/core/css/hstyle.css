@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: #2e2e2e;
+  background: #9b9797;
 }
 main {
   float: top;
@@ -11,13 +11,13 @@ main {
 aside {
   z-index: 2;
   position: fixed;
-  border-bottom: 1px solid rgb(142, 195, 242);
+  border-bottom: 2px solid rgb(142, 195, 242);
   float: left;
-  background: #1b1a1a;
+  background: #363636;
   width: 100vw;
   padding-bottom: 0.5%;
-  height: 15vh;
-  color: #fff;
+  height: 16vh;
+  color: black;
 }
 .page-logo {
   margin-top: 15px;
@@ -38,7 +38,7 @@ aside ul li {
   margin-left: 40px;
   margin-bottom: 10px;
   display: block;
-  color: #fff;
+  color: #3a4554;
   transition: transform 0.14s ease;
 }
 aside ul li:hover,
@@ -65,11 +65,11 @@ main .table-form {
   width: 100%;
 }
 .alert {
-  background: #201f1f;
-  border-top: 1px solid #fff;
-  border-color: #fff;
+  background: #eedede;
+  border-top: 1px solid #4e4a4a;
+  border-color: #232222;
   border-width: 1px;
-  color: #fff;
+  color: #000000;
   height: 50px;
 }
 .thead {
@@ -91,7 +91,7 @@ main .table-form {
 .redacte,
 .redactd {
   display: block;
-  color: #fff;
+  color: #3a3838;
   transition: transform 0.14s ease;
   text-decoration: dashed;
 }
@@ -112,7 +112,7 @@ input {
   font-weight: 500;
 }
 table {
-  margin-top: 15vh;
+  margin-top: 16vh;
   width: 100%;
   max-width: 100%;
   z-index: 1;
@@ -125,7 +125,7 @@ td {
   z-index: 3;
   margin-top: 20px;
   position: fixed;
-  background: #1b1a1a;
+  background: #363636;
   width: 60vw;
   margin-left: 22vw;
   float: top;
@@ -139,6 +139,7 @@ td {
 .btn:hover {
   background: rgb(223, 10, 10);
 }
+/*
 .popup {
   z-index: 5;
   position: fixed;
@@ -182,8 +183,9 @@ td {
   color: rgb(142, 195, 242);
   text-decoration: none;
 }
+*/
 th {
-  background: rgb(25, 25, 25);
+  background: rgb(114, 110, 110);
   color: #fff;
 }
 .spisok {
