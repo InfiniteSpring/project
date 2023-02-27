@@ -21,7 +21,7 @@
             {%  if user.is_superuser %}
             <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
             {% endif %}
-            <div class="fio-on-page"> {{user.fio}} </div>
+            <div class="fio-on-page"> {{user.username}} </div>
             {% if perms.core.can_add_order %}
             <div class="title-add">
                 <form method="POST" action="create/">

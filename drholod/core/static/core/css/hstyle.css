@@ -16,7 +16,7 @@ aside {
   background: #1b1a1a;
   width: 100vw;
   padding-bottom: 0.5%;
-  height: 15vh;
+  height: 16vh;
   color: #fff;
 }
 .page-logo {
@@ -112,7 +112,7 @@ input {
   font-weight: 500;
 }
 table {
-  margin-top: 15vh;
+  margin-top: 16vh;
   width: 100%;
   max-width: 100%;
   z-index: 1;
@@ -139,6 +139,7 @@ td {
 .btn:hover {
   background: rgb(223, 10, 10);
 }
+/*
 .popup {
   z-index: 5;
   position: fixed;
@@ -182,6 +183,7 @@ td {
   color: rgb(142, 195, 242);
   text-decoration: none;
 }
+*/
 th {
   background: rgb(25, 25, 25);
   color: #fff;
