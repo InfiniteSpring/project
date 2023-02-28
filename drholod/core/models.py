@@ -26,6 +26,7 @@ class Orders(models.Model):
     status = models.CharField('Статус', max_length= 45, default= '')
     date = models.DateField('Дата')
     note = models.CharField('Примечания', max_length= 250, default= '')
+    master = models.CharField('Мастер', max_length=100, default='')
 
     def __str__(self):
         return self.name

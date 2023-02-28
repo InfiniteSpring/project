@@ -12,17 +12,17 @@ aside {
   z-index: 2;
   position: fixed;
   border-bottom: 2px solid rgb(142, 195, 242);
-  border-left: 2px solid rgb(142, 195, 242);
+  border-left: 1px solid rgb(142, 195, 242);
   float: left;
   background: #dcccb3;
   width: 100vw;
   padding-bottom: 0.5%;
   border-bottom-left-radius: 22px;
-  height: 16vh;
+  height: 14vh;
   color: black;
 }
 .page-logo {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 aside img {
   margin-left: 20px;
@@ -52,7 +52,9 @@ aside ul a:hover {
 .fio-on-page {
   font-size: 24px;
   color: #fff;
-  width: 500px;
+  max-width: 17vw;
+  margin-left: 80vw;
+  margin-top: 6vh;
 }
 .table-title {
   text-align: center;
@@ -80,7 +82,7 @@ main .table-form {
 }
 .butt {
   border: none;
-  width: 110px;
+  width: 12vw;
   height: 25px;
   background: rgb(142, 195, 242);
   border-radius: 3px;
@@ -115,7 +117,7 @@ input {
   font-weight: 500;
 }
 table {
-  margin-top: 16vh;
+  margin-top: 14vh;
   width: 100%;
   max-width: 100%;
   z-index: 1;
@@ -126,11 +128,11 @@ td {
 }
 .title-add {
   z-index: 3;
-  margin-top: 20px;
+  margin-top: 2vw;
   position: fixed;
   background: #dcccb3;
-  width: 60vw;
-  margin-left: 22vw;
+  width: 61.3vw;
+  margin-left: 12vw;
   float: top;
 }
 .btn {
@@ -190,8 +192,17 @@ td {
 th {
   background: #dcccb3;
   color: #fff;
+  max-width: 11vw;
 }
 .spisok {
   width: 12vw;
   max-width: 12vw;
+}
+.search_address {
+  margin-left: 3vw;
+  width: 13vw;
+}
+.search_master {
+  margin-left: 3vw;
+  width: 13vw;
 }
