@@ -14,7 +14,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.core.mail import EmailMessage
 from django.http import HttpResponseRedirect, HttpResponseNotFound
-from django.views.generic import UpdateView
+from django.views.generic import ListView
 from .forms import OrderForm
 
 from .tokens import account_activation_token
@@ -57,13 +57,23 @@ def homepage(request):
     info = Orders.objects.order_by('-date')
     return render(request, "homepage.html", {"info": info})
 
-# сохранение данных в бд
+def search_by_address(request):
+    info = Orders.objects.filter(address__icontains=request.GET.get("q"))
+    return render(request, "homepage.html", {"info": info})
+
+def search_by_master(request):
+    info = Orders.objects.filter(master__icontains=request.GET.get("q"))
+    return render(request, "homepage.html", {"info": info})
+    
+
+#сохранение данных в бд
 def create(request):
     if request.method == "POST":
         info = Orders()
         info.name = request.POST.get("name")
         info.address = request.POST.get("address")
         info.employee = request.POST.get("employee")
+        info.master = request.POST.get("master")
         info.equipment = request.POST.get("equipment")
         info.breaking = request.POST.get("breaking")
         info.status = request.POST.get("status")
@@ -89,6 +99,7 @@ def edit(request, id):
             info.name = request.POST.get("name")
             info.address = request.POST.get("address")
             info.employee = request.POST.get("employee")
+            info.master = request.POST.get("master")
             info.equipment = request.POST.get("equipment")
             info.breaking = request.POST.get("breaking")
             info.status = request.POST.get("status")

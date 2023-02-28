@@ -46,8 +46,6 @@ class CustomUserCreationForm(UserCreationForm):
 
 
         
-
-
 class LoginForm(AuthenticationForm):
     username = forms.CharField(label='')  
     password = forms.CharField(label='')

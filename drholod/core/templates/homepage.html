@@ -21,7 +21,6 @@
             {%  if user.is_superuser %}
             <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
             {% endif %}
-            <div class="fio-on-page"> {{user.username}} </div>
             {% if perms.core.can_add_order %}
             <div class="title-add">
                 <form method="POST" action="create/">
@@ -35,6 +34,9 @@
                     </td>
                     <td>
                       <input type="text" name="employee" placeholder="Сотрудник" />
+                    </td>
+                    <td>
+                        <input type="text" name="master" placeholder="Мастер">
                     </td>
                     <td>
                         <input type="text" name="equipment" list="equipment" placeholder="Оборудование">
@@ -104,19 +106,47 @@
                 </form>
             </div>
             {% endif %}
+            <div class="fio-on-page"> {{user.username}} </div>
         </aside>
         <main>
-            <div class="table-form">
-                
+            <div class="table-form">                
                 {% if info.count > 0 %}
                 <table>
-                    <thead class="alert alert-warning"><th>Имя</th><th>Адрес</th>
-                    <th>Сотрудник</th><th>Оборудование</th><th>Поломка</th>
-                    <th>Статус</th><th>Дата</th><th>Примечания</th><th></th></thead>
+                    <thead class="alert alert-warning">
+                        <th>Имя</th>
+                        <th>                            
+                            <div class="search_address">
+                                <form action="{% url 'search_by_address' %}" method="get" class="d-flex editContent">
+                                    <input type="search" placeholder="Адрес" name="q" class="form-control" required="">
+                                    <button type="submit" class="btn1 btn">
+                                        <span class="fa fa-search" aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </th>
+                        <th>Сотрудник</th>
+                        <th>                            
+                            <div class="search_master">
+                                <form action="{% url 'search_by_master' %}" method="get" class="d-flex editContent">
+                                    <input type="search" placeholder="Мастер" name="q" class="form-control" required="">
+                                    <button type="submit" class="btn1 btn">
+                                        <span class="fa fa-search" aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </th>
+                        <th>Оборудование</th>
+                        <th>Поломка</th>
+                        <th>Статус</th>
+                        <th>Дата</th>
+                        <th>Примечания</th>
+                        <th></th>
+                    </thead>
                     {% for inf in info %}
                     <tr class="alert alert-warning">
                         <td>{{ inf.name }}</td><td>{{ inf.address }}</td>
-                        <td>{{ inf.employee }}</td><td>{{ inf.equipment }}</td>
+                        <td>{{ inf.employee }}</td><td>{{ inf.master }}</td>
+                        <td>{{ inf.equipment }}</td>
                         <td>{{ inf.breaking }}</td><td>{{ inf.status }}</td>
                         <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
                         {% if perms.core.can_edit_order %}
