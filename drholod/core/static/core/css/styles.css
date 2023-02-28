@@ -123,9 +123,11 @@ main {
     text-align: center;
     line-height: 25px;
     cursor: pointer;
+    border: #fff;
 }
 .button:hover {
     background-color: #0d6cf2;
+    transform: scale(1.05);
 }
 .text-center {
     font-weight: 500;
