@@ -50,11 +50,11 @@ aside ul a:hover {
   transform: scale(1.05);
 }
 .fio-on-page {
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
   max-width: 17vw;
   margin-left: 80vw;
-  margin-top: 6vh;
+  margin-top: 5vh;
 }
 .table-title {
   text-align: center;
@@ -199,10 +199,8 @@ th {
   max-width: 12vw;
 }
 .search_address {
-  margin-left: 3vw;
   width: 13vw;
 }
 .search_master {
-  margin-left: 3vw;
   width: 13vw;
 }

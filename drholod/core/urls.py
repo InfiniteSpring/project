@@ -7,8 +7,8 @@ from .views import SignUpView, LoginView
 urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('create/', views.create),
-    path('edit/<int:id>/', views.edit, name='edit'),
-    re_path(r'^delete/<int:id>/$', views.delete),
+    path('edit/<int:id>/', views.edit),
+    path('delete/<int:id>', views.delete),
     path('search_by_address/', views.search_by_address, name='search_by_address'),
     path('search_by_master/', views.search_by_master, name='search_by_master'),
     path('signup/', SignUpView.as_view(), name='signup'),

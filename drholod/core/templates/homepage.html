@@ -151,7 +151,7 @@
                         <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
                         {% if perms.core.can_edit_order %}
                         <td><a href="edit/{{inf.id}}" class="redacte">Изменить</a>                    
-                            <a href="delete/{{inf.id}}" class="redactd">Удалить</a></td>
+                            <a href="http://127.0.0.1:8000/delete/{{inf.id}}" class="redactd">Удалить</a></td>
                         {% endif %}
                     </tr>
                     {% endfor %}

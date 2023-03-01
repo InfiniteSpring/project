@@ -16,6 +16,7 @@ input {
     width: 200px;
     height: 25px;
     color: #181818;
+    margin-left: 14px;
 }
 .butt{
     margin-left: 20px;
@@ -40,3 +41,6 @@ a.hover {
     transform: scale(1.05);
     color: yellow;
 }
+td {
+    max-width: 120px;
+  }

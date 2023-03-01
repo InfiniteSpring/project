@@ -11,86 +11,85 @@
     <a href='/'>Вернуться</a>
     <h5>Редактирование заказа</h5>
     <form method="POST">
-        {% csrf_token %}
-          <tr>
-            <td>
-              <input type="text" name="name" placeholder="Имя клиента" />
-            </td>
-            <td>
-              <input type="text" name="address" placeholder="Адрес" />
-            </td>
-            <td>
-              <input type="text" name="employee" placeholder="Сотрудник" />
-            </td>
-            <td>
-              <input type="text" name="master" placeholder="Мастер">
-            </td>
-            <td>
-                  <select name="equipment" class="spisok">
-                    <option>Оборудование</option>
-                    <option>Низкотемпературная с/c (моноблок)</option>
-                    <option>Среднетемпературная с/ c(моноблок)</option>
-                    <option>Линия начинения</option>
-                    <option>Стол холодильный</option>
-                    <option>Стол морозильный</option>
-                    <option>Шкаф холодильный</option>
-                    <option>Шкаф морозильный</option>
-                    <option>Витрина холодильная</option>
-                    <option>Горка холодильная</option>
-                    <option>Ларь морозильный</option>
-                    <option>Камера холодильная</option>
-                    <option>Камера холодильная</option>
-                    <option>Лёдогенератор</option>
-                    <option>Холодильник кофемашины</option>
-                    <option>Кондиционер настенный</option>
-                    <option>Кондиционер кассетный</option>
-                    <option>Кондиционер иное</option>
-                    <option>Ларь морозильный</option>
-                    <option>Вытяжка</option>
-                    <option>Иное</option>
-                  </select>
-            </td>
-            <td>
-                  <select name="breaking" class="spisok">
-                    <option>Поломка</option>
-                    <option>Высокая температура</option>
-                    <option>Выдает ошибку</option>
-                    <option>Течет вода</option>
-                    <option>Посторонний шум</option>
-                    <option>Моргает контроллер</option>
-                    <option>Не(плохо) открывается дверь</option>
-                    <option>Порван уплотнитель</option>
-                    <option>Отвалилась дверь</option>
-                    <option>Требуется ТО</option>
-                    <option>Замена ручки</option>
-                    <option>Нужна шторка</option>
-                    <option>Не горит свет</option>
-                    <option>Перемерзает</option>
-                    <option>Образовался лёд</option>
-                    <option>Не включается</option>
-                    <option>Не работает</option>
-                    <option>Проводка</option>
-                    <option>Жалоба РПН</option>
-                    <option>Выбивает автомат</option>
-                    <option>Иное</option>
-                  </select>
-            </td>
-            <td>
-                  <select name="status" class="spisok">
-                    <option>Статус</option>
-                    <option>Выполнен</option>
-                    <option>В обработке</option>
-                  </select>
-                   <td>
-                    <input type="date" name="date" placeholder="Дата" />
-                  </td>
-                  <td>
-                    <input type="text" name="note" placeholder="Примечания" />
-                  </td>
+      {% csrf_token %}
+      <tr>
+        <td>
+          <input type="text" name="name" placeholder="Имя клиента" value="{{info.name}}"/>
+        </td>
+        <td>
+          <input type="text" name="address" placeholder="Адрес" value="{{info.address}}"/>
+        </td>
+        <td>
+          <input type="text" name="employee" placeholder="Сотрудник" value="{{info.employee}}"/>
+        </td>
+        <td>
+            <input type="text" name="master" placeholder="Мастер" value="{{info.master}}"/>
+        </td>
+        <td>
+            <input type="text" name="equipment" list="equipment" placeholder="Оборудование" value="{{info.equipment}}"/>
+            <datalist id="equipment">
+                <option value="Стол холодильный">
+                <option value="Стол морозильный">
+                <option value="Низкотемпературная с/с (моноблок)">
+                <option value="Среднетемпературнаяс с/с (моноблок)">
+                <option value="Линия начинения">
+                <option value="Стол морозильный">
+                <option value="Шкаф холодильный">
+                <option value="Шкаф морозильный">
+                <option value="Витрина холодильная">
+                <option value="Горка холодильная">
+                <option value="Ларь морозильный">
+                <option value="Камера холодильная">
+                <option value="Лёдогенератор">
+                <option value="Холодильник кофемашины">
+                <option value="Кондиционер настенный">
+                <option value="Кондиционер кассетный">
+                <option value="Кондиционер иное">
+                <option value="Вытяжка">                             
+            </datalist>
+        </td>
+        <td>
+            <input type="text" name="breaking" list="breaking" placeholder="Поломка" value="{{info.breaking}}"/>
+            <datalist id="breaking">
+                <option value="Поломка">
+                <option value="Высокая температура">
+                <option value="Выдает ошибку">
+                <option value="Течет вода">
+                <option value="Посторонний шум">
+                <option value="Моргает контроллер">
+                <option value="Не(плохо) открывается дверь">
+                <option value="Порван уплотнитель">
+                <option value="Отвалилась дверь">
+                <option value="Требуется ТО">
+                <option value="Замена ручки">
+                <option value="Нужна шторка">
+                <option value="Не горит свет">
+                <option value="Перемерзает">
+                <option value="Образовался лёд">
+                <option value="Не включается">
+                <option value="Не работает">
+                <option value="Проводка">
+                <option value="Жалоба РПН">
+                <option value="Выбивает автомат">
+            </datalist>
+        </td>
+        <td>
+            <input type="text" name="status" list="status" placeholder="Статус" value="{{info.status}}"/>
+            <datalist id="status">
+                <option value="В обработке">
+                <option value="Выполнен">
+            </datalist>
+               <td>
+                <input type="date" name="date" placeholder="Дата" />
+               </td>
+               <td>
+                <input type="text" name="note" placeholder="Примечания" value="{{info.note}}"/>
+               </td>
+               <td>
                 <input type="submit" value="Сохранить" class="butt" />
-              </form>
-            </td>
-          </tr>
+               </td>
+        </td>
+      </tr>
     </form>
 </body>
 </html>
