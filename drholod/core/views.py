@@ -54,7 +54,7 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('-date')
+    info = Orders.objects.order_by('status').order_by('-date')
     return render(request, "homepage.html", {"info": info})
 
 def search_by_address(request):
@@ -92,7 +92,6 @@ def edit(request, id):
         'form': OrderForm(instance=get_order),
     }
     return render(request, template, context)'''
-    url = request.META.get('HTTP_REFERER')
     try:
         info = Orders.objects.get(id=id)
 
@@ -107,7 +106,7 @@ def edit(request, id):
             info.date = request.POST.get("date")
             info.note = request.POST.get("note")
             info.save()
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect('/')
         else:
             return render(request, "edit.html", {"info": info})
     except Orders.DoesNotExist:

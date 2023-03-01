@@ -140,7 +140,9 @@
                         <th>Статус</th>
                         <th>Дата</th>
                         <th>Примечания</th>
-                        <th></th>
+                        <th>
+                            <a href="/" class="but1">Очистить</a>
+                        </th>
                     </thead>
                     {% for inf in info %}
                     <tr class="alert alert-warning">
@@ -151,8 +153,10 @@
                         <td>{{ inf.date }}</td><td>{{ inf.note }}</td>
                         {% if perms.core.can_edit_order %}
                         <!--ПОМЕНЯТЬ ССЫЛКИ-->
-                        <td><a href="http://127.0.0.1:8000/edit/{{inf.id}}" class="redacte">Изменить</a>                    
-                            <a href="http://127.0.0.1:8000/delete/{{inf.id}}" class="redactd">Удалить</a></td>
+                        <td><a href="http://127.0.0.1:8000/edit/{{inf.id}}" class="redacte">Изменить</a>  
+                            {%  if user.is_superuser %}
+                                <a href="http://127.0.0.1:8000/delete/{{inf.id}}" class="redactd">Удалить</a></td>
+                            {% endif %}
                         {% endif %}
                     </tr>
                     {% endfor %}

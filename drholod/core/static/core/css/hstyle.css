@@ -89,9 +89,28 @@ main .table-form {
   color: #444444;
   font-weight: 500;
 }
+.but1 {
+  display: block;
+  border: none;
+  width: 7vw;
+  height: 25px;
+  background: rgb(142, 195, 242);
+  border-radius: 3px;
+  color: #444444;
+  font-weight: 500;
+  text-decoration: dashed;
+  transition: transform 0.14s ease;
+}
 .butt:hover {
   transform: scale(1.05);
   background: yellowgreen;
+  text-decoration: none;
+}
+.but1:hover {
+  transform: scale(1.05);
+  background: rgb(52, 52, 52);
+  color: rgb(142, 195, 242);
+  text-decoration: none;
 }
 .redacte,
 .redactd {
