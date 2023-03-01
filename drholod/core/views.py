@@ -92,6 +92,7 @@ def edit(request, id):
         'form': OrderForm(instance=get_order),
     }
     return render(request, template, context)'''
+    url = request.META.get('HTTP_REFERER')
     try:
         info = Orders.objects.get(id=id)
 
@@ -117,7 +118,11 @@ def delete(request, id):
     try:
         info = Orders.objects.get(id=id)
         info.delete()
-        return HttpResponseRedirect("/")
+        url = request.META.get('HTTP_REFERER')       
+        if 'search_by_address' or 'search_by_master' in url:
+            return HttpResponseRedirect(url)
+        else:
+            return HttpResponseRedirect("/")
     except Orders.DoesNotExist:
         return HttpResponseNotFound("<h2>Orders not found</h2>")
 
