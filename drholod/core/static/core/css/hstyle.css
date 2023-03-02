@@ -88,6 +88,16 @@ main .table-form {
   border-radius: 3px;
   color: #444444;
   font-weight: 500;
+  border: 1px solid #444444;
+  transition: transform .14s ease;
+}
+.btn {
+  background: rgb(142, 195, 242);
+  height: auto;
+  width: auto;
+  border: none;
+  border: 1px solid #444444;
+  transition: transform .14s ease;
 }
 .but1 {
   display: block;
@@ -100,13 +110,22 @@ main .table-form {
   font-weight: 500;
   text-decoration: dashed;
   transition: transform 0.14s ease;
+  border: 1px solid #444444;
 }
-.butt:hover {
-  transform: scale(1.05);
-  background: yellowgreen;
-  text-decoration: none;
+.btn2 {
+  display: block;
+  border: none;
+  width: 8xvw;
+  height: 25px;
+  background: rgb(142, 195, 242);
+  border-radius: 3px;
+  color: #444444;
+  font-weight: 500;
+  text-decoration: dashed;
+  transition: transform 0.14s ease;
+  border: 1px solid #444444;
 }
-.but1:hover {
+.btn2:hover, .but1:hover, .butt:hover, .btn:hover {
   transform: scale(1.05);
   background: rgb(52, 52, 52);
   color: rgb(142, 195, 242);
@@ -153,15 +172,6 @@ td {
   width: 61.3vw;
   margin-left: 12vw;
   float: top;
-}
-.btn {
-  background: rgb(142, 195, 242);
-  height: auto;
-  width: auto;
-  border: none;
-}
-.btn:hover {
-  background: rgb(223, 10, 10);
 }
 /*
 .popup {

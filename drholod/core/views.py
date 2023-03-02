@@ -68,11 +68,11 @@ def search_by_master(request):
     return render(request, "homepage.html", {"info": info})
 
 def orders_completed(request):
-    info = Orders.objects.filter(status__icontains='Выполнен')
+    info = Orders.objects.filter(status__icontains='Выполнен').order_by('-date')
     return render(request, "homepage.html", {"info": info})
 
 def orders_uncompleted(request):
-    info = Orders.objects.filter(status__icontains='В обработке')
+    info = Orders.objects.filter(status__icontains='В обработке').order_by('-date')
     return render(request, "homepage.html", {"info": info})
     
 

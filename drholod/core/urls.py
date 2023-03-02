@@ -9,6 +9,8 @@ urlpatterns = [
     path('create/', views.create),
     path('edit/<int:id>/', views.edit),
     path('delete/<int:id>', views.delete),
+    path('completed_orders', views.orders_completed),
+    path('uncompleted_orders', views.orders_uncompleted),
     path('search_by_address/', views.search_by_address, name='search_by_address'),
     path('search_by_master/', views.search_by_master, name='search_by_master'),
     path('signup/', SignUpView.as_view(), name='signup'),
