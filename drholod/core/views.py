@@ -16,6 +16,7 @@ from django.core.mail import EmailMessage
 from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.views.generic import ListView
 from .forms import OrderForm
+from django.db.models import Q
 
 from .tokens import account_activation_token
 
@@ -54,15 +55,24 @@ def activateEmail(request, user, to_email):
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('status').order_by('-date')
+    info = Orders.objects.order_by('status', '-date')    
     return render(request, "homepage.html", {"info": info})
+ 
 
 def search_by_address(request):
-    info = Orders.objects.filter(address__icontains=request.GET.get("q"))
+    info = Orders.objects.filter(address__contains=request.GET.get("q"))
     return render(request, "homepage.html", {"info": info})
 
 def search_by_master(request):
-    info = Orders.objects.filter(master__icontains=request.GET.get("q"))
+    info = Orders.objects.filter(master__contains=request.GET.get("q"))
+    return render(request, "homepage.html", {"info": info})
+
+def orders_completed(request):
+    info = Orders.objects.filter(status__icontains='Выполнен')
+    return render(request, "homepage.html", {"info": info})
+
+def orders_uncompleted(request):
+    info = Orders.objects.filter(status__icontains='В обработке')
     return render(request, "homepage.html", {"info": info})
     
 
@@ -92,6 +102,7 @@ def edit(request, id):
         'form': OrderForm(instance=get_order),
     }
     return render(request, template, context)'''
+    url = request.META.get('HTTP_REFERER')
     try:
         info = Orders.objects.get(id=id)
 
@@ -106,7 +117,7 @@ def edit(request, id):
             info.date = request.POST.get("date")
             info.note = request.POST.get("note")
             info.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect("/")
         else:
             return render(request, "edit.html", {"info": info})
     except Orders.DoesNotExist:
