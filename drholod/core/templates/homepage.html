@@ -113,6 +113,7 @@
                 {% if info.count > 0 %}
                 <table>
                     <thead class="alert alert-warning">
+                        <th>№</th>
                         <th>Имя</th>
                         <th>                            
                             <div class="search_address">
@@ -148,6 +149,7 @@
                     </thead>
                     {% for inf in info %}
                     <tr class="alert alert-warning">
+                        <td>{{ inf.id }}</td>
                         <td>{{ inf.name }}</td><td>{{ inf.address }}</td>
                         <td>{{ inf.employee }}</td><td>{{ inf.master }}</td>
                         <td>{{ inf.equipment }}</td>
