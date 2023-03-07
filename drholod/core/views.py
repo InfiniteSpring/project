@@ -17,6 +17,7 @@ from django.http import HttpResponseRedirect, HttpResponseNotFound
 from django.views.generic import ListView
 from .forms import OrderForm
 from django.db.models import Q
+import quopri
 
 from .tokens import account_activation_token
 
@@ -60,19 +61,59 @@ def homepage(request):
  
 
 def search_by_address(request):
-    info = Orders.objects.filter(address__contains=request.GET.get("q"))
+    url = request.META.get('HTTP_REFERER')
+    q = request.GET.get("q")
+    info = Orders.objects.filter(address__contains=q)
+    if 'search_by_master' in url:
+        id_q = url.find('q')
+        q1 = url[id_q + 2:]
+        q1 = q1.replace('%', '=')
+        b = quopri.decodestring(q1)
+        q1 = b.decode('UTF-8')
+        info = Orders.objects.filter(address__icontains=q).filter(master__icontains=q1).order_by('-date')
     return render(request, "homepage.html", {"info": info})
 
 def search_by_master(request):
-    info = Orders.objects.filter(master__contains=request.GET.get("q"))
+    url = request.META.get('HTTP_REFERER')
+    q = request.GET.get("q")
+    info = Orders.objects.filter(master__contains=q)
+    if 'search_by_address' in url:
+        id_q = url.find('q')
+        q1 = url[id_q + 2:]
+        q1 = q1.replace('%', '=')
+        b = quopri.decodestring(q1)
+        q1 = b.decode('UTF-8')
+        info = Orders.objects.filter(address__icontains=q1).filter(master__icontains=q).order_by('-date')    
     return render(request, "homepage.html", {"info": info})
 
 def orders_completed(request):
+    url = request.META.get('HTTP_REFERER')
     info = Orders.objects.filter(status__icontains='Выполнен').order_by('-date')
+    if 'q=' in url:
+        id_q = url.find('q')
+        q = url[id_q + 2:]
+        q = q.replace('%', '=')
+        b = quopri.decodestring(q)
+        q = b.decode('UTF-8')
+        if 'search_by_address' in url:
+            info = Orders.objects.filter(address__icontains=q).filter(status__icontains='Выполнен').order_by('-date')
+        elif 'search_by_master':
+            info = Orders.objects.filter(master__icontains=q).filter(status__icontains='Выполнен').order_by('-date')
     return render(request, "homepage.html", {"info": info})
 
 def orders_uncompleted(request):
+    url = request.META.get('HTTP_REFERER')
     info = Orders.objects.filter(status__icontains='В обработке').order_by('-date')
+    if 'q=' in url:
+        id_q = url.find('q')
+        q = url[id_q + 2:]
+        q = q.replace('%', '=')
+        b = quopri.decodestring(q)
+        q = b.decode('UTF-8')
+        if 'search_by_address' in url:
+            info = Orders.objects.filter(address__icontains=q).filter(status__icontains='В обработке').order_by('-date')
+        elif 'search_by_master':
+            info = Orders.objects.filter(master__icontains=q).filter(status__icontains='В обработке').order_by('-date')
     return render(request, "homepage.html", {"info": info})
     
 
