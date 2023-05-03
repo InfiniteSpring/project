@@ -1,0 +1,71 @@
+<!--{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+        <title>Логин</title>
+    </head>
+    <body>
+        <main>
+            <div class="circle"></div>
+            <div class="register-form-container">
+                <h1 class="form-title">Вход в аккаунт </h1>
+                <form method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="R4GCGrYDuXMOS514RCTn67bCiaR8cNtn7dx78knEcuXdOMgUoO7wYf7leahZoj52">
+                    <div class="form-fields">
+                        <div class="form-field">
+                            <input type="text" name="username" maxlength="255" required="" id="id_username" placeholder="username">
+                        </div>
+                        <div class="form-field">
+                            <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="password">
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button  type="submit" class="btn btn-primary">Войти</button>
+                    </div>
+                    <p class="text-center">Ещё нет аккаунта? <a href="/signup">Зарегистрироваться!</a></p>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="https://img.hhcdn.ru/employer-logo/4078732.jpeg" type="image/x-icon"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="D:\git\project\project\drholod\static\core\css\styles.css">
+    <title>Вход в аккаунт</title>
+  </head>
+  <main>
+    <div class="circle"></div>
+    <div class="register-form-container">
+      <h1 class="form-title">Вход в аккаунт</h1>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary">Войти</button>
+        </div>
+        <p class="text-center">
+          Ещё нет аккаунта? <a href="/signup">Зарегистрироваться!</a>
+        </p>
+      </form>
+    </div>
+  </main>
+</html>

@@ -1,0 +1,320 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.hhcdn.ru/employer-logo/4078732.jpeg" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="static/core/css/hstyle.css">
+    <title>ДОКТОР ХОЛОДА</title>
+</head>     
+    <body>
+        <aside>
+            <div class="page-logo"><img src="../drholod/core/static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" >
+                <ul>
+                    <a href="/logout" class="btn btn-warning">Выйти</a> 
+                </ul>
+            </div>
+            {%  if user.is_superuser %}
+            <ul><a href="/admin" class="btn btn-warning">Администрирование</a></ul>
+            {% endif %}
+            {% if perms.core.can_add_order %}
+            <div class="title-add">
+                <form method="POST" action="/create/">
+                  {% csrf_token %}
+                  <tr>
+                    <td>
+                      <input type="text" name="name" placeholder="Имя клиента" />
+                    </td>
+                    <td>
+                      <input type="text" name="address" list="address" placeholder="Адрес" />
+                      <datalist id="address">
+                            <option value="МО, Железнодорожный, ул. Некрасова, дом 2а"></option>
+                            <option value="МО, г.Балашиха, мкр. Кучино, ул. Центральная д26с3"></option>
+                            <option value="МО, г. Балашиха, мкрн. Железнодорожный, ул. Новая, д. 43"></option>
+                            <option value="Москва, ул. Тимирязевская, д. 11"></option>
+                            <option value="МО, г. Видное, пр-т Ленинского Комсомола, 46А/1"></option>
+                            <option value="МО г. Бронницы, Советская 54"></option>
+                            <option value="Москва, ул. Поляны, 8"></option>
+                            <option value="Москва, ул. Южнобутовская, 42"></option>
+                            <option value="Москва, Паромная 11/31"></option>
+                            <option value="Москва, Борисовский проезд 18 а"></option>
+                            <option value="Москва, Каширское шоссе 65 к3"></option>
+                            <option value="Москва, ул. Воронежская, 36"></option>
+                            <option value="Москва, ул. Бирюлевская, 51к1  "></option>
+                            <option value="Москва,  ул. Домодедовская, 42А"></option>
+                            <option value="Москва, ул. Грина, 32"></option>
+                            <option value="Москва, Пролетарский пр., вл. 30"></option>
+                            <option value="Москва, ул. Андропова, 22"></option>
+                            <option value="Москва, Каширское шоссе 26к2"></option> 
+                            <option value="Москва, Сиреневый б-р, 60"></option>
+                            <option value="Москва, ул. Первомайская, 51/26"></option>
+                            <option value="Москва, ул. Уральская, дом 5а"></option>
+                            <option value="Москва, ул. Большая Серпуховская, 31, к. 11"></option>
+                            <option value="Москва, ул. Большая Полянка, дом 30"></option>
+                            <option value="Москва, ул. Садовая-Кудринская, 7"></option>
+                            <option value="МО, г.Подольск, ул.Рабочая, 1"></option>
+                            <option value="МО, г.Подольск, ул.Заводская д. 7а"></option>
+                            <option value="МО, г.Подольск, ул. Академика Доллежаля 3с1"></option>
+                            <option value="МО, г. Химки, Совхозная 14"></option>
+                            <option value="Москва, Дмитровское шоссе 169 корпус 5"></option>
+                            <option value="МО, г. Долгопрудный, Ракетостроителей, д. 7, корп. 1"></option>
+                            <option value="МО, г. Химки, ул. Московская, 28/2"></option>
+                            <option value="МО, Химки, Юбилейный просп., 6А"></option>
+                            <option value="МО, г. Химки ул. Вороницына, 1к2"></option>
+                            <option value="Москва, ул. Наметкина, дом 13б"></option>
+                            <option value="Москва, Нахимовский проспект, дом 59 А"></option>
+                            <option value="Москва, пр-т. Севастопольский 18"></option>
+                            <option value="Москва, ул. Одесская, 16"></option>
+                            <option value="Москва, Чонгарский б-р, дом 19"></option>
+                            <option value="Москва, улица Академика Анохина, 56"></option>
+                            <option value="Москва, ул. Вернадского, 29"></option>
+                            <option value="Москва, улица Озерная, дом 18"></option>
+                            <option value="Москва, пр-т Новоясеневский, вл7"></option>
+                            <option value="Москва, улица Миклухо-Маклая, 36"></option>
+                            <option value="Москва, ул. Профсоюзная, д. 152, к. 2, стр. 2"></option>
+                            <option value="Москва, Обручева, 16с1"></option>
+                            <option value="Москва, Огородный проезд д. 10"></option>
+                            <option value="Москва, ул. Электродная, дом 2, стр. 32"></option>
+                            <option value="Москва, ул. Молостовых 3а"></option>
+                            <option value="Москва, ул. Народная, д. 4, стр. 2"></option>
+                            <option value="Москва, ул. Новослободская, д. 18"></option>
+                            <option value="Москва, Сущевский вал, 16с2"></option>
+                            <option value="Москва, Театральный проезд, дом 5/1"></option>
+                            <option value="Москва, г. Москва, ул. Кировоградская, дом 13 А"></option>
+                            <option value="Москва, г. Москва, ул. Каховка, 29А"></option>
+                            <option value="Москва, пос.Московский, Киевское ш., 23-й км, 1, ТЦ Саларис "></option>
+                            <option value="Москва, ул. Ленинская Слобода, 19, с. 7"></option>
+                            <option value="Москва, ул. Семеновская Большая, л.32 с13"></option>
+                            <option value="Москва, ул.Тагильская, д.4а"></option>
+                            <option value="МО, гор.округ Лосино-Петровский, раб. посёлок Свердловский, улица Строителей, 14, пом.4"></option>
+                            <option value="МО, г.Щелково, ул.Сиреневая, 9"></option>
+                            <option value="МО, Старая Купавна, ул. Кирова, 19"></option>
+                            <option value="МО, Ногинск, Рабочая ул., 20"></option>
+                            <option value="МО, д. Голубое, улица Трехсвятская, стр.3м"></option>
+                            <option value="МО, Орехово-Зуево, ул. Ленина, 50А"></option>
+                            <option value="МО, Орехово-Зуево, ул. Якова Флиера, 4"></option>
+                            <option value="МО, Ликино-Дулёво, ул. Ленина, 4/1, "></option>
+                            <option value="МО, г. Балашиха, пр-т Ленина, дом 21"></option>
+                            <option value="МО, г. Балашиха, ул. Свердлова, 16/5"></option>
+                            <option value="МО, г. Балашиха, Щёлковское ш., д. 141Б"></option>
+                            <option value="МО, г. Фрязино, ул. Октябрьская, 9"></option>
+                            <option value="Москва, ул. Павла Корчагина, 3с1"></option>
+                            <option value="Москва, ул. Аргуновская, д. 10, стр. 2"></option>
+                            <option value="МО, г. Лыткакрино, ул. Ленина, дом 3"></option>
+                            <option value="МО, г. Павловский Посад, ул. Герцена, 15"></option>
+                            <option value="МО, г Чехов, ул Московская, д. 45"></option>
+                            <option value="МО, г. Егорьевск, просп. Ленина, 3А"></option>
+                            <option value="Москва, ул. Юннатов, д.18, 1 эт"></option>
+                            <option value="МО, деревня Шевёлкино, База отдыха «Лесные поляны»"></option>
+                            <option value="гор.окр.Подольск, деревня Валищево, 7А стр5"></option>
+                            <option value="МО, г. Королев, ул. Фрунзе, 1В (БЦ «Орион»)"></option>
+                            <option value="МО, г. Королев, ул. Лесная, 20"></option>
+                            <option value="МО, г. Королев, ул.Дзержинского, д.23/2"></option>
+                            <option value="МО д. Мисайлово, Литературный б-р, д.7 "></option>
+                            <option value="Москва, ул. 1-я Машиностроения, д.10"></option>
+                            <option value="Москва, ул.Толбухина, д.8"></option>
+                            <option value="Москва, ул.Давыдковская, д.8к1"></option>
+                            <option value="Москва, ул. 2-й Кожуховский проезд 29к2с6"></option>
+                            <option value="Реутов, Юбилейный пр-т, д.2к1"></option>
+                            <option value="Реутов, Комсомольская, д.21к1"></option>
+                            <option value="Котельники, Сосновая, д.2к4"></option>
+                            <option value="МО, Кубинка, Колхозный пр., 5 "></option>
+                            <option value="Москва, Люблинская, д.59"></option>
+                            <option value="Братиславская, 22"></option>
+                            <option value="Новочеркасский бульвар, 13"></option>
+                            <option value="Пресненская набережная д.2"></option>
+                            <option value="Троицк, Сиреневый бульвар, 1Б"></option>
+                            <option value="МО, г. Дмитров, ул. Московская, 23а "></option>
+                            <option value="Коммунарка, ул. Александры Монаховой, 21, стр. 1"></option>
+                            <option value="Москва, ул. Ленинская Слобода, 19 Кофе"></option>
+                            <option value="Москва, Пресненская наб., 12 Кофе"></option>
+                            <option value="Москва, Олимпийский просп., 14 Кофе"></option>
+                            <option value="Москва, Головинское ш., 5, корп. 1 Кофе"></option>
+                            <option value="Москва, 2-я Брестская ул., 37, стр. 1"></option>
+                            <option value="Москва, ул. Украинский бульвар, дом 6"></option>
+                            <option value="Москва, Цветной бульвар, дом 2"></option>
+                            <option value="Москва, ш. Варшавское, д. 1А, помещ. 27/1"></option>
+                            <option value="Цветы Белая Дача"></option>
+                            <option value="Цветы Москва Волгина"></option>
+                            <option value="Цветы Железнодорожный Колхозная"></option>
+                            <option value="Цветы Томилино Гаршина"></option>
+                            <option value="Цветы Октябрьский Текстильщиков"></option>
+                            <option value="Цветы Люберцы Хлебозаводская"></option>
+                            <option value="Цветы Дзержинский Лесная"></option>
+                            <option value="Цветы Дзержинский Шама"></option>
+                            <option value="Бульвар академика Ландау дом 1"></option>
+                        </datalist>
+                    </td>
+                    <td>
+                      <input type="text" value="{{user.username}}" name="employee" placeholder="Сотрудник" />
+                    </td>
+                    <td>
+                        <input type="text" name="master" placeholder="Мастер">
+                    </td>
+                    <td>
+                        <input type="text" name="equipment" list="equipment" placeholder="Оборудование">
+                        <datalist id="equipment">
+                            <option value="Стол холодильный"></option>
+                            <option value="Стол морозильный"></option>
+                            <option value="Низкотемпературная с/с (моноблок)"></option>
+                            <option value="Среднетемпературнаяс с/с (моноблок)"></option>
+                            <option value="Линия начинения"></option>
+                            <option value="Стол морозильный"></option>
+                            <option value="Шкаф холодильный"></option>
+                            <option value="Шкаф морозильный"></option>
+                            <option value="Витрина холодильная"></option>
+                            <option value="Горка холодильная"></option>
+                            <option value="Ларь морозильный"></option>
+                            <option value="Камера холодильная"></option>
+                            <option value="Лёдогенератор"></option>
+                            <option value="Холодильник кофемашины"></option>
+                            <option value="Кондиционер настенный"></option>
+                            <option value="Кондиционер кассетный"></option>
+                            <option value="Кондиционер иное"></option>
+                            <option value="Вытяжка"></option>                            
+                        </datalist>
+                    </td>
+                    <td>
+                        <input type="text" name="breaking" list="breaking" placeholder="Поломка">
+                        <datalist id="breaking">
+                            <option value="Поломка">
+                            <option value="Высокая температура">
+                            <option value="Выдает ошибку">
+                            <option value="Течет вода">
+                            <option value="Посторонний шум">
+                            <option value="Моргает контроллер">
+                            <option value="Не(плохо) открывается дверь">
+                            <option value="Порван уплотнитель">
+                            <option value="Отвалилась дверь">
+                            <option value="Требуется ТО">
+                            <option value="Замена ручки">
+                            <option value="Нужна шторка">
+                            <option value="Не горит свет">
+                            <option value="Перемерзает">
+                            <option value="Образовался лёд">
+                            <option value="Не включается">
+                            <option value="Не работает">
+                            <option value="Проводка">
+                            <option value="Жалоба РПН">
+                            <option value="Выбивает автомат">
+                        </datalist>
+                    </td>
+                    <td>
+                        <input type="text" name="status" list="status" placeholder="Статус">
+                        <datalist id="status">
+                            <option value="Срочное">
+                            <option value="Текущее">
+                            <option value="В обработке">
+                        </datalist>
+                           <td>
+                            <input type="date" name="date" placeholder="Дата" />
+                           </td>
+                           <td>
+                            <input type="text" name="note" placeholder="Примечания" />
+                           </td>
+                           <td>
+                            <input type="submit" value="Добавить" class="butt" />
+                           </td>
+                    </td>
+                  </tr>
+                </form>
+            </div>
+            {% endif %}
+            <div class="fio-on-page"> {{user.username}} </div>
+        </aside>
+        <main>
+            <div class="table-form">                
+                {% if info.count > -1 %}
+                <table>
+                    <thead class="alert alert-warning">
+                        <tr class="alert-tr">
+                            <th class='num1'>№</th>
+                            <th class='name1'>Имя</th>
+                            <th class='address1'>                            
+                                <div class="search_address">
+                                    <form action="{% url 'search_by_address' %}" method="get" class="d-flex editContent">
+                                        <input type="search" placeholder="Адрес" name="q" class="form-control" required="">
+                                        <button type="submit" class="btn1 btn">
+                                            <span class="fa fa-search" aria-hidden="true"></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </th>
+                            <th class='employee1'>Сотрудник</th>
+                            <th class='master1'>                            
+                                <div class="search_master">
+                                    <form action="{% url 'search_by_master' %}" method="get" class="d-flex editContent">
+                                        <input type="search" placeholder="Мастер" name="q" class="form-control" required="">
+                                        <button type="submit" class="btn1 btn">
+                                            <span class="fa fa-search" aria-hidden="true"></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </th>
+                            <th class='equipment1'>Оборудование</th>
+                            <th class='breaking1'>Поломка</th>
+                            <th class='status1'>Статус 
+                                <a href='/completed_orders' type="submit" class="btn2">Выполнен</a>
+                                <a href="/uncompleted_orders" class="btn2">В обработке</a></th>
+                            <th class='date1'>Дата</th>
+                            <th class='note1'>Примечания</th>
+                            <th class='clean1'>
+                                <a href="/" class="but1">Очистить</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    {% for inf in info %}
+                    <tr class="alert alert-warning">
+                        <td class='num1'>{{ inf.id }}</td>
+                        <td class='name1'>{{ inf.name }}</td><td class='address1'>{{ inf.address }}</td>
+                        <td class='employee1'>{{ inf.employee }}</td><td class='master1'>{{ inf.master }}</td>
+                        <td class='equipment1'>{{ inf.equipment }}</td>
+                        <td class='breaking1'>{{ inf.breaking }}</td><td class='status1'>{{ inf.status }}</td>
+                        <td class='date1'>{{ inf.date }}</td><td class='note1'>{{ inf.note }}</td>
+                        {% if perms.core.can_edit_order %}
+                        <!--ПОМЕНЯТЬ ССЫЛКИ-->
+                        <td class='clean1'><a href="http://127.0.0.1:8000/edit/{{inf.id}}" class="redacte">Изменить</a> 
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+            </div>
+        </main>
+        <!--<div id="popup_red" class="popup">
+            <div class="popup_body">
+                <div class="popup_content">
+                    <a href="" class="popup_close">&times;</a> 
+                    <div class="popup_title">Редактирование</div> 
+                    <div class="popup_action">
+                        <form method="POST" action="#popup_red/{{inf.id}}">
+                            {% csrf_token %}
+                            <p>
+                                <input type="text" name="name" value="{{inf.name}}" placeholder="Имя клиента"/>
+                            </p> <p>
+                                <input type="text" name="address" value="{{inf.address}}" placeholder="Адрес"/>
+                            </p> <p>
+                                <input type="text" name="employee" value="{{inf.employee}}" placeholder="Сотрудник"/>
+                            </p><p>
+                                <input type="text" name="equipment" value="{{inf.equipment}}" placeholder="Оборудование"/>
+                            </p> <p>
+                                <input type="text" name="breaking" value="{{inf.breaking}}" placeholder="Поломка"/>
+                            </p><p>
+                                <input type="text" name="status" value="{{inf.status}}" placeholder="Статус"/>
+                            </p><p>
+                                <input type="date" name="date" value="{{inf.date}}" placeholder="Дата"/>
+                            </p><p>
+                                <input type="text" name="note" value="{{inf.note}}" placeholder="Примечания"/>
+                            </p>
+                            <a type="submit" href="{{inf.id}}" class="butt">Сохранить</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </body>
+</html>

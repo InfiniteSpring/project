@@ -1,0 +1,89 @@
+<!--{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+		<title>Регистрация</title>
+	</head>
+	<body>
+		<main>
+			<div class="circle"></div>
+			<div class="register-form-container">
+				<form method="post">
+					{% csrf_token %}
+					<input type="hidden" name="csrfmiddlewaretoken" value="LB5nxpIvF6KP5AyRxLQXicGIOshN7OhG5M4EQXM8lQBFQaVq8Nm8mxvErX9x0N2K">
+					<h1 class="form-title">Регистрация</h1>
+					<div class="form-fields">
+						<div class="form-field">
+							<label for="id_username"></label>
+							<input type="text" name="username" maxlength="255" autofocus="" class="form-control" placeholder="Имя пользователя" required="" id="id_username">
+						</div>
+						<div class="form-field">
+							<label for="id_fio"></label>
+							<input type="text" name="fio" maxlength="255" class="form-control" placeholder="ФИО сотрудника" required="" id="id_fio">
+						</div>
+						<div class="form-field">
+							<label for="id_email"></label>
+							<input type="email" name="email" maxlength="254" class="form-control" placeholder="Электронная почта" required="" id="id_email">
+						</div>
+						<div class="form-field">
+							<label for="id_password1"></label>
+							<input type="password" name="password1" autocomplete="new-password" class="form-control" placeholder="Пароль" required="" id="id_password1">
+						</div>
+						<div class="form-field">
+							<label for="id_password2"></label>
+							<input type="password" name="password2" autocomplete="new-password" class="form-control" placeholder="Подтверждение пароля" required="" id="id_password2">
+						</div>
+						<div class="selection-group">
+							<label for="id_groups">Позиция:</label>
+							<select name="groups" class="form-control" placeholder="Позиция" required="" id="id_groups">
+								<option value="" selected="">Бухгалтер или Менеджер</option>
+								<option value="1">Менеджер</option>
+								<option value="2">Бухгалтер</option>
+							</select>
+						</div>
+						<div class="form-buttons">
+							<input name="Зарегистрироваться" type="submit" value="Зарегистрироваться" class="btn btn-primary">
+						</div>
+					</div>
+					<p class="text-center">Уже есть аккаунт? <a href="/login">Войти!</a></p>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="https://img.hhcdn.ru/employer-logo/4078732.jpeg" type="image/x-icon"/>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="static/core/css/styles.css">
+	<title>Регистрация</title>
+</head>
+	<main>
+		<div class="circle"></div>
+		<div class="register-form-container">
+			<h1 class="form-title">Регистрация</h1>
+			<form method="post">
+					{% csrf_token %}
+					{{ form.as_p }}
+				<div class="form-buttons">
+					<input name='Зарегистрироваться' type='submit' value="Зарегистрироваться" class="btn btn-primary"></input>
+				</div>
+				<p class="text-center">Уже есть аккаунт? <a href="/login">Войти!</a></p>
+			</form>
+		</div>
+	</main>
+</html>

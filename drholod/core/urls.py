@@ -6,6 +6,8 @@ from .views import SignUpView, LoginView
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
+    path('master/', views.master, name='master'),
+    #path('orderpdf/', views.orderpdf, name='orderpdf'),
     path('create/', views.create),
     path('edit/<int:id>/', views.edit),
     path('delete/<int:id>', views.delete),

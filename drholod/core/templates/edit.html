@@ -75,13 +75,24 @@
             </datalist>
         </td>
         <td>
-            <input type="text" name="status" list="status" placeholder="Статус" value="{{info.status}}"/>
+            <input type="text" onfocus="this.value=''" name="status" list="status" placeholder="Статус" value="{{info.status}}"/>
             <datalist id="status">
                 <option value="В обработке">
                 <option value="Выполнен">
             </datalist>
                <td>
-                <input type="date" name="date" placeholder="Дата" value="{{info.date}}"/>
+                <input type="text" onfocus="this.value=''" name="date" placeholder="Дата(YYYY-MM-DD)" required="" value="{{info.date}}"/>
+                <data>
+                  <instance id="orderDc"
+                            class="com.company.sales.entity.Order"
+                            view="_local">
+                      <loader/>
+                  </instance>
+              </data>
+              <layout>
+                  <dateField dataContainer="orderDc"
+                             property="date"/>
+              </layout>
                </td>
                <td>
                 <input type="text" name="note" placeholder="Примечания" value="{{info.note}}"/>

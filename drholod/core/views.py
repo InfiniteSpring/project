@@ -18,7 +18,8 @@ from django.views.generic import ListView
 from .forms import OrderForm
 from django.db.models import Q
 import quopri
-
+from reportlab.pdfgen import canvas 
+from django.http import HttpResponse 
 from .tokens import account_activation_token
 
 
@@ -35,13 +36,11 @@ def activate(request, uidb64, token):
         user.save()
 
         messages.success(request, "Администратор подтвердил регистрацию. Теперь войдите в ваш аккаунт.")
-        return redirect('login')
     else:
         messages.error(request, "Аккаунт не был подтверждён.")
 
     return redirect('homepage')
-
-def activateEmail(request, user, to_email):
+def activateEmail(request, user):
     mail_subject = "Activate user account."
     message = render_to_string("core/template_activate_account.html", {
         'user': user,
@@ -50,15 +49,30 @@ def activateEmail(request, user, to_email):
         'token': account_activation_token.make_token(user),
         "protocol": 'https' if request.is_secure() else 'http'
     })
-    email = EmailMessage(mail_subject, message, to=['den1ssapon4ik@gmail.com'])
+    email = EmailMessage(mail_subject, message, to=['yankovaim@yandex.ru'])
     if email.send():
         messages.success(request, f'Уважаемый {user.username}. Ваш аккаунт необходимо верифицировать. Дождитесь подтверждения от администратора, а затем войдите.')
 
 @login_required(login_url='/login/')
 def homepage(request):
-    info = Orders.objects.order_by('status', '-date')    
+    info = Orders.objects.exclude(status__icontains='Выполнен').order_by('-date')    
     return render(request, "homepage.html", {"info": info})
- 
+
+
+def master(request):
+    return render(request, "master.html")
+
+def orderpdf(request): #pip install reportlab
+
+    response = HttpResponse(content_type='application/pdf') 
+    response['Content-Disposition'] = 'attachment; filename="file.pdf"' #добавить id заказа в название
+    p = canvas.Canvas(response)
+    p.setFont("Times-Roman", 55) 
+    p.drawString(100,700, "Hello, Javatpoint.") 
+    p.showPage() 
+    p.save() 
+    return response 
+
 
 def search_by_address(request):
     url = request.META.get('HTTP_REFERER')
@@ -72,7 +86,6 @@ def search_by_address(request):
         q1 = b.decode('UTF-8')
         info = Orders.objects.filter(address__icontains=q).filter(master__icontains=q1).order_by('-date')
     return render(request, "homepage.html", {"info": info})
-
 def search_by_master(request):
     url = request.META.get('HTTP_REFERER')
     q = request.GET.get("q")
@@ -85,7 +98,6 @@ def search_by_master(request):
         q1 = b.decode('UTF-8')
         info = Orders.objects.filter(address__icontains=q1).filter(master__icontains=q).order_by('-date')    
     return render(request, "homepage.html", {"info": info})
-
 def orders_completed(request):
     url = request.META.get('HTTP_REFERER')
     info = Orders.objects.filter(status__icontains='Выполнен').order_by('-date')
@@ -100,10 +112,9 @@ def orders_completed(request):
         elif 'search_by_master':
             info = Orders.objects.filter(master__icontains=q).filter(status__icontains='Выполнен').order_by('-date')
     return render(request, "homepage.html", {"info": info})
-
 def orders_uncompleted(request):
     url = request.META.get('HTTP_REFERER')
-    info = Orders.objects.filter(status__icontains='В обработке').order_by('-date')
+    info = Orders.objects.exclude(status__icontains='Выполнен').order_by('-date')
     if 'q=' in url:
         id_q = url.find('q')
         q = url[id_q + 2:]
@@ -111,11 +122,10 @@ def orders_uncompleted(request):
         b = quopri.decodestring(q)
         q = b.decode('UTF-8')
         if 'search_by_address' in url:
-            info = Orders.objects.filter(address__icontains=q).filter(status__icontains='В обработке').order_by('-date')
+            info = Orders.objects.filter(address__icontains=q).exclude(status__icontains='Выполнен').order_by('-date')
         elif 'search_by_master':
-            info = Orders.objects.filter(master__icontains=q).filter(status__icontains='В обработке').order_by('-date')
+            info = Orders.objects.filter(master__icontains=q).exclude(status__icontains='Выполнен').order_by('-date')
     return render(request, "homepage.html", {"info": info})
-    
 
 #сохранение данных в бд
 def create(request):
@@ -132,7 +142,6 @@ def create(request):
         info.note = request.POST.get("note")
         info.save()
     return HttpResponseRedirect("/")
-
 # изменение данных в бд
 def edit(request, id):    
     '''template = 'edit.html'
@@ -163,17 +172,16 @@ def edit(request, id):
             return render(request, "edit.html", {"info": info})
     except Orders.DoesNotExist:
         return HttpResponseNotFound("<h2>Order not found</h2>")
-
 # удаление данных из бд
 def delete(request, id):
     try:
+        url = request.META.get('HTTP_REFERER') 
         info = Orders.objects.get(id=id)
-        info.delete()
-        url = request.META.get('HTTP_REFERER')       
-        if 'search_by_address' or 'search_by_master' in url:
-            return HttpResponseRedirect(url)
-        else:
-            return HttpResponseRedirect("/")
+        info.delete()      
+#        if 'search_by_address' in url or 'search_by_master' in url:
+#            return HttpResponseRedirect(url)
+ #       else:
+        return HttpResponseRedirect('/')
     except Orders.DoesNotExist:
         return HttpResponseNotFound("<h2>Orders not found</h2>")
 
@@ -190,18 +198,15 @@ class SignUpView(CreateView):
             user.save()
             user_group = Group.objects.get(name=form.cleaned_data['groups'])
             user.groups.add(user_group)
-            activateEmail(request, user, form.cleaned_data.get('email'))
+            activateEmail(request, user)
 
-            return redirect('homepage')
+            return redirect('/login/')
         else:
             return render(request, self.template_name, {'form' : form })
-
-
 class LoginView(auth_views.LoginView):
     form_class = LoginForm
     template_name = 'core/login.html'
-    redirect_field_name = 'homepage'
-
+    redirect_field_name = '../'
 
 def logout_view(request):
     logout(request)

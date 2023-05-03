@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #e3e5f1;
+  }
+  main {                                                                                                    
+    background: #F1F5FE;
+    height: 100vh;
+        display: flex;
+        flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}                                               
+  aside {
+    z-index: 2;
+    position: fixed;
+    border-bottom: 1px solid rgb(24, 24, 24);
+    float: left;
+    background: #dcccb3;
+    width: 100vw;
+    padding-bottom: 0.5%;
+    height: 14vh;
+    color: black;
+  }
+  .page-logo {
+    margin-top: 8px;
+  }
+  aside img {
+    margin-left: 20px;
+    width: 140px;
+    float: left;
+  }
+  aside ul {
+    float: right;
+    margin-right: 2.2vw;
+    padding-left: 10px;
+  }
+  aside ul li {
+    float: right;
+    z-index: 4;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    display: block;
+    color: #3a4554;
+    transition: transform 0.14s ease;
+  }
+  aside ul li:hover,
+  aside ul a:hover {
+    color: rgb(142, 195, 242);
+    text-decoration: none;
+    transform: scale(1.05);
+  }
+  .btn {
+    background: rgb(142, 195, 242);
+    height: auto;
+    width: auto;
+    border: none;
+    border: 1px solid #444444;
+    transition: transform .14s ease;
+  }
+.btn:hover {
+    transform: scale(1.05);
+    background: rgb(52, 52, 52);
+    color: rgb(114, 177, 231);
+    text-decoration: none;
+  }
+.conteiner{
+    width: 80%;
+}
+.btn-warning {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    height: 35px;
+    width: 100%;
+    background: rgb(114, 177, 231);
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    border: #fff;
+}
+input {
+    height: 45px;
+    width: 100%;
+    color: #385983;
+    font-size: 14px;
+    line-height: 16px;
+    border: 2px solid #E9F2FF;
+    border-radius: 5px;
+    padding-left: 25px;
+}

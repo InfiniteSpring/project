@@ -16,7 +16,7 @@ class Orders(models.Model):
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
-        permissions = (("can_delete_order", "Удаление заказа"), ("can_edit_order", "Редактирование заказа"), ("can_add_order", "Добавление заказа"),)
+        permissions = (("can_delete_order", "Удаление заказа"), ("can_edit_order", "Редактирование заказа"), ("can_add_order", "Добавление заказа"), ("Master", "Страница для мастера"),)
 
     name = models.CharField('Имя клиента', max_length= 50, default= '')
     address = models.CharField('Адресс', max_length= 50)
@@ -24,7 +24,7 @@ class Orders(models.Model):
     equipment = models.CharField('Оборудование', max_length = 45, default= '')
     breaking = models.CharField('Поломка', max_length= 45, default= '')
     status = models.CharField('Статус', max_length= 45, default= '')
-    date = models.DateField('Дата')
+    date = models.DateField('Дата')  
     note = models.CharField('Примечания', max_length= 250, default= '')
     master = models.CharField('Мастер', max_length=100, default='')
 

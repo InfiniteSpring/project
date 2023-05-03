@@ -1,0 +1,91 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.hhcdn.ru/employer-logo/4078732.jpeg" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="{% static 'core/css/master.css' %}">
+    <title>ДОКТОР ХОЛОДА</title>
+</head>     
+    <body>
+        <aside>
+            <div class="page-logo"><img src="../static/core/images/logo1.png" alt="ДОКТОР ХОЛОДА" >
+                <ul>
+                    <a href="/logout" class="btn btn-warning">Выйти</a> 
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <div class="conteiner">
+                    <input class="info" type="text"/>
+                    <input class="info" type="text"/>
+                    <input class="info" type="text"/>
+                    <input class="info" type="text"/>
+                    <input class="info" type="text"/>
+                    <input class="info" type="text"/>
+                    <div class="CanvasContainer">
+                        <canvas id="drawingCanvas" width=300 style="background-color:#eee; align-items: center;"></canvas>
+                        <script type="text/javascript" src="{% static 'core/js/esign.js' %}"></script>
+                    </div>
+                    <div class="Toolbar">
+                        - Операции-<br>
+                        <button onclick="saveCanvas()">Сохранить содержимое Canvas</button>
+                        <button onclick="clearCanvas()">Очистить Canvas</button>
+                        <div id="savedCopyContainer">
+                           <img id="savedImageCopy"><br>
+                           Щелкните правой кнопкой мыши для сохранения ...
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- <canvas id="esign" width=300 style="background-color:#eee; align-items: center;"></canvas> -->
+                                                   
+                    
+                    <!-- <script>
+                        var canvas = document.getElementById("esign"), 
+                            context = canvas.getContext("2d"),
+                            w = canvas.width,
+                            h=canvas.height;
+                            
+                        var mouse = { x:0, y:0};
+                        var draw = false;
+                        
+                        canvas.addEventListener("mousedown", function(e){
+                            
+                            mouse.x = e.pageX - this.offsetLeft;
+                            mouse.y = e.pageY - this.offsetTop;
+                            draw = true;
+                            context.beginPath();
+                            context.moveTo(mouse.x, mouse.y);
+                        });
+                        canvas.addEventListener("mousemove", function(e){
+                            
+                            if(draw==true){
+                            
+                                mouse.x = e.pageX - this.offsetLeft;
+                                mouse.y = e.pageY - this.offsetTop;
+                                context.lineTo(mouse.x, mouse.y);
+                                context.stroke();
+                            }
+                        });
+                        canvas.addEventListener("mouseup", function(e){
+                            
+                            mouse.x = e.pageX - this.offsetLeft;
+                            mouse.y = e.pageY - this.offsetTop;
+                            context.lineTo(mouse.x, mouse.y);
+                            context.stroke();
+                            context.closePath();
+                            draw = false;
+                        });
+                    </script> -->
+
+
+                    <!-- <button class="btn btn-warning">Закрыть заказ</button> -->
+                    <!-- <a href="\orderpdf" class="btn btn-warning">Закрыть заказ</a> -->
+            </div>
+        </main>
+</html>

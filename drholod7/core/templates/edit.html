@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ДОКТОР ХОЛОДА</title>
+    <link rel="icon" href="https://img.hhcdn.ru/employer-logo/4078732.jpeg" type="image/x-icon"/>
+    <link rel="stylesheet" href="static/core/css/estyle.css">
+</head>
+<body>
+  <div class="container">
+    <a href='/'>Вернуться</a>
+    <h5>Редактирование заказа</h5>
+    <form method="POST">
+      {% csrf_token %}
+      <tr>
+        <td>
+          <input type="text" onfocus="this.value=''" name="name" placeholder="Имя клиента" value="{{info.name}}"/>
+        </td>
+        <td>
+          <input type="text" onfocus="this.value=''" name="address" list="address" placeholder="Адрес" value="{{info.address}}"/>
+          <datalist id="address">
+                            <option value="МО, Железнодорожный, ул. Некрасова, дом 2а"></option>
+                            <option value="МО, г.Балашиха, мкр. Кучино, ул. Центральная д26с3"></option>
+                            <option value="МО, г. Балашиха, мкрн. Железнодорожный, ул. Новая, д. 43"></option>
+                            <option value="Москва, ул. Тимирязевская, д. 11"></option>
+                            <option value="МО, г. Видное, пр-т Ленинского Комсомола, 46А/1"></option>
+                            <option value="МО г. Бронницы, Советская 54"></option>
+                            <option value="Москва, ул. Поляны, 8"></option>
+                            <option value="Москва, ул. Южнобутовская, 42"></option>
+                            <option value="Москва, Паромная 11/31"></option>
+                            <option value="Москва, Борисовский проезд 18 а"></option>
+                            <option value="Москва, Каширское шоссе 65 к3"></option>
+                            <option value="Москва, ул. Воронежская, 36"></option>
+                            <option value="Москва, ул. Бирюлевская, 51к1  "></option>
+                            <option value="Москва,  ул. Домодедовская, 42А"></option>
+                            <option value="Москва, ул. Грина, 32"></option>
+                            <option value="Москва, Пролетарский пр., вл. 30"></option>
+                            <option value="Москва, ул. Андропова, 22"></option>
+                            <option value="Москва, Каширское шоссе 26к2"></option> 
+                            <option value="Москва, Сиреневый б-р, 60"></option>
+                            <option value="Москва, ул. Первомайская, 51/26"></option>
+                            <option value="Москва, ул. Уральская, дом 5а"></option>
+                            <option value="Москва, ул. Большая Серпуховская, 31, к. 11"></option>
+                            <option value="Москва, ул. Большая Полянка, дом 30"></option>
+                            <option value="Москва, ул. Садовая-Кудринская, 7"></option>
+                            <option value="МО, г.Подольск, ул.Рабочая, 1"></option>
+                            <option value="МО, г.Подольск, ул.Заводская д. 7а"></option>
+                            <option value="МО, г.Подольск, ул. Академика Доллежаля 3с1"></option>
+                            <option value="МО, г. Химки, Совхозная 14"></option>
+                            <option value="Москва, Дмитровское шоссе 169 корпус 5"></option>
+                            <option value="МО, г. Долгопрудный, Ракетостроителей, д. 7, корп. 1"></option>
+                            <option value="МО, г. Химки, ул. Московская, 28/2"></option>
+                            <option value="МО, Химки, Юбилейный просп., 6А"></option>
+                            <option value="МО, г. Химки ул. Вороницына, 1к2"></option>
+                            <option value="Москва, ул. Наметкина, дом 13б"></option>
+                            <option value="Москва, Нахимовский проспект, дом 59 А"></option>
+                            <option value="Москва, пр-т. Севастопольский 18"></option>
+                            <option value="Москва, ул. Одесская, 16"></option>
+                            <option value="Москва, Чонгарский б-р, дом 19"></option>
+                            <option value="Москва, улица Академика Анохина, 56"></option>
+                            <option value="Москва, ул. Вернадского, 29"></option>
+                            <option value="Москва, улица Озерная, дом 18"></option>
+                            <option value="Москва, пр-т Новоясеневский, вл7"></option>
+                            <option value="Москва, улица Миклухо-Маклая, 36"></option>
+                            <option value="Москва, ул. Профсоюзная, д. 152, к. 2, стр. 2"></option>
+                            <option value="Москва, Обручева, 16с1"></option>
+                            <option value="Москва, Огородный проезд д. 10"></option>
+                            <option value="Москва, ул. Электродная, дом 2, стр. 32"></option>
+                            <option value="Москва, ул. Молостовых 3а"></option>
+                            <option value="Москва, ул. Народная, д. 4, стр. 2"></option>
+                            <option value="Москва, ул. Новослободская, д. 18"></option>
+                            <option value="Москва, Сущевский вал, 16с2"></option>
+                            <option value="Москва, Театральный проезд, дом 5/1"></option>
+                            <option value="Москва, г. Москва, ул. Кировоградская, дом 13 А"></option>
+                            <option value="Москва, г. Москва, ул. Каховка, 29А"></option>
+                            <option value="Москва, пос.Московский, Киевское ш., 23-й км, 1, ТЦ Саларис "></option>
+                            <option value="Москва, ул. Ленинская Слобода, 19, с. 7"></option>
+                            <option value="Москва, ул. Семеновская Большая, л.32 с13"></option>
+                            <option value="Москва, ул.Тагильская, д.4а"></option>
+                            <option value="МО, гор.округ Лосино-Петровский, раб. посёлок Свердловский, улица Строителей, 14, пом.4"></option>
+                            <option value="МО, г.Щелково, ул.Сиреневая, 9"></option>
+                            <option value="МО, Старая Купавна, ул. Кирова, 19"></option>
+                            <option value="МО, Ногинск, Рабочая ул., 20"></option>
+                            <option value="МО, д. Голубое, улица Трехсвятская, стр.3м"></option>
+                            <option value="МО, Орехово-Зуево, ул. Ленина, 50А"></option>
+                            <option value="МО, Орехово-Зуево, ул. Якова Флиера, 4"></option>
+                            <option value="МО, Ликино-Дулёво, ул. Ленина, 4/1, "></option>
+                            <option value="МО, г. Балашиха, пр-т Ленина, дом 21"></option>
+                            <option value="МО, г. Балашиха, ул. Свердлова, 16/5"></option>
+                            <option value="МО, г. Балашиха, Щёлковское ш., д. 141Б"></option>
+                            <option value="МО, г. Фрязино, ул. Октябрьская, 9"></option>
+                            <option value="Москва, ул. Павла Корчагина, 3с1"></option>
+                            <option value="Москва, ул. Аргуновская, д. 10, стр. 2"></option>
+                            <option value="МО, г. Лыткакрино, ул. Ленина, дом 3"></option>
+                            <option value="МО, г. Павловский Посад, ул. Герцена, 15"></option>
+                            <option value="МО, г Чехов, ул Московская, д. 45"></option>
+                            <option value="МО, г. Егорьевск, просп. Ленина, 3А"></option>
+                            <option value="Москва, ул. Юннатов, д.18, 1 эт"></option>
+                            <option value="МО, деревня Шевёлкино, База отдыха «Лесные поляны»"></option>
+                            <option value="гор.окр.Подольск, деревня Валищево, 7А стр5"></option>
+                            <option value="МО, г. Королев, ул. Фрунзе, 1В (БЦ «Орион»)"></option>
+                            <option value="МО, г. Королев, ул. Лесная, 20"></option>
+                            <option value="МО, г. Королев, ул.Дзержинского, д.23/2"></option>
+                            <option value="МО д. Мисайлово, Литературный б-р, д.7 "></option>
+                            <option value="Москва, ул. 1-я Машиностроения, д.10"></option>
+                            <option value="Москва, ул.Толбухина, д.8"></option>
+                            <option value="Москва, ул.Давыдковская, д.8к1"></option>
+                            <option value="Москва, ул. 2-й Кожуховский проезд 29к2с6"></option>
+                            <option value="Реутов, Юбилейный пр-т, д.2к1"></option>
+                            <option value="Реутов, Комсомольская, д.21к1"></option>
+                            <option value="Котельники, Сосновая, д.2к4"></option>
+                            <option value="МО, Кубинка, Колхозный пр., 5 "></option>
+                            <option value="Москва, Люблинская, д.59"></option>
+                            <option value="Братиславская, 22"></option>
+                            <option value="Новочеркасский бульвар, 13"></option>
+                            <option value="Пресненская набережная д.2"></option>
+                            <option value="Троицк, Сиреневый бульвар, 1Б"></option>
+                            <option value="МО, г. Дмитров, ул. Московская, 23а "></option>
+                            <option value="Коммунарка, ул. Александры Монаховой, 21, стр. 1"></option>
+                            <option value="Москва, ул. Ленинская Слобода, 19 Кофе"></option>
+                            <option value="Москва, Пресненская наб., 12 Кофе"></option>
+                            <option value="Москва, Олимпийский просп., 14 Кофе"></option>
+                            <option value="Москва, Головинское ш., 5, корп. 1 Кофе"></option>
+                            <option value="Москва, 2-я Брестская ул., 37, стр. 1"></option>
+                            <option value="Москва, ул. Украинский бульвар, дом 6"></option>
+                            <option value="Москва, Цветной бульвар, дом 2"></option>
+                            <option value="Москва, ш. Варшавское, д. 1А, помещ. 27/1"></option>
+                            <option value="Цветы Белая Дача"></option>
+                            <option value="Цветы Москва Волгина"></option>
+                            <option value="Цветы Железнодорожный Колхозная"></option>
+                            <option value="Цветы Томилино Гаршина"></option>
+                            <option value="Цветы Октябрьский Текстильщиков"></option>
+                            <option value="Цветы Люберцы Хлебозаводская"></option>
+                            <option value="Цветы Дзержинский Лесная"></option>
+                            <option value="Цветы Дзержинский Шама"></option>
+                            <option value="Бульвар академика Ландау дом 1"></option>
+                        </datalist>
+        </td>
+        <td>
+          <input type="text" onfocus="this.value=''" name="employee" placeholder="Сотрудник" value="{{info.employee}}"/>
+        </td>
+        <td>
+            <input type="text" onfocus="this.value=''" name="master" placeholder="Мастер" value="{{info.master}}"/>
+        </td>
+        <td>
+            <input type="text" onfocus="this.value=''" name="equipment" list="equipment" placeholder="Оборудование" value="{{info.equipment}}"/>
+            <datalist id="equipment">
+                <option value="Стол холодильный">
+                <option value="Стол морозильный">
+                <option value="Низкотемпературная с/с (моноблок)">
+                <option value="Среднетемпературнаяс с/с (моноблок)">
+                <option value="Линия начинения">
+                <option value="Стол морозильный">
+                <option value="Шкаф холодильный">
+                <option value="Шкаф морозильный">
+                <option value="Витрина холодильная">
+                <option value="Горка холодильная">
+                <option value="Ларь морозильный">
+                <option value="Камера холодильная">
+                <option value="Лёдогенератор">
+                <option value="Холодильник кофемашины">
+                <option value="Кондиционер настенный">
+                <option value="Кондиционер кассетный">
+                <option value="Кондиционер иное">
+                <option value="Вытяжка">                             
+            </datalist>
+        </td>
+        <td>
+            <input type="text" onfocus="this.value=''" name="breaking" list="breaking" placeholder="Поломка" value="{{info.breaking}}"/>
+            <datalist id="breaking">
+                <option value="Поломка">
+                <option value="Высокая температура">
+                <option value="Выдает ошибку">
+                <option value="Течет вода">
+                <option value="Посторонний шум">
+                <option value="Моргает контроллер">
+                <option value="Не(плохо) открывается дверь">
+                <option value="Порван уплотнитель">
+                <option value="Отвалилась дверь">
+                <option value="Требуется ТО">
+                <option value="Замена ручки">
+                <option value="Нужна шторка">
+                <option value="Не горит свет">
+                <option value="Перемерзает">
+                <option value="Образовался лёд">
+                <option value="Не включается">
+                <option value="Не работает">
+                <option value="Проводка">
+                <option value="Жалоба РПН">
+                <option value="Выбивает автомат">
+            </datalist>
+        </td>
+        <td>
+            <input type="text" onfocus="this.value=''" name="status" list="status" placeholder="Статус" value="{{info.status}}"/>
+            <datalist id="status">
+                <option value="Срочное">
+                <option value="Текущее">
+                <option value="В обработке">
+                <option value="Выполнен">
+            </datalist>
+               <td>
+                <input type="date" name="date" required="" value="{{info.date}}"/>
+               </td>
+               <td>
+                <input type="text" onfocus="this.value=''" name="note" placeholder="Примечания" value="{{info.note}}"/>
+               </td>
+               <td>
+                <input type="submit" value="Сохранить" class="butt" />
+               </td>
+        </td>
+      </tr>
+    </form>
+  </div>
+</body>
+</html>
