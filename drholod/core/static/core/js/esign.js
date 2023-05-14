@@ -1,6 +1,16 @@
 var canvas;
 var context;
 
+//const addBlock = document.querySelector('.addBlock');
+//var block_number = 2;
+//addBlock.onclick = () => {
+//	const createBlock = document.createElement('div');
+//	createBlock.className = 'block' + block_number;
+//	block_number++;
+//
+//	addBlock.insertAdjacentElement('brforbegin', createBlock);
+//}
+
 window.onload = function() {
       canvas = document.getElementById("drawingCanvas");
       context = canvas.getContext("2d");
@@ -52,7 +62,11 @@ function saveCanvas() {
 	imageCopy.src = canvas.toDataURL();
 	
 	// Показываем элемент <div>, делая изображение видимым
-	// делая изображение видимым
+	// делая изображение видимы
 	var imageContainer = document.getElementById("savedCopyContainer");
     imageContainer.style.display = "block";
+}
+
+function clearCanvas() {	
+	canvas.clearRect(0, 0, canvas.width, canvas.height);
 }

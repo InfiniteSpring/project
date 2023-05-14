@@ -21,20 +21,47 @@
         </aside>
         <main>
             <div class="conteiner">
-                    <input class="info" type="text"/>
-                    <input class="info" type="text"/>
-                    <input class="info" type="text"/>
-                    <input class="info" type="text"/>
-                    <input class="info" type="text"/>
-                    <input class="info" type="text"/>
+                    <input class="info" type="text" placeholder="id(У менеджера)"/>
+                    <input class="info" type="text" placeholder="ЗАКАЗ-НАРЯД №"/>
+                    <input class="info" type="text" placeholder="Заказчик"/>
+                    <input class="info" type="text" placeholder="Адрес проведения работ"/><br><br>
+
+                    </div>
+                    <div id="parentId">
+                        <script>
+                            function addBlock() {
+                                var newdiv = document.createElement("div");
+                                newdiv.innerHTML = "<div id='original-wrapper'>\n<div  class='form-1'>\n<form id='question' method='post'>\n<div id='code_block'><div class='block'>\n<input class='info' type='text' placeholder='Марка'/>\n<input class='info' type='text' placeholder='Модель'/>\n<input class='info' type='text' placeholder='Серийный №'/>\n<input class='info' type='text' placeholder='Дата выполнения работ(DD-MM-YYYY)'/>\n<input class='info' type='text' placeholder='Наименование работ'/>\n<input class='info' type='text' placeholder='Количество'/>\n<input class='info' type='text' placeholder='Стоимость'/>\n<input class='info' type='text' placeholder='Сумма'/>\n<br><\/div>\n<\/div>\n<div style='float:left'><\/div>\n<div>\n<\/div>\n<div><\/div><\/form><\/div><\/div><br>";
+                                //newdiv.appendTo('div#quest');
+                                document.getElementById("parentId").appendChild(newdiv);
+                                return false;
+                            }
+                        </script>
+                    </div>
+
+                    <div>
+                        <a href="#" onclick="addBlock()">Добавить блок</a>
+                    </div>
+                        
+                    <!--<button class="addBlock">Добавить блок</button>
+                    
+                    <div id="code_block">
+                        <div class="block">
+                            <input class="info" type="text" placeholder="Марка"/>\n<input class="info" type="text" placeholder="Модель"/>\n<input class="info" type="text" placeholder="Серийный №"/>\n<input class="info" type="text" placeholder="Дата выполнения работ(DD-MM-YYYY)"/>\n<input class="info" type="text" placeholder="Наименование работ"/>\n<input class="info" type="text" placeholder="Количество"/>\n<input class="info" type="text" placeholder="Стоимость"/>\n<input class="info" type="text" placeholder="Сумма"/>\n      <br><br>
+                        </div>
+                    </div>-->
+                    <input class="info" type="text" placeholder="Итого работы(руб.): "/>
+                    <input class="info" type="text" placeholder="Рекомендации"/>
+                    <input class="info" type="text" placeholder="Заказ-наряд оформил:________(М.П.)/Янков Ю.И./"/>
+                    <input class="info" type="text" placeholder="Объем и качество выполненных работ проверил:_______/_______/"/>
+                    <input class="info" type="text" placeholder="Заказчик_______/_______/"/>
                     <div class="CanvasContainer">
                         <canvas id="drawingCanvas" width=300 style="background-color:#eee; align-items: center;"></canvas>
                         <script type="text/javascript" src="{% static 'core/js/esign.js' %}"></script>
                     </div>
                     <div class="Toolbar">
-                        - Операции-<br>
-                        <button onclick="saveCanvas()">Сохранить содержимое Canvas</button>
-                        <button onclick="clearCanvas()">Очистить Canvas</button>
+                        <button class="btn btn-warning" onclick="saveCanvas()" style="margin: 5">Сохранить</button>
+                        <button class="btn btn-warning" onclick="clearCanvas()">Очистить</button>
                         <div id="savedCopyContainer">
                            <img id="savedImageCopy"><br>
                            Щелкните правой кнопкой мыши для сохранения ...

@@ -7,10 +7,8 @@
   }
   main {                                                                                                    
     background: #F1F5FE;
-    height: 100vh;
-        display: flex;
-        flex-direction: column;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }                                               
   aside {
@@ -21,7 +19,7 @@
     background: #dcccb3;
     width: 100vw;
     padding-bottom: 0.5%;
-    height: 14vh;
+    height: 100px;
     color: black;
   }
   .page-logo {
@@ -29,7 +27,7 @@
   }
   aside img {
     margin-left: 20px;
-    width: 140px;
+    width: 100px;
     float: left;
   }
   aside ul {
@@ -67,7 +65,8 @@
     text-decoration: none;
   }
 .conteiner{
-    width: 80%;
+    width: 100%;
+    margin-top: 110px;
 }
 .btn-warning {
     font-weight: bold;
@@ -93,4 +92,7 @@ input {
     border: 2px solid #E9F2FF;
     border-radius: 5px;
     padding-left: 25px;
+}
+#code_block{
+  display: block;
 }
