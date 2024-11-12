@@ -2,15 +2,15 @@
 
 .intro-image {
     position: relative;
-    padding-top: 100px;
+    // padding-top: 100px;
     top: 0;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
 }
 .text-container {
     width:60%;
-    margin-top: 15vh;
+    margin-top: 25vh;
     text-align: left;
     font-size: 50px;
     font-weight: 300px;
@@ -44,14 +44,13 @@
     // border: 2px solid white;
 }
 .lets-talk {
-    margin: 150px 100px 0 50px;
+    margin: 250px 100px 0 50px;
     width: 200px; 
-    justify-content: center;
     a {
         // position: absolute;
         // background-color: $main-background-color;
         background: transparent;
-        border: 1px solid $main-text-color;
+        // border: 1px solid $main-text-color;
         box-shadow: 0px 0px 10px $main-text-color;
         text-shadow: 0 0 10px $main-text-color;
         border-radius: 200px;
@@ -63,35 +62,28 @@
         animation-name: blinking;
         animation-duration: 1s;
         animation-iteration-count: infinite;
-        transition: all ease;
+        // transition: all ease;
     }
     :hover {
         background-color: $main-text-color;
         color: $main-background-color;
         cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0px 0px 30px $main-text-color;
+        // box-shadow: 0px 0px 30px $main-text-color;
     }
 }
 @keyframes blinking {
     0% {
-        // padding: 40px 10px 40px 10px;
-        // margin-left: 50px;
         padding: 60px 30px 60px 30px;
         margin-left: 50px;
     }
 
     50% {
-        padding: 50px 20px 50px 20px;
-        margin-left: 60px;
+        padding: 57px 27px 57px 27px;
+        margin-left: 53px;
         box-shadow: 0px 0px 30px $main-text-color;
-        // padding: 44px 14px 44px 14px;
-        // margin-left: 46px
     }
   
     100% {
-        // padding: 40px 10px 40px 10px;
-        // margin-left: 50px;
         padding: 60px 30px 60px 30px;
         margin-left: 50px;
     }
