@@ -16,6 +16,7 @@
         width: 100%;
         height: 100%;
         display: flex;
+        transition: all 0.3s ease;
         .service-names-container {
             min-width: 30%;
             height: 100%;
@@ -31,7 +32,7 @@
             font-size: 20px;
             background-color: $main-background-color;
             border: none;
-            border-radius: 1px;
+            // border-radius: 1px;
             border-bottom: 1px solid $main-background-color;
             transition: all 0.3s ease;
         }
@@ -44,6 +45,7 @@
         .service-description-container {
             width: 70%;
             height: 100%;
+            transition: all 0.5s ease;
             .service-description {
                 width: 100%;
                 height: 100%;
@@ -54,7 +56,8 @@
                     text-align: center;
                     h3 {
                         margin-right: 30%;
-                        font-size: 30px;
+                        font-size: 35px;
+                        transition: all 0.3s ease;
                     }
                 }
                 .options-container {
@@ -63,21 +66,31 @@
                     display: flex;
                     flex-wrap: wrap;
                     gap: 75px;
+                    text-overflow: ellipsis;
+                    transition: all 0.3s ease;
                     .option {
                         margin: 0;
                         padding: 0;
                         width: 40%;
-                        height: 25vh;
-                        overflow: hidden;
-                        // white-space: nowrap;
-                        // text-overflow:;
-                        :hover {
-                            overflow: visible;
-                            text-shadow: 0 0 5px $main-text-color;
-                            height: auto;
-                        }
+                        max-height: 25vh;
+                        overflow:hidden;
+                        word-wrap: break-word;
                         a {
                             color: $main-text-color;
+                            text-overflow: ellipsis;
+                            transition: all 0.3s ease;
+                            h4 {
+                                font-size: 22px;
+                            }
+                            span {
+                                max-height: 100px;
+                                transition: all 0.3s ease;
+                            }
+                            &:hover {
+                                // color: $header-background-color;
+                                text-shadow: 0 0 5px $main-text-color;
+                                // text-shadow: 0 0 5px blue;
+                            }
                         }
                     }
                 }

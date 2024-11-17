@@ -33,7 +33,7 @@ const CheckpointsComponent = () => {
                         95%
                     </div>
                     <div className="about">
-                        recurring customers
+                        satisfied customers
                     </div>
                 </div>
             </div>

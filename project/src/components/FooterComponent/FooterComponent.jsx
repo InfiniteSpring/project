@@ -5,7 +5,7 @@ export default function FooterComponent() {
 
     const [isName, setIsName] = useState("");
     const [isEmail, setIsEmail] = useState("");
-    const [isSummary, setIsSummary] = useState("");
+    const [isSubject, setIsSubject] = useState("");
 
     const changeName = (e) => {
         setIsName(e.target.value);
@@ -15,8 +15,8 @@ export default function FooterComponent() {
         setIsEmail(e.target.value);
     }
 
-    const changeSummary = (e) => {
-        setIsSummary(e.target.value);
+    const changeSubject = (e) => {
+        setIsSubject(e.target.value);
     }
 
 
@@ -48,11 +48,11 @@ export default function FooterComponent() {
                                     /><br/>
                                     <input
                                         type="text"
-                                        name="summary"
-                                        id="summary"
-                                        placeholder="Summary"
-                                        onChange={changeSummary}
-                                        value={isSummary}
+                                        name="subject"
+                                        id="subject"
+                                        placeholder="Subject"
+                                        onChange={changeSubject}
+                                        value={isSubject}
                                     /><br/> 
                                 </div>
                                 <p>Just send an order and we will contact you soon</p>

@@ -35,19 +35,30 @@ footer{
                 font-size: 20px;
                 background-color: $main-background-color;
                 border: none;
-                border-radius: 1px;
-                border-bottom: 1px solid $main-background-color;
-                transition: all 0.3s ease;
+                // border-radius: 4px;
+                border: 1px solid $main-background-color;
+                transition: all 0.2s ease;
             }
             input:focus {
                 outline: none;
-                border-bottom: 1px solid $main-text-color;
+                // border-bottom: 1px solid $main-text-color;
+                // border-radius: 0px;
+                border: 1px solid $main-text-color;
+                box-shadow: 0 0 5px $main-text-color;
             }
         }
+    }
+    button {
+        border-radius: 0px;
+        border: 1px solid $main-background-color;
+        transition: all 0.2s ease;
+        background-color: $main-background-color;
+        color: $main-text-color;
     }
     button:hover {
         border: 1px solid $main-text-color;
         box-shadow: 0 0 5px $main-text-color;
+        border-radius: 0px;
     }
 }
 .container{

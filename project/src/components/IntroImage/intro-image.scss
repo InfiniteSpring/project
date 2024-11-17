@@ -48,7 +48,7 @@
     width: 200px; 
     a {
         // position: absolute;
-        // background-color: $main-background-color;
+        // background-color: transparentize($main-background-color, 0.3);
         background: transparent;
         // border: 1px solid $main-text-color;
         box-shadow: 0px 0px 10px $main-text-color;
@@ -69,6 +69,7 @@
         color: $main-background-color;
         cursor: pointer;
         // box-shadow: 0px 0px 30px $main-text-color;
+        animation-name: blinking-2;
     }
 }
 @keyframes blinking {
@@ -87,4 +88,21 @@
         padding: 60px 30px 60px 30px;
         margin-left: 50px;
     }
-  }
+}
+@keyframes blinking-2 {
+0% {
+    padding: 60px 30px 60px 30px;
+    margin-left: 50px;
+}
+
+50% {
+    padding: 57px 27px 57px 27px;
+    margin-left: 53px;
+    box-shadow: 0px 0px 45px $main-text-color;
+}
+
+100% {
+    padding: 60px 30px 60px 30px;
+    margin-left: 50px;
+}
+}

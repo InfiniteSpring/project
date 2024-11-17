@@ -13,10 +13,13 @@ header{
     align-items: center;
     color: $main-text-color;
     font-size: 22px;   
-    // border-bottom: 1px solid $gray-text-color;
-    // border-top: 1px solid $gray-text-color;
     box-shadow: 0 0 3px $gray-text-color;
-    // border-radius: 10px; 
+
+    // animation-name: header-move;
+    // animation-duration: 1s;
+    // animation-timing-function: ease-in-out;
+    // animation-iteration-count: infinite;
+
     .logo{
         margin-left: 40px;
         img {
@@ -53,10 +56,19 @@ header{
 .contact-us-btn {
     padding: 2px 10px 6px 10px;
     border: 1px solid $main-text-color;
-    border-radius: 1px;
-    // box-shadow: 0 0 1px $main-text-color;
-    :hover {
-        background-color: $main-text-color-hover;
-        color: $main-text-color;
+    &:hover {
+        box-shadow: 0 0 5px $main-text-color;
     }
 }
+
+// @keyframes header-move {
+//     0% {
+//         top: 20px;
+//     }
+//     50% {
+//         top: 15px;
+//     }
+//     100% {
+//         top: 20px;
+//     }
+// }
