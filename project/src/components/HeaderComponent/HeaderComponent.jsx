@@ -1,10 +1,28 @@
 import "./header.scss";
 import logo from "./images/main-logo.png";
 
+import { useEffect, useRef } from "react";
+
 export default function HeaderComponent() {
+
+    const headerRef = useRef(null);
+
+    useEffect(() => {
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                headerRef.current.classList.add('sticky');
+            } else {
+                headerRef.current.classList.remove('sticky');
+            }
+        });
+        return () => {
+            headerRef.current.removeEventListener('scroll', () => {});
+        }
+    }, []);
+
     return (
         <div>
-            <header>
+            <header ref={headerRef} className="header">
                 <div className="logo">
                     <img src={logo} alt="Innovaware" />
                 </div>
@@ -16,7 +34,7 @@ export default function HeaderComponent() {
                     <a href="/portfolio">portfolio</a>
                     <a className="contact-us-btn" href="/contact">contact us</a>
                 </div>
-                </header>
+            </header>
         </div>
     );
 }

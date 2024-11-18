@@ -66,16 +66,16 @@ export default function FooterComponent() {
                             Services
                             </div><br/>
                             <div className="service-link">
-                            <a href="#">Web development</a>
+                            <a href="#">Software development</a>
                             </div><br/>
                             <div className="service-link">
-                            <a href="#">SEO and statistics collection</a>
+                            <a href="#">Analisys and promotion</a>
                             </div><br/>
                             <div className="service-link">
-                            <a href="#">UI and UX design</a>
+                            <a href="#">Design</a>
                             </div><br/>
                             <div className="service-link">
-                            <a href="#">QA and software testing</a>
+                            <a href="#">Quality assurance</a>
                             </div><br/>
                             <div className="service-link">
                             <a href="#">Devops</a>

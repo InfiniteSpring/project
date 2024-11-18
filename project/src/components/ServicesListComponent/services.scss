@@ -43,12 +43,16 @@
         }
 
         .service-description-container {
+            // display: none;
             width: 70%;
             height: 100%;
             transition: all 0.5s ease;
             .service-description {
+                display: none;
+                opacity: 0;
                 width: 100%;
                 height: 100%;
+                transition: all 0.3s ease;
                 // display: grid;
                 .service-name {
                     width: 100%;
@@ -75,25 +79,57 @@
                         max-height: 25vh;
                         overflow:hidden;
                         word-wrap: break-word;
-                        a {
-                            color: $main-text-color;
-                            text-overflow: ellipsis;
-                            transition: all 0.3s ease;
-                            h4 {
-                                font-size: 22px;
-                            }
-                            span {
-                                max-height: 100px;
+                        justify-content: center;
+                        .option-btn {
+                            width: 100%;
+                            height: 100%;
+                            justify-content: center;
+                            align-items: center;
+                            width: calc(100% - 10px);
+                            height: calc(100% - 10px);
+                            a {
+                                color: $main-text-color;
+                                text-overflow: ellipsis;
                                 transition: all 0.3s ease;
+                                h4 {
+                                    width: auto;
+                                    font-size: 22px;
+                                    transition: all 0.2s ease;
+                                    border-bottom: 1px solid transparent;
+                                }
+                                div {
+                                    max-height: 100px;
+                                    // transition: all 0.2s ease;
+                                }
                             }
                             &:hover {
                                 // color: $header-background-color;
                                 text-shadow: 0 0 5px $main-text-color;
                                 // text-shadow: 0 0 5px blue;
+                                // box-shadow: 0 0 5px $main-text-color;
+                                h4 {
+                                    border-bottom: 1px solid $main-text-color;
+                                }
                             }
                         }
                     }
+                    .big-option {
+                        width: 80%;
+                        // color: $main-text-color;
+                        a {
+                            color: $main-text-color;
+                            text-overflow: ellipsis;
+                            transition: all 0.3s ease;
+                        }
+                        &:hover {
+                            text-shadow: 0 0 5px $main-text-color;
+                        }
+                    }
                 }
+            }
+            .descr-visible {
+                display: block;
+                opacity: 1;
             }
         }
     }
