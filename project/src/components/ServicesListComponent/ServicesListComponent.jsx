@@ -71,6 +71,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -79,6 +80,7 @@ const ServicesListComponent = () => {
                                         <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -87,6 +89,7 @@ const ServicesListComponent = () => {
                                         <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -95,6 +98,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                         </div>
                     </div>
@@ -111,6 +115,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -119,6 +124,7 @@ const ServicesListComponent = () => {
                                         <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -127,6 +133,7 @@ const ServicesListComponent = () => {
                                         <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -135,6 +142,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                         </div>
                     </div>
@@ -151,6 +159,7 @@ const ServicesListComponent = () => {
                                         <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -159,6 +168,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -167,6 +177,7 @@ const ServicesListComponent = () => {
                                         <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -175,6 +186,7 @@ const ServicesListComponent = () => {
                                         <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                         </div>
                     </div>
@@ -191,6 +203,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -199,6 +212,7 @@ const ServicesListComponent = () => {
                                         <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -207,6 +221,7 @@ const ServicesListComponent = () => {
                                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                             <div className="option">
                                 <div className="option-btn">
@@ -215,6 +230,7 @@ const ServicesListComponent = () => {
                                         <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
                                     </a>
                                 </div>
+                                <div className="option-underline"></div>
                             </div>
                         </div>
                     </div>
@@ -231,6 +247,7 @@ const ServicesListComponent = () => {
                                     </a>
                                 </div>
                             </div>
+                            <div className="option-underline"></div>
                         </div>
                     </div>
                 </div>
