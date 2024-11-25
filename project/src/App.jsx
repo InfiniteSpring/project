@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HeaderFooterComponent />}>
-          <Route index element={<div>-</div>} />
+          {/* <Route index element={<div>-</div>} /> */}
           <Route path="about" element={<div>about</div>} />
           <Route path="services" element={<div>services</div>} />
           <Route path="technologies" element={<div>technologies</div>} />

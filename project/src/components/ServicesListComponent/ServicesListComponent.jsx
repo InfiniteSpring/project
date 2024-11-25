@@ -66,18 +66,9 @@ const ServicesListComponent = () => {
                         <div className="options-container">
                             <div className="option">
                                 <div className="option-btn">
-                                    <a href="/software-development/full-stack">
-                                        <h4>Full stack</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
-                                    </a>
-                                </div>
-                                <div className="option-underline"></div>
-                            </div>
-                            <div className="option">
-                                <div className="option-btn">
                                     <a href="/software-development/backend">
                                         <h4>Backend</h4>
-                                        <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>   Backend development handles the server-side of applications, including database interactions and logic, using languages like Python, Java, or Ruby.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -86,7 +77,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/software-development/fronend">
                                         <h4>Frontend</h4>
-                                        <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>   Frontend development focuses on creating the visual part of web applications that users interact with, involving HTML, CSS, and JavaScript for intuitive interfaces.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -95,7 +86,16 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/software-development/mobile">
                                         <h4>Mobile</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                                        <div>   Mobile development creates applications for platforms like iOS and Android, using Swift and Kotlin to ensure great functionality on different devices</div>
+                                    </a>
+                                </div>
+                                <div className="option-underline"></div>
+                            </div>
+                            <div className="option">
+                                <div className="option-btn">
+                                    <a href="/software-development/full-stack">
+                                        <h4>Specific</h4>
+                                        <div>   Specific software development focuses on creating tailored solutions to meet unique client needs, often involving custom applications and systems that enhance business processes and efficiency</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -112,7 +112,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/analysis-and-promotion/seo">
                                         <h4>SEO</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
+                                        <div> SEO (Search Engine Optimization) focuses on improving the visibility of websites in search engines by using strategies and techniques to attract organic traffic.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -121,7 +121,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/analysis-and-promotion/statistics">
                                         <h4>Statistics</h4>
-                                        <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>Statistics involves the collection, analysis, and interpretation of data, allowing for informed business decisions and trend identification</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -130,7 +130,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/analysis-and-promotion/analytics">
                                         <h4>Analytics</h4>
-                                        <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>Analytics provides opportunities to study and evaluate data, enabling companies to track performance and optimize strategies.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -139,7 +139,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/analysis-and-promotion/promotion">
                                         <h4>Promotion</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                                        <div>Promotion encompasses various methods and tools to increase brand awareness and attract customers through advertising, content, and social media.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -156,7 +156,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/design/web-design">
                                         <h4>Web design</h4>
-                                        <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>Web design involves creating visually appealing and functional websites, focusing on layout, color schemes, typography, and overall aesthetics to enhance user experience.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -165,7 +165,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/design/ui-and-ux">
                                         <h4>UI and UX</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
+                                        <div>UI (User Interface) and UX (User Experience) design focus on the interaction between users and digital products. UI design is about creating intuitive and attractive interfaces, while UX design focuses on optimizing user journeys and satisfaction.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -174,7 +174,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/design/motion-graphics">
                                         <h4>Motion graphics</h4>
-                                        <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>Motion graphics are animated visuals that combine graphic design and animation techniques to create engaging and dynamic content for digital media, enhancing storytelling and brand messaging.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -183,7 +183,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/design/advertising-and-marketing">
                                         <h4>Advertising and marketing</h4>
-                                        <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>Advertising and marketing encompass strategies aimed at promoting products or services to target audiences through various channels, including digital, print, social media, and more, to drive brand awareness and sales.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -200,7 +200,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/quality-assurance/software-testing">
                                         <h4>Software testing</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </div>
+                                        <div>Software testing involves the systematic evaluation of software applications to identify defects and ensure that they meet specified requirements. This process aims to ensure quality, performance, and reliability before deployment.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -209,7 +209,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/quality-assurance/ui-testing">
                                         <h4>UI testing</h4>
-                                        <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>UI testing focuses on verifying the user interface of an application to ensure it is visually correct and functions as intended. This includes checking elements like layout, buttons, and responsiveness across different devices.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -218,7 +218,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/quality-assurance/mobile-testing">
                                         <h4>Mobile testing</h4>
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                                        <div>Mobile testing is the process of testing mobile applications across various devices and platforms to ensure functionality, usability, and performance. It helps identify issues related to compatibility and user experience on mobile devices.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -227,7 +227,7 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/quality-assurance/code-review">
                                         <h4>Code review</h4>
-                                        <div>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamt esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>Code review is a systematic examination of source code by developers to identify bugs, improve code quality, and ensure adherence to coding standards. This process promotes collaboration and knowledge sharing within the development team.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
@@ -243,7 +243,9 @@ const ServicesListComponent = () => {
                             <div className="big-option">
                                 <div className="option-btn">
                                     <a href="/devops">
-                                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                                        <div>&emsp; DevOps is a set of practices that integrates software development (Dev) and IT operations (Ops) to shorten the software development lifecycle. Its primary goal is to enhance deployment frequency, improve software quality, and reduce the time required to recover from failures. By fostering a culture of collaboration and automation, DevOps allows teams to respond quickly to market changes.<br/><br/><br/>
+                                            &emsp; Key principles of DevOps include continuous integration (CI) and continuous delivery (CD). CI involves automatically testing and integrating code changes, while CD automates the deployment process, enabling more frequent updates. Monitoring and feedback are also crucial, as they provide insights into application performance and user behavior, helping teams to identify and resolve issues swiftly.<br/><br/><br/>
+                                            &emsp; Ultimately, DevOps is a cultural shift that emphasizes communication and collaboration across teams. By breaking down silos and adopting relevant tools and practices, organizations can enhance agility, deliver high-quality software more efficiently, and remain competitive in today’s fast-paced digital landscape.</div>
                                     </a>
                                 </div>
                             </div>
