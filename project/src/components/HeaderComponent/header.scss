@@ -58,9 +58,12 @@ header{
 }
 .contact-us-btn {
     padding: 0px 10px 6px 10px;
+    // border: 1px solid $gray-text-color;
     border: 1px solid $main-text-color;
     &:hover {
-        box-shadow: 0 0 5px $main-text-color;
+        color: $header-background-color;
+        background-color: $main-text-color;
+        box-shadow: 0 0 15px $main-text-color;
     }
 }
 

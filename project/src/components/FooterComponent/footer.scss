@@ -54,16 +54,16 @@ footer{
         }
     }
     button {
-        border-radius: 0px;
-        border: 1px solid $main-background-color;
+        border-radius: 1px;
+        border: 1px solid $main-text-color; 
         transition: all 0.2s ease;
         background-color: $main-background-color;
         color: $main-text-color;
     }
     button:hover {
-        border: 1px solid $main-text-color;
-        box-shadow: 0 0 5px $main-text-color;
-        border-radius: 0px;
+        color: $header-background-color;
+        background-color: $main-text-color;
+        box-shadow: 0 0 15px $main-text-color;
     }
 }
 .container{
