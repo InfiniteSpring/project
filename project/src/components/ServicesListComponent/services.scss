@@ -38,13 +38,13 @@
             border-bottom: 1px solid $main-background-color;
             transition: all 0.3s ease;
             padding-left: 20px;
-            border-left: 1px solid $main-background-color;
+            border-left: 3px solid $main-background-color;
         }
         input:hover {
             outline: none;
             // border-bottom: 1px solid $main-text-color;
             text-shadow: 0 0 5px $main-text-color;
-            border-left: 1px solid $main-text-color;
+            border-left: 3                                                                                                                                                                                                                                  px solid $main-text-color;
         }
 
         .service-description-container {
