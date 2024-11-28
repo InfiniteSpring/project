@@ -6,8 +6,8 @@
     width: 100vw;
     min-height: 100vh;
     // height: 120vh;
-    background: $main-background-color;
-    box-shadow: 0 0 3px $gray-text-color;
+    // background: $main-background-color;
+    // box-shadow: 0 0 3px $gray-text-color;
     overflow: hidden;
     .title {
         margin-left: 5%;
@@ -31,7 +31,8 @@
             width: auto;
             height: 40px;
             font-size: 20px;
-            background-color: $main-background-color;
+            background: transparent;
+            // background-color: $main-background-color;
             border: none;
             // border-radius: 1px;
             border-bottom: 1px solid $main-background-color;

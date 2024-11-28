@@ -14,7 +14,8 @@ header{
     align-items: center;
     color: $main-text-color;
     font-size: 22px;   
-    box-shadow: 0 0 3px $gray-text-color;
+    // box-shadow: 0 0 3px $gray-text-color;
+    box-shadow: 0 0 10px $header-background-color;
     transition: all 0.33s ease;
 
     // animation-name: header-move;

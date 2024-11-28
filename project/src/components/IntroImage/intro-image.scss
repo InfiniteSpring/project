@@ -7,7 +7,8 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: $main-background-color;
+    // background-color: $main-background-color;
+    
 }
 .text-container {
     width:60%;
@@ -37,12 +38,13 @@
     height: 300px;
     object-fit: cover;
     background: $main-background-color;
-    border-radius: 300px;
+    border-radius: 1px;
     height: 140px;
     margin-top: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px $gray-text-color;
-    // border: 2px solid white;
+    // box-shadow: 0 0 10px $gray-text-color;
+    box-shadow: 0 0 10px $header-background-color;
+    // border: 1px solid white;
 }
 .lets-talk {
     margin-top: 40vh;
@@ -64,7 +66,7 @@
     }
     :hover {
         background-color: $main-text-color;
-        color: $main-background-color;
+        color: $header-background-color;
         cursor: pointer;
         animation-name: blinking-2;
     }
