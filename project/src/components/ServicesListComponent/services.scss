@@ -53,6 +53,9 @@
             // border-bottom: 1px solid $main-text-color;
             text-shadow: 0 0 5px $main-text-color;
             border-left: 2px solid $main-text-color;
+
+            color: $important-text-color;
+            border-left: 2px solid $important-text-color;
         }
 
         .service-description-container {
@@ -101,6 +104,9 @@
                         word-wrap: break-word;
                         justify-content: center;
                         border-bottom: 1px solid $gray-text-color;
+                        &:hover {
+                            border-bottom: 1px solid $important-text-color;
+                        }
                         .option-underline {
                             // content: "";
                             // position: absolute;
@@ -111,29 +117,34 @@
                             // color: $main-text-color;
                             // border-bottom: 1px solid $main-text-color;
                         }
-                            .option-btn {
-                                justify-content: center;
-                                align-items: center;
-                                width: calc(100% - 10px);
-                                // height: calc(100% - 40px);
-                                a {
-                                    color: $main-text-color;
-                                    text-overflow: ellipsis;
-                                    transition: all 0.3s ease;
-                                    h4 {
-                                    width: auto;
-                                    color: $important-text-color;
-                                    font-size: 22px;
-                                    transition: all 0.2s ease;
-                                    border-bottom: 1px solid transparent;
-                                }
-                                div {
-                                    // max-height: 100px;
-                                    overflow-y: hidden;
-                                }
+                        .option-btn {
+                            justify-content: center;
+                            align-items: center;
+                            width: calc(100% - 10px);
+                            height: 100%;
+                            width: 100%;
+                            // height: calc(100% - 40px);
+                            a {
+                                color: $main-text-color;
+                                text-overflow: ellipsis;
+                                transition: all 0.3s ease;
+                                h4 {
+                                width: auto;
+                                font-size: 22px;
+                                transition: all 0.2s ease;
+                                border-bottom: 1px solid transparent;
+                            }
+                            div {
+                                // max-height: 100px;
+                                overflow-y: hidden;
+                            }
                             }
                             &:hover {
                                 text-shadow: 0 0 5px $main-text-color;
+                                h4 {
+                                    color: $important-text-color;
+                                    
+                                }
                             }
                         }
                     }
