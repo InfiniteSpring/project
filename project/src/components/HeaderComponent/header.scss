@@ -8,6 +8,8 @@
     // background-color: $header-background-color2;
     background-color: $header-background-color2;
     box-shadow: 0 0 10px $header-background-color;
+
+    // border-bottom: 1px solid $gray-text-color;
 }
 header{
     z-index: 10;
@@ -70,10 +72,9 @@ header{
 }
 .contact-us-btn {
     padding: 0px 10px 6px 10px;
-    // border: 1px solid $gray-text-color;
     border: 1px solid $main-text-color;
     &:hover {
-        color: $header-background-color;
+        color: black;
         background-color: $main-text-color;
         box-shadow: 0 0 15px $main-text-color;
     }

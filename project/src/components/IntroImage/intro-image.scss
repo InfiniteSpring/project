@@ -68,7 +68,8 @@
     }
     :hover {
         background-color: $main-text-color;
-        color: $header-background-color;
+        // color: $header-background-color;
+        color: black;
         cursor: pointer;
         animation-name: blinking-2;
     }

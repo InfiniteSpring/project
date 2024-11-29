@@ -7,7 +7,7 @@
     padding-bottom: 10vh;
     background: $header-background-color;
     // box-shadow: 0 0 10px $header-background-color;
-    box-shadow: 0 0 100px black;
+    // box-shadow: 0 0 100px $header-background-color;
     z-index: 2;
     display: flex;
     justify-content: space-around;
@@ -26,7 +26,7 @@
             justify-content: center;
             align-items: center;
             .number {
-                font-size: 80px;
+                font-size: 110px;
                 // font-weight: bold;
                 // color: $main-text-color;
                 background-image: $important-text-gradient-color;

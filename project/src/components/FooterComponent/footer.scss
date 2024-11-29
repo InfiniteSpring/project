@@ -10,7 +10,10 @@ footer{
     color: $main-text-color;
     min-height: 440px;
     background: $footer-background-color;
-    box-shadow: 0 0 20px $footer-background-color;
+    // box-shadow: 0 0 20px $footer-background-color;
+
+    // box-shadow: 0 0 100px black;
+
     // box-shadow: inset 0 0 50px $vanta-background-color;
     // box-shadow: inset 0 0 20px $main-text-color;
 }
@@ -29,6 +32,11 @@ footer{
         margin-bottom: 10px;
         justify-content: center;
         text-align: center;
+        h2 {
+            background-image: $important-text-gradient-color;
+            color: transparent;
+            background-clip: text;
+        }
         .inputs {
             display: block;
             input {
@@ -61,7 +69,8 @@ footer{
         color: $main-text-color;
     }
     button:hover {
-        color: $header-background-color;
+        // color: $header-background-color;
+        color: black;
         background-color: $main-text-color;
         box-shadow: 0 0 15px $main-text-color;
     }
@@ -77,6 +86,10 @@ footer{
 }
 .link-container-block-title{
     font-size: 18px;
+    color: $important-text-color;
+    // background-image: $important-text-gradient-color;
+    // color: transparent;
+    // background-clip: text;
 }
 .link-container-block{
     text-align: left;

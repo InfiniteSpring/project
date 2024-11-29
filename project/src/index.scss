@@ -98,12 +98,12 @@ button:focus-visible {
 
 
 ::-moz-selection { /* Code for Firefox */
-  color: $header-background-color;
+  color: black;
   background: $main-text-color;
   // text-shadow: 0 0 10px $header-background-color;
 }
 ::selection {
-  color: $header-background-color;
+  color: black;
   background: $main-text-color;
   // text-shadow: 0 0 10px $header-background-color;
 }
