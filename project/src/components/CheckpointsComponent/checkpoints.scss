@@ -3,11 +3,11 @@
 .checkpoints {
     position: relative;
     width: 100vw;
-    height: 40vh;
+    height: 45vh;
     padding-bottom: 10vh;
     background: $header-background-color;
-    // box-shadow: 0 0 3px $gray-text-color;
-    box-shadow: 0 0 10px $header-background-color;
+    // box-shadow: 0 0 10px $header-background-color;
+    box-shadow: 0 0 100px black;
     z-index: 2;
     display: flex;
     justify-content: space-around;
@@ -28,7 +28,10 @@
             .number {
                 font-size: 80px;
                 // font-weight: bold;
-                color: $main-text-color;
+                // color: $main-text-color;
+                background-image: $important-text-gradient-color;
+                color: transparent;
+                background-clip: text;
             }
             .about {
                 font-size: 20px;

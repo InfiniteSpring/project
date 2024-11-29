@@ -17,8 +17,10 @@ $header-background-color: #0000008e;
 $footer-background-color: $header-background-color;
 
 $main-text-color: white;
-$main-text-color-hover: rgb(140, 0, 255);
+$important-text-color: rgb(52, 214, 255);
+$important-text-gradient-color: linear-gradient(60deg, $important-text-color 0%, rgb(103, 4, 112) 100%);
 $gray-text-color: #acacac;
 
 $vanta-background-color: #11071f;
 
+$main-gradient-background-color: linear-gradient(60deg, $header-background-color 0%, rgba(0,0,0,0) 30%, $header-background-color 70%,  $header-background-color 100%);

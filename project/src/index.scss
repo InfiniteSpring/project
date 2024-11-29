@@ -33,11 +33,13 @@
   -moz-osx-font-smoothing: grayscale;
 
   overflow-x: hidden;
+
+  // scroll-behavior: smooth;
   
 }
 
 #vanta-anchor {
-  filter: brightness(0.66);
+  filter: brightness(0.88);
 }
 
 a {
