@@ -1,10 +1,10 @@
-import "./services.scss";
+import "./industries.scss";
 
 import { useState, useEffect } from 'react';
 
-const ServicesListComponent = () => {
+const IndustriesListComponent = () => {
 
-    const [currentService, setCurrentService] = useState("Software development");
+    const [currentindustry, setCurrentindustry] = useState("Software development");
 
     const equality = {
         "Software development": "software-development",
@@ -14,55 +14,53 @@ const ServicesListComponent = () => {
         "Devops": "devops"
     }
 
-    const changeServices = (e) => {
-        if (e.target.value !== currentService) {
-            document.getElementById(`inp-${equality[currentService]}`).classList.remove("active-option-input");
-            document.getElementById(`inp-${equality[e.target.value]}`).classList.add("active-option-input");
-            document.getElementById(equality[currentService]).style.opacity = 0;
+    const changeindustrys = (e) => {
+        if (e.target.value !== currentindustry) {
+            document.getElementById(equality[currentindustry]).style.opacity = 0;
             setTimeout(() => {
-                document.getElementById(equality[currentService]).style.display = "none";
+                document.getElementById(equality[currentindustry]).style.display = "none";
                 document.getElementById(equality[e.target.value]).style.display = "block";
                 setTimeout(() => {
                     document.getElementById(equality[e.target.value]).style.opacity = 1;
-                    setCurrentService(e.target.value);
+                    setCurrentindustry(e.target.value);
                 }, 10);
             }, 290);
         }
     }
 
     return (
-        <div className="services-list">
+        <div className="industries-list">
             <div className="title">
-                <h2>Services</h2>
+                <h2>Industries</h2>
             </div>
             <div className="container">
-                <div className="service-names-container">
-                    <div className="service-names">
-                        <div className="service-name">
-                            <input className="active-option-input" id="inp-software-development" type="submit" value="Software development" onClick={changeServices} />
+                <div className="industry-names-container">
+                    <div className="industry-names">
+                        <div className="industry-name">
+                            <input type="submit" value="Software development" onClick={changeindustrys} />
                         </div><br/>
-                        <div className="service-name">
-                            <input id="inp-analisys-and-promotion" type="submit" value="Analisys and promotion" onClick={changeServices} />
+                        <div className="industry-name">
+                            <input type="submit" value="Analisys and promotion" onClick={changeindustrys} />
                             {/* <a>Mobile development</a> */}
                         </div><br/>
-                        <div className="service-name">
-                            <input id="inp-design" type="submit" value="Design" onClick={changeServices} />
+                        <div className="industry-name">
+                            <input type="submit" value="Design" onClick={changeindustrys} />
                             {/* <a>Software development</a> */}
                         </div><br/>
-                        <div className="service-name">
-                            <input id="inp-quality-assurance" type="submit" value="Quality assurance" onClick={changeServices} />
+                        <div className="industry-name">
+                            <input type="submit" value="Quality assurance" onClick={changeindustrys} />
                             {/* <a>IT consulting</a> */}
                         </div><br/>
-                        <div className="service-name">
-                            <input id="inp-devops" type="submit" value="Devops" onClick={changeServices} />  
+                        <div className="industry-name">
+                            <input type="submit" value="Devops" onClick={changeindustrys} />  
                             {/* <a>Web development</a> */}
                         </div>
                     </div>
                 </div>
-                <div className="service-description-container">
-                    <div id="software-development" className="service-description descr-visible">
-                    {/* <div className="service-description" style={{display: currentService === "Software development" ? "block" : "none", opacity: currentService === "Software development" ? 1 : 0.2}}> */}
-                        <div className="service-name">
+                <div className="industry-description-container">
+                    <div id="software-development" className="industry-description descr-visible">
+                    {/* <div className="industry-description" style={{display: currentindustry === "Software development" ? "block" : "none", opacity: currentindustry === "Software development" ? 1 : 0.2}}> */}
+                        <div className="industry-name">
                             <h3>Software development</h3>
                         </div>
                         <div className="options-container">
@@ -104,9 +102,9 @@ const ServicesListComponent = () => {
                             </div>
                         </div>
                     </div>
-                    <div id="analisys-and-promotion" className="service-description">
-                    {/* <div className="service-description" style={{opacity: currentService === "Analisys and promotion" ? 1 : 0, display: currentService === "Analisys and promotion" ? "block" : "none"}}> */}
-                        <div className="service-name">
+                    <div id="analisys-and-promotion" className="industry-description">
+                    {/* <div className="industry-description" style={{opacity: currentindustry === "Analisys and promotion" ? 1 : 0, display: currentindustry === "Analisys and promotion" ? "block" : "none"}}> */}
+                        <div className="industry-name">
                             <h3>Analisys and promotion</h3>
                         </div>
                         <div className="options-container">
@@ -148,9 +146,9 @@ const ServicesListComponent = () => {
                             </div>
                         </div>
                     </div>
-                    <div id="design" className="service-description">
-                    {/* <div className="service-description" style={{opacity: currentService === "Design" ? 1 : 0, display: currentService === "Design" ? "block" : "none"}}> */}
-                        <div className="service-name">
+                    <div id="design" className="industry-description">
+                    {/* <div className="industry-description" style={{opacity: currentindustry === "Design" ? 1 : 0, display: currentindustry === "Design" ? "block" : "none"}}> */}
+                        <div className="industry-name">
                             <h3>Design</h3>
                         </div>
                         <div className="options-container">
@@ -185,16 +183,16 @@ const ServicesListComponent = () => {
                                 <div className="option-btn">
                                     <a href="/design/advertising-and-marketing">
                                         <h4>Advertising and marketing</h4>
-                                        <div>Advertising and marketing encompass strategies aimed at promoting products or services to target audiences through various channels, including digital, print, social media, and more, to drive brand awareness and sales.</div>
+                                        <div>Advertising and marketing encompass strategies aimed at promoting products or industrys to target audiences through various channels, including digital, print, social media, and more, to drive brand awareness and sales.</div>
                                     </a>
                                 </div>
                                 <div className="option-underline"></div>
                             </div>
                         </div>
                     </div>
-                    <div id="quality-assurance" className="service-description">
-                    {/* <div className="service-description" style={{opacity: currentService === "Quality assurance" ? 1 : 0, display: currentService === "Quality assurance" ? "block" : "none"}}> */}
-                        <div className="service-name">
+                    <div id="quality-assurance" className="industry-description">
+                    {/* <div className="industry-description" style={{opacity: currentindustry === "Quality assurance" ? 1 : 0, display: currentindustry === "Quality assurance" ? "block" : "none"}}> */}
+                        <div className="industry-name">
                             <h3>Quality assurance</h3>
                         </div>
                         <div className="options-container">
@@ -236,9 +234,9 @@ const ServicesListComponent = () => {
                             </div>
                         </div>
                     </div>
-                    <div id="devops" className="service-description">
-                    {/* <div className="service-description" style={{opacity: currentService === "Devops" ? 1 : 0, display: currentService === "Devops" ? "block" : "none"}}> */}
-                        <div className="service-name">
+                    <div id="devops" className="industry-description">
+                    {/* <div className="industry-description" style={{opacity: currentindustry === "Devops" ? 1 : 0, display: currentindustry === "Devops" ? "block" : "none"}}> */}
+                        <div className="industry-name">
                             <h3>Devops</h3>
                         </div>
                         <div className="options-container">
@@ -260,4 +258,4 @@ const ServicesListComponent = () => {
     );
 };
 
-export default ServicesListComponent;
+export default IndustriesListComponent;

@@ -6,6 +6,8 @@ import IntroImage from "../IntroImage/IntroImage";
 import CheckpointsComponent from "../CheckpointsComponent/CheckpointsComponent";
 import ServicesListComponent from "../ServicesListComponent/ServicesListComponent";
 import HelpYouComponent from "../HelpYouService/HelpYouComponent";
+import IndustriesListComponent from "../IndustriesListComponent/IndustriesListComponent";
+import TechDomainsComponent from "../TechDomainsComponent/TechDomainsComponent";
 
 function HeaderFooterLayout() {
   return (
@@ -15,9 +17,13 @@ function HeaderFooterLayout() {
       <IntroImage />
       <CheckpointsComponent />
       <ServicesListComponent />
+      <TechDomainsComponent />
       <HelpYouComponent />
+      <IndustriesListComponent />
+
 
       <Outlet />
+      <div style={{ height: "100px" }}></div>
       {/* <div className="footer-padding">-</div> */}
       <FooterComponent />
     </>

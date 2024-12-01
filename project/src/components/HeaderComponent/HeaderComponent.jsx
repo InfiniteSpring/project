@@ -1,5 +1,6 @@
 import "./header.scss";
-import logo from "./images/main-logo.png";
+// import logo from "./images/main-logo.png";
+import logo from "./images/logo.png";
 
 import { useEffect, useRef } from "react";
 
@@ -25,6 +26,7 @@ export default function HeaderComponent() {
             <header ref={headerRef} className="header">
                 <div className="logo">
                     <img src={logo} alt="Innovaware" />
+                    <h2>Innovaware</h2>
                 </div>
                 <div className="navigation">
                     <a href="/about">about us</a>

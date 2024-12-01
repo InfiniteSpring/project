@@ -1,7 +1,8 @@
 @use "../../_colors.scss" as *;
 
-.services-list {
-    background: $main-background-color;
+.tech-domains {
+    background-color: $main-background-color;
+  
     position: relative;
     display: block;
     width: 100vw;
@@ -19,10 +20,10 @@
         height: 100%;
         display: flex;
         transition: all 0.3s ease;
-        .service-names-container {
+        .tech-domain-names-container {
             min-width: 30%;
             height: 100%;
-            .service-names {
+            .tech-domain-names {
                 width: 80%;
                 margin-left: 20%;
             }
@@ -47,18 +48,21 @@
             border-left: 3px solid $important-text-color;
         }
 
-        .service-description-container {
+        .tech-description-container {
             width: 70%;
             height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;            
             transition: all 0.5s ease;
             padding-bottom: 10%;
-            .service-description {
+            .tech-description {
                 display: none;
                 opacity: 0;
                 width: 100%;
                 height: 100%;
                 transition: all 0.3s ease;
-                .service-name {
+                .tech-name {
                     width: 100%;
                     height: 5%;
                     text-align: center;
@@ -70,6 +74,7 @@
                         background-clip: text;
                         font-size: 35px;
                         transition: all 0.3s ease;
+                        margin-top: 0;
                     }
                 }
                 .options-container {
@@ -77,7 +82,8 @@
                     margin-top: 20px;
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 50px;
+                    gap: 80px 50px;
+                    margin-top: 50px;
                     transition: all 0.3s ease;
                     .option {
                         margin: 0;
@@ -86,12 +92,11 @@
                         word-wrap: break-word;
                         justify-content: center;
                         border-bottom: 1px solid $gray-text-color;
-                        transition: all 0.2s ease;
                         &:hover {
                             border-bottom: 1px solid $important-text-color;
                         }
                         .option-underline {
-                            margin-top: 30px;
+                            margin-top: 15px;
                         }
                         .option-btn {
                             justify-content: center;
@@ -100,27 +105,29 @@
                             height: 100%;
                             width: 100%;
                             a {
+                                display: flex;
                                 color: $main-text-color;
                                 text-overflow: ellipsis;
                                 transition: all 0.3s ease;
+                                img {
+                                    padding-right: 50px;
+                                }
                                 h4 {
                                 width: auto;
                                 font-size: 22px;
                                 transition: all 0.2s ease;
                                 border-bottom: 1px solid transparent;
-                                margin-top: 0px;
+                                margin-top: 0;
                             }
                             div {
                                 overflow-y: hidden;
                             }
                             }
                             &:hover {
+                                text-shadow: 0 0 5px $important-text-shadow-color;
                                 h4 {
                                     color: $important-text-color;
-                                    text-shadow: 0 0 5px $important-text-color;
-                                }
-                                a {
-                                    text-shadow: 0 0 5px $main-text-color;
+                                    
                                 }
                             }
                         }
@@ -146,8 +153,7 @@
     }
 }
 
-.service-names {
-    // padding-left: 10px;
+.tech-domain-names {
     border-left: 1px solid $gray-text-color;
     padding-top: 20px;
     padding-bottom: 20px;
