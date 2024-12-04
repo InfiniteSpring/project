@@ -6,9 +6,17 @@ const IntroImage = () => {
     return (
             <div className="intro-image">
                 <div className="text-container">
-                Global software development<br/>
+                {/* Global software development<br/>
                 Innovation and technology<br/>
-                Best practices and solutions
+                Best practices and solutions */}
+                    <span className="span-1">
+                        The best <span className="improve">IT community</span><br/>
+                    </span>
+                    <div className="span-2">
+                        <span>
+                            The <span className="improve">best solutions</span>&nbsp;for your business
+                        </span>
+                    </div>
                 </div>
                 <div className="right-part">
                     <div className="lets-talk">

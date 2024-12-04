@@ -26,14 +26,14 @@ export default function HeaderComponent() {
             <header ref={headerRef} className="header">
                 <div className="logo">
                     <img src={logo} alt="Innovaware" />
-                    <h2>Innovaware</h2>
+                    <h2>Proxity</h2>
                 </div>
                 <div className="navigation">
                     <a href="/about">about us</a>
                     <a href="/services">services</a>
-                    <a href="/technologies">technologies</a>
+                    <a href="/domains">domains</a>
                     <a href="/industries">industries</a>
-                    <a href="/portfolio">portfolio</a>
+                    {/* <a href="/portfolio">portfolio</a> */}
                     <a className="contact-us-btn" href="/contact">contact us</a>
                 </div>
             </header>

@@ -10,12 +10,9 @@ export default function HelpYouComponent() {
             </span>
             <span className="improve">improve</span>
             <span>
-                &nbsp;your business with the best technology.
+                &nbsp;your business with the best technology
             </span>
         </div>
-        {/* <div className="secondary-text">
-            something something something something something something something
-        </div> */}
       </div>
     </div>
   );

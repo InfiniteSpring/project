@@ -146,24 +146,24 @@ export default function FooterComponent() {
                 <div className="copy-contacts">
                     <div className="copywrite">
                         <div className="footer-logo">
-                        Innovaware
+                        Proxity
                         </div>
                         <div className="copytext">
-                        &copy; 2024 Innovaware. All Rights Reserved.
+                        &copy; 2024 Proxity. All Rights Reserved.
                         </div>
                     </div>
                     <div className="contacts">
                         <div className="email">
-                        innovaware@gmail.com
+                        proxity@gmail.com
                         </div>
                         <div className="xtwitter">
-                        @Innovaware Twitter
+                        @proxity Twitter
                         </div>
                         <div className="linkedin">
-                        @Innovaware Linkedin
+                        @proxity Linkedin
                         </div>
                         <div className="telegram">
-                        @Innovaware
+                        @proxity
                         </div>
                     </div>
                 </div>

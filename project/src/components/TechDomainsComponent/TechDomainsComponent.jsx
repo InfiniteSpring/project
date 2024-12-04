@@ -1,6 +1,9 @@
 import "./tech-dom.scss";
 import { useState } from 'react';
-import testImg from "./images/test.svg";
+import icon1 from "./images/icon1.svg";
+import icon2 from "./images/icon2.svg";
+import icon3 from "./images/icon3.svg";
+import icon4 from "./images/icon4.svg";
 
 const TechDomainsComponent = () => {
 
@@ -73,7 +76,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/workflow-automation">
-                                        <img src={testImg} style={{ width: "50px", height: "50px" }} alt="" />
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Workflow automation</h4>
                                     </a>
                                 </div>
@@ -82,7 +85,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/business-process-automation">
-                                        {/* <img src="/images/" alt="" /> */}
+                                    <img src={icon2} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Business process automation</h4>
                                     </a>
                                 </div>
@@ -91,7 +94,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/document-data-extraction-processing">
-                                        {/* <img src="/images/" alt="" /> */}
+                                    <img src={icon3} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Document data extraction & processing</h4>
                                     </a>
                                 </div>
@@ -100,7 +103,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/virtual-assistance-support">
-                                        {/* <img src="/images/" alt="" /> */}
+                                    <img src={icon4} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Virtual assistance & support</h4>
                                     </a>
                                 </div>

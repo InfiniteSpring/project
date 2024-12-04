@@ -29,6 +29,7 @@
             
         }
         input {
+            // color: $main-text-color;
             width: auto;
             height: 40px;
             font-size: 20px;
@@ -117,10 +118,10 @@
                             &:hover {
                                 h4 {
                                     color: $important-text-color;
-                                    text-shadow: 0 0 5px $important-text-color;
+                                    // text-shadow: 0 0 5px $important-text-color;
                                 }
                                 a {
-                                    text-shadow: 0 0 5px $main-text-color;
+                                    // text-shadow: 0 0 5px $main-text-color;
                                 }
                             }
                         }

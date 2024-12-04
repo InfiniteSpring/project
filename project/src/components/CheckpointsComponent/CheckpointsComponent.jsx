@@ -6,7 +6,7 @@ const CheckpointsComponent = () => {
             <div className="container">
                 <div className="chechpoint">
                     <div className="number">
-                        20+
+                        40+
                     </div>
                     <div className="about">
                         successful projects
@@ -14,7 +14,7 @@ const CheckpointsComponent = () => {
                 </div>
                 <div className="chechpoint">
                     <div className="number">
-                        30+
+                        50+
                     </div>
                     <div className="about">
                         IT professionals
@@ -25,7 +25,7 @@ const CheckpointsComponent = () => {
                         2+
                     </div>
                     <div className="about">
-                        years of experience
+                        years in existence
                     </div>
                 </div>
                 <div className="chechpoint">

@@ -30,6 +30,7 @@
             
         }
         input {
+            // color: $main-text-color;
             width: auto;
             height: 40px;
             font-size: 20px;
@@ -92,6 +93,7 @@
                         word-wrap: break-word;
                         justify-content: center;
                         border-bottom: 1px solid $gray-text-color;
+                        transition: all 0.3s ease;
                         &:hover {
                             border-bottom: 1px solid $important-text-color;
                         }
@@ -104,30 +106,40 @@
                             width: calc(100% - 10px);
                             height: 100%;
                             width: 100%;
+                            transition: all 0.3s ease;
                             a {
                                 display: flex;
                                 color: $main-text-color;
                                 text-overflow: ellipsis;
                                 transition: all 0.3s ease;
                                 img {
-                                    padding-right: 50px;
+                                    // padding-right: 50px;
+                                    transition: all 0.3s ease;
                                 }
                                 h4 {
-                                width: auto;
-                                font-size: 22px;
-                                transition: all 0.2s ease;
-                                border-bottom: 1px solid transparent;
-                                margin-top: 0;
-                            }
+                                    margin-left: 50px;
+                                    width: auto;
+                                    font-size: 22px;
+                                    transition: all 0.3s ease;
+                                    border-bottom: 1px solid transparent;
+                                    margin-top: 0;
+                                    margin-bottom: 0;
+                                }
                             div {
                                 overflow-y: hidden;
                             }
                             }
                             &:hover {
-                                text-shadow: 0 0 5px $important-text-shadow-color;
+                                // text-shadow: 0 0 5px $important-text-shadow-color;
                                 h4 {
                                     color: $important-text-color;
                                     
+                                }
+                                img {
+                                    animation-name: turnOver;
+                                    animation-duration: .44s;
+                                    animation-iteration-count: initial;
+                                    transform: rotate(270deg);
                                 }
                             }
                         }
@@ -163,4 +175,13 @@
     border-left: 3px solid $important-text-color;
     color: $important-text-color;
     text-shadow: 0 0 5px $important-text-color;
+}
+
+@keyframes turnOver {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
 }

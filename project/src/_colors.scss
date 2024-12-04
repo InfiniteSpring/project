@@ -1,5 +1,6 @@
 
-$main-background-color: #0000008f;
+$main-background-color: #000000aa;
+$second-background-color: #000000c4;
 $main-foreground-color: #ffffff;
 
 
@@ -19,5 +20,26 @@ $important-text-shadow-color2: $important-text-color2;
 
 $vanta-background-color: #11071f;
 
-$intro-gradient-background-color: linear-gradient(60deg, $main-background-color 0% 10%, rgba(0,0,0,0) 30% 35%, $main-background-color 55% 100%);
-// $intro-gradient-background-color: linear-gradient(60deg, $important-text-color 0%, $important-text-color2 3%, $main-background-color 5% 10%, rgba(0,0,0,0) 30% 35%, $main-background-color 55% 95%, $important-text-color2 98%, $important-text-color 100%);
+$intro-gradient-background-color: linear-gradient(60deg, $main-background-color 0% 10%, rgba(0,0,0,0) 30% 40%, $main-background-color 80% 100%);
+
+// $main-background-color: #ffffffe7;
+// $main-foreground-color: #ffffff;
+
+
+// $header-background-color2: #000000e8;
+// $header-background-color: #00000077;
+// $footer-background-color: $main-background-color;
+
+// $main-text-color: rgb(0, 0, 0);
+// $gray-text-color: #3f3f3f;
+
+
+// $important-text-color2: rgb(183, 0, 255);
+// $important-text-color: rgb(17, 0, 255);
+// $important-text-gradient-color: linear-gradient(130deg, $important-text-color 0%, $important-text-color2 100%);
+// $important-text-shadow-color: $important-text-color;
+// $important-text-shadow-color2: $important-text-color2;
+
+// $vanta-background-color: #11071f;
+
+// $intro-gradient-background-color: linear-gradient(60deg, $main-background-color 0% 10%, rgba(0,0,0,0) 30% 35%, $main-background-color 55% 100%);
