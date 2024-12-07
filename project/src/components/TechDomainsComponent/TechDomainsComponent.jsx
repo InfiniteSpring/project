@@ -4,6 +4,18 @@ import icon1 from "./images/icon1.svg";
 import icon2 from "./images/icon2.svg";
 import icon3 from "./images/icon3.svg";
 import icon4 from "./images/icon4.svg";
+import icon5 from "./images/icon5.svg";
+import icon6 from "./images/icon6.svg";
+import icon7 from "./images/icon7.svg";
+import icon8 from "./images/icon8.svg";
+import icon9 from "./images/icon9.svg";
+// import icon10 from "./images/icon10.svg";
+// import icon11 from "./images/icon11.svg";
+// import icon12 from "./images/icon12.svg";
+// import icon13 from "./images/icon13.svg";
+// import icon14 from "./images/icon14.svg";
+// import icon15 from "./images/icon15.svg";
+// import icon16 from "./images/icon16.svg";
 
 const TechDomainsComponent = () => {
 
@@ -85,7 +97,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/business-process-automation">
-                                    <img src={icon2} style={{ width: "50px", height: "50px" }} alt="" />
+                                        <img src={icon2} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Business process automation</h4>
                                     </a>
                                 </div>
@@ -94,7 +106,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/document-data-extraction-processing">
-                                    <img src={icon3} style={{ width: "50px", height: "50px" }} alt="" />
+                                        <img src={icon3} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Document data extraction & processing</h4>
                                     </a>
                                 </div>
@@ -103,7 +115,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/process-automation/virtual-assistance-support">
-                                    <img src={icon4} style={{ width: "50px", height: "50px" }} alt="" />
+                                        <img src={icon4} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Virtual assistance & support</h4>
                                     </a>
                                 </div>
@@ -120,6 +132,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/artificial-intelligence/ai-for-business">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>AI for business</h4>
                                     </a>
                                 </div>
@@ -128,6 +141,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/artificial-intelligence/machine-learning">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Machine learning</h4>
                                     </a>
                                 </div>
@@ -136,6 +150,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/artificial-intelligence/deep-learning">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Deep learning</h4>
                                     </a>
                                 </div>
@@ -144,6 +159,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/artificial-intelligence/generative-ai">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Generative AI</h4>
                                     </a>
                                 </div>
@@ -152,6 +168,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/artificial-intelligence/computer-vision">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Computer vision</h4>
                                     </a>
                                 </div>
@@ -160,6 +177,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/artificial-intelligence/reinforcement-learning">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Reinforcement learning</h4>
                                     </a>
                                 </div>
@@ -176,6 +194,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/big-data/data-warehouse">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Data warehouse</h4>
                                     </a>
                                 </div>
@@ -184,6 +203,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/big-data/data-lake">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Data lake</h4>
                                     </a>
                                 </div>
@@ -192,6 +212,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/big-data/big-data-analytics">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Big data analytics</h4>
                                     </a>
                                 </div>
@@ -200,6 +221,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/big-data/business-intelligence">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Business intelligence</h4>
                                     </a>
                                 </div>
@@ -208,6 +230,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/big-data/machine-learning-for-big-data">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Machine learning for big data</h4>
                                     </a>
                                 </div>
@@ -224,6 +247,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/business-intelligence/business-intelligence-for-business">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Business intelligence for business</h4>
                                     </a>
                                 </div>
@@ -232,6 +256,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/business-intelligence/business-intelligence-for-developers">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Business intelligence for developers</h4>
                                     </a>
                                 </div>
@@ -240,6 +265,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/business-intelligence/data-visualization">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Data visualization</h4>
                                     </a>
                                 </div>
@@ -248,6 +274,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/business-intelligence/predictive-analytics">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Predictive analytics</h4>
                                     </a>
                                 </div>
@@ -256,6 +283,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/business-intelligence/reporting-and-analytics">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Reporting and analytics</h4>
                                     </a>
                                 </div>
@@ -272,6 +300,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/blockchain/blockchain-for-business">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Blockchain for business</h4>
                                     </a>
                                 </div>
@@ -280,6 +309,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/blockchain/blockchain-for-developers">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Blockchain for developers</h4>
                                     </a>
                                 </div>
@@ -288,6 +318,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/blockchain/cryptocurrency">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />    
                                         <h4>Cryptocurrency</h4>
                                     </a>
                                 </div>
@@ -296,6 +327,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/blockchain/decentralized-applications">
+                                    <   img src={icon6} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Decentralized applications</h4>
                                     </a>
                                 </div>
@@ -304,6 +336,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/blockchain/smart-contracts">
+                                        <img src={icon7} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Smart contracts</h4>
                                     </a>
                                 </div>
@@ -312,6 +345,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/blockchain/blockchain-for-entrepreneurs">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Blockchain for entrepreneurs</h4>
                                     </a>
                                 </div>
@@ -328,6 +362,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cloud-computing/cloud-computing-for-business">
+                                        <img src={icon5} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Cloud computing for business</h4>
                                     </a>
                                 </div>
@@ -336,6 +371,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cloud-computing/cloud-computing-for-developers">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Cloud computing for developers</h4>
                                     </a>
                                 </div>
@@ -344,6 +380,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cloud-computing/infrastructure-as-a-service">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Infrastructure as a service</h4>
                                     </a>
                                 </div>
@@ -352,6 +389,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cloud-computing/serverless-computing">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Serverless computing</h4>
                                     </a>
                                 </div>
@@ -360,6 +398,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cloud-computing/virtualization">
+                                        <img src={icon8} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Virtualization</h4>
                                     </a>
                                 </div>
@@ -368,6 +407,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cloud-computing/containerization">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Containerization</h4>
                                     </a>
                                 </div>
@@ -384,6 +424,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/cyber-security-for-business">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Cyber security for business</h4>
                                     </a>
                                 </div>
@@ -392,6 +433,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/cyber-security-for-developers">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Cyber security for developers</h4>
                                     </a>
                                 </div>
@@ -400,6 +442,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/encryption">
+                                        <img src={icon9} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Encryption</h4>
                                     </a>
                                 </div>
@@ -408,6 +451,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/firewalls">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Firewalls</h4>
                                     </a>
                                 </div>
@@ -416,6 +460,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/intrusion-detection">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Intrusion detection</h4>
                                     </a>
                                 </div>
@@ -424,6 +469,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/malware">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Malware</h4>
                                     </a>
                                 </div>
@@ -432,6 +478,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/network-security">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Network security</h4>
                                     </a>
                                 </div>
@@ -440,6 +487,7 @@ const TechDomainsComponent = () => {
                             <div className="option">
                                 <div className="option-btn">
                                     <a href="/cyber-security/vulnerability-management">
+                                        <img src={icon1} style={{ width: "50px", height: "50px" }} alt="" />
                                         <h4>Vulnerability management</h4>
                                     </a>
                                 </div>

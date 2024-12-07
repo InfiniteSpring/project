@@ -1,21 +1,29 @@
 @use "./_colors.scss" as *;
 
 @font-face {
-  font-family: 'Font1';
-  font-style: bold;
-  font-weight: 700;
-  src: url(/public/notdef.woff2) format('woff');
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source-Code-Pro';
+  src: url('./assets/fonts/SourceCodePro-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 
-
 :root {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  // font-family: 'Font1', sans-serif;
-  // font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
-  // font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Quicksand', 'Nunito', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

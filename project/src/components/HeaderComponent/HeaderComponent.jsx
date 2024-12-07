@@ -34,7 +34,7 @@ export default function HeaderComponent() {
                     <a href="/domains">domains</a>
                     <a href="/industries">industries</a>
                     {/* <a href="/portfolio">portfolio</a> */}
-                    <a className="contact-us-btn" href="/contact">contact us</a>
+                    <a className="contact-us-btn-1" href="/contact">contact us</a>
                 </div>
             </header>
         </div>
