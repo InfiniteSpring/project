@@ -1,0 +1,63 @@
+@use "../../_colors.scss" as *;
+
+.contact-us-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact-us-form {
+        width: 70%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .what-next-container {
+        width: 30%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        .what-next-card {
+            position: relative;
+            width: 80%;
+            height: 400px;
+            background-color: $main-background-color;
+            // backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border: 1px solid $important-text-color2;
+            .title {
+                h2 {
+                    margin-top: 0;
+                }
+            }
+            ul {
+                li {
+                    padding: 10px;
+                }
+            }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 1px solid $important-text-color;
+                top: 10px;
+                left: -10px;
+                z-index: -1;
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 1px solid $important-text-color2;
+                top: 20px;
+                left: -20px;
+                z-index: -1;
+            }
+        }
+    }
+}

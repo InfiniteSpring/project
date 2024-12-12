@@ -36,10 +36,12 @@
         background-image: $important-text-gradient-color;
         color: transparent;
         background-clip: text;
+        font-family: 'Source-Code-Pro', sans-serif;
+        // font-family: 'Nunito', sans-serif;
     }
 }
 .right-part{
-    width: 40%  ;
+    width: 40%;
 }
 .VideoTag {
     display: none;

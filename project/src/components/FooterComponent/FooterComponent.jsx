@@ -106,19 +106,19 @@ export default function FooterComponent() {
                             Industries
                             </div><br/>
                             <div className="industries-link">
-                            <a href="#">Healthcare</a>
-                            </div><br/>
-                            <div className="industries-link">
-                            <a href="#">Finance</a>
-                            </div><br/>
-                            <div className="industries-link">
                             <a href="#">eCommerce</a>
                             </div><br/>
                             <div className="industries-link">
                             <a href="#">Education</a>
                             </div><br/>
                             <div className="industries-link">
+                            <a href="#">Finance</a>
+                            </div><br/>
+                            <div className="industries-link">
                             <a href="#">Logistics</a>
+                            </div><br/>
+                            <div className="industries-link">
+                            <a href="#">Healthcare</a>
                             </div><br/>
                         </div>
                         <div className="about link-container-block">
