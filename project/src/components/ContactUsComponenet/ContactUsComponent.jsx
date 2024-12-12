@@ -11,6 +11,8 @@ export default function ContactUsComponent() {
                     </div>
                 </div>
                 <div className="contact-us-form-content">
+                    <div className="inputs">
+
                     <div className="form-input">
                         <input type="text" placeholder="Name" />
                     </div>
@@ -29,8 +31,12 @@ export default function ContactUsComponent() {
                     <div className="form-input">
                         <input type="text" placeholder="Project budget" />
                     </div>
-                    <textarea name="needs-in-details" id="needs-in-details" placeholder='Describe your needs in details...'></textarea>
-                    <button>Send</button>
+                    </div>
+                    <textarea name="needs-in-details" id="needs-in-details" placeholder='Describe your needs in details...'></textarea><br/>
+                    <div className="btn-container">
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, voluptas, quia, doloremque, quos, repellendus, laborum, quisquam, voluptatem, aspernatur, consequuntur, fugiat, eaque.</span>
+                        <button>Send</button>
+                    </div>
                 </div>
             </div>
             <div className="what-next-container">

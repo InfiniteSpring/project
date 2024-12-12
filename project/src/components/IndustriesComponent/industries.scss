@@ -18,6 +18,9 @@
             margin: 0;
             padding-top: 100px;
             margin-bottom: 20px;
+            background-image: $important-text-gradient-color;
+            color: transparent;
+            background-clip: text;
         }
     }
     .industries-content {

@@ -7,12 +7,110 @@
     justify-content: center;
     align-items: center;
     .contact-us-form {
-        width: 70%;
+        width: 55%;
+        margin-left: 5%;
+        margin-right: 10%;
         height: 100%;
         justify-content: center;
         align-items: center;
+        font-size: 30px;
+        h2 {
+            margin-bottom: 0;
+            background-image: $important-text-gradient-color;
+            color: transparent;
+            background-clip: text;
+        }
+        .contact-us-form-content {
+            width: 100%;
+            height: 100%;
+            textarea {
+                font-family: 'Source-Code-Pro', sans-serif;
+                margin-top: 60px;
+                font-size: 18px;
+                background-color: $main-background-color;
+                border: 1px solid $main-background-color;
+                color: $important-text-color;
+                transition: all 0.3s ease;
+                max-width: calc(100% - 60px);
+                min-width: calc(100% - 60px);
+                max-height: 300px;
+                min-height: 100px;
+                border-bottom: 1px solid $important-text-color;
+
+                &:hover {
+                    border: 1px solid $important-text-color;
+                    color: $important-text-color;
+                }
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 10px $important-text-color;
+
+                    border-bottom: 1px solid $important-text-color2;
+                }
+                &::placeholder {
+                    color: $important-text-color;
+                }
+            }
+            .inputs {
+                display: flex;
+                margin-top: 50px;
+                flex-wrap: wrap; gap: 50px;
+                width: 100%;
+                .form-input {
+                    input {
+                        font-family: 'Source-Code-Pro', sans-serif;
+                        width: 310px;
+                        background-color: $main-background-color;
+                        border: 1px solid $main-background-color;
+                        border-bottom: 1px solid $important-text-color;
+                        padding: 15px;
+                        color: $important-text-color;
+                        transition: all 0.3s ease;
+                        font-size: 18px;
+                        &:hover {
+                            border: 1px solid $important-text-color;
+                            color: $important-text-color;
+                        }
+                        &::placeholder {
+                            color: $important-text-color;
+                        }
+                        &:focus {
+                            outline: none;
+                            box-shadow: 0 0 10px $important-text-color;
+
+                            border-bottom: 1px solid $important-text-color2;
+                        }
+                    }
+                }
+            }
+            .btn-container {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                margin-top: 30px;
+                span {
+                    font-size: 16px;
+                }
+                button {
+                    margin-right: 60px;
+                    font-size: 24px;
+                    border-radius: 1px;
+                    border: 1px solid $main-text-color; 
+                    transition: all 0.2s ease;
+                    background-color: $main-background-color;
+                    color: $main-text-color;
+                }
+            }
+            button:hover {
+                // color: $header-background-color;
+                color: black;
+                background-color: $main-text-color;
+                box-shadow: 0 0 15px $main-text-color;
+            }
+        }
     }
     .what-next-container {
+        // margin-top: 200px;
         width: 30%;
         height: 100%;
         justify-content: center;
@@ -20,12 +118,15 @@
         .what-next-card {
             position: relative;
             width: 80%;
-            height: 400px;
+            // height: 400px;
+            font-size: 18px;
             background-color: $main-background-color;
+            // background-color: black;
             // backdrop-filter: blur(10px);
-            backdrop-filter: blur(5px);
+            // backdrop-filter: blur(5px);
             padding: 20px;
-            border: 1px solid $important-text-color2;
+            border: 1px solid $main-text-color;
+            box-shadow: 0 0 10px $main-text-color;
             .title {
                 h2 {
                     margin-top: 0;
@@ -43,9 +144,11 @@
                 width: 100%;
                 height: 100%;
                 border: 1px solid $important-text-color;
-                top: 10px;
-                left: -10px;
-                z-index: -1;
+                box-shadow: 0 0 10px $important-text-color;
+                background-color: $main-background-color;
+                top: 15px;
+                left: -15px;
+                z-index: -2;
             }
             &::after {
                 content: '';
@@ -54,9 +157,10 @@
                 width: 100%;
                 height: 100%;
                 border: 1px solid $important-text-color2;
-                top: 20px;
-                left: -20px;
-                z-index: -1;
+                box-shadow: 0 0 10px $important-text-color2;
+                top: 30px;
+                left: -30px;
+                z-index: -3;
             }
         }
     }
