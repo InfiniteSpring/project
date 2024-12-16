@@ -1,6 +1,6 @@
 import "./header.scss";
-// import logo from "./images/main-logo.png";
-import logo from "./images/logo.png";
+// import logo2 from "./images/1-2.svg"
+import logo2 from "./images/header-logo-letter.svg"
 
 import { useEffect, useRef } from "react";
 
@@ -25,8 +25,8 @@ export default function HeaderComponent() {
         <div>
             <header ref={headerRef} className="header">
                 <div className="logo">
-                    <img src={logo} alt="Innovaware" />
-                    <h2>Proxity</h2>
+                    <img src={logo2} alt="Innovaware" />
+                    <h2>roxity</h2>
                 </div>
                 <div className="navigation">
                     <a href="/about">about us</a>

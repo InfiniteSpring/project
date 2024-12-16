@@ -26,7 +26,7 @@ function HeaderFooterLayout() {
       <ContactUsComponent />
 
       <Outlet />
-      <div style={{ height: "100px" }}></div>
+      {/* <div style={{ height: "100px" }}></div> */}
       {/* <div className="footer-padding">-</div> */}
       <FooterComponent />
     </>

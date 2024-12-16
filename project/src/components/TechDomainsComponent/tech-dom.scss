@@ -11,9 +11,9 @@
     .title {
         margin-left: 5%;
         font-size: 30px;
-        background-image: $important-text-gradient-color;
-        color: transparent;
-        background-clip: text;
+        // background-image: $important-text-gradient-color;
+        // color: transparent;
+        // background-clip: text;
     }
     .title::after {
         z-index: -1;
@@ -166,7 +166,7 @@
                                     animation-name: turnOver;
                                     animation-duration: .44s;
                                     animation-iteration-count: initial;
-                                    transform: rotate(270deg);
+                                    transform: rotate(360deg);
                                 }
                             }
                         }
@@ -209,7 +209,7 @@
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(270deg);
+        transform: rotate(360deg);
     }
 }
 

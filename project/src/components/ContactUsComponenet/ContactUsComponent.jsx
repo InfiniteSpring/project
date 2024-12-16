@@ -7,7 +7,7 @@ export default function ContactUsComponent() {
                 <div className="contact-us-form-title">
                     <h2>Contact Us</h2>
                     <div>
-                        some very interesting text will be here. Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        <a className='book-a-call' href="/pupupu">Book a call</a> or fill the form below and we will get back to you as soon as possible.
                     </div>
                 </div>
                 <div className="contact-us-form-content">
@@ -22,9 +22,9 @@ export default function ContactUsComponent() {
                     <div className="form-input">
                         <input type="text" placeholder="Reply mail" />
                     </div>
-                    <div className="form-input">
+                    {/* <div className="form-input">
                         <input type="text" placeholder="Phone" />
-                    </div>
+                    </div> */}
                     <div className="form-input">
                         <input type="text" placeholder="Subject" />
                     </div>
