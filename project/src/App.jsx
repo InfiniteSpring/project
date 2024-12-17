@@ -8,7 +8,7 @@ function App() {
     return (
       <div className="only-computer-error-container">
         <div className="only-computer-error">
-          This site is supposed to be used on a desktop computer
+        This site is designed for use on laptops and desktops (devices with a screen width of at least 1440 pixels)
         </div>
       </div>
     )
