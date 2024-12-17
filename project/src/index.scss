@@ -117,6 +117,9 @@ button:focus-visible {
 ::-webkit-resizer{
   background: red;
 }
+::-moz-progress-bar{
+  background: red;
+}
 ::selection {
   color: black;
   background: $main-text-color;
