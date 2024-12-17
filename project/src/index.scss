@@ -109,19 +109,11 @@ button:focus-visible {
 }
 
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
   color: black;
   background: $main-text-color;
-  // text-shadow: 0 0 10px $header-background-color;
-}
-::-webkit-resizer{
-  background: red;
-}
-::-moz-progress-bar{
-  background: red;
 }
 ::selection {
   color: black;
   background: $main-text-color;
-  // text-shadow: 0 0 10px $header-background-color;
 }
