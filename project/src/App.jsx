@@ -10,11 +10,6 @@ function App() {
         <div className="only-computer-error">
         This site is designed for use on laptops and desktops
         </div>
-        <div className="only-computer-error-bottom">
-          <a href="https://github.com/grokify/grokify-website">
-            <img alt="github" width="32" height="32" />
-          </a>
-        </div>
       </div>
     )
   }
