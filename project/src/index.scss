@@ -123,8 +123,10 @@ button:focus-visible {
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px);
-  position: relative;
+
+  display: flex;
   align-items: center;
+  
   .only-computer-error {
     width: 100%;
     font-size: 26px;
