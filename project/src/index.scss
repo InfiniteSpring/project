@@ -125,6 +125,7 @@ button:focus-visible {
   backdrop-filter: blur(10px);
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   
   .only-computer-error {
