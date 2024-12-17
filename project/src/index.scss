@@ -114,8 +114,7 @@ button:focus-visible {
   background: $main-text-color;
   // text-shadow: 0 0 10px $header-background-color;
 }
-::-moz-resizer {
-  color: red;
+::-webkit-resizer{
   background: red;
 }
 ::selection {
