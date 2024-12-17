@@ -3,6 +3,9 @@ import HeaderFooterComponent from './components/HeaderFooterComponent/HeaderFoot
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+
+  console.log(window.innerWidth);
+
   return (
     <BrowserRouter>
       <Routes>
