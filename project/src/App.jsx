@@ -12,7 +12,7 @@ function App() {
         </div>
         <div className="only-computer-error-bottom">
           <a href="https://github.com/grokify/grokify-website">
-            <img src={github} alt="github" width="32" height="32" />
+            <img alt="github" width="32" height="32" />
           </a>
         </div>
       </div>
