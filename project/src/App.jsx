@@ -6,8 +6,10 @@ function App() {
 
   if (window.innerWidth < 1440) {
     return (
-      <div className="only-computer-error">
-        This site is supposed to be used on a desktop computer
+      <div className="only-coputer-error-container">
+        <div className="only-computer-error">
+          This site is supposed to be used on a desktop computer
+        </div>
       </div>
     )
   }
