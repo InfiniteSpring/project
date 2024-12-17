@@ -121,6 +121,8 @@ button:focus-visible {
 
 .only-computer-error-container {
   width: 100vw;
+  justify-items: center;
+  align-items: center;
   .only-computer-error {
     // backdrop-filter: blur(10px);
     width: 100vw;
