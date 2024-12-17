@@ -4,7 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-  console.log(window.innerWidth);
+  if (window.innerWidth < 1440) {
+    return (
+      "This site is supposed to be used on a desktop computer"
+    )
+  }
 
   return (
     <BrowserRouter>
