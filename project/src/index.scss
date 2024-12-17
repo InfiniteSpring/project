@@ -131,9 +131,8 @@ button:focus-visible {
     width: 100%;
     font-size: 26px;
     text-align: center;
-    padding: 0;
+    padding: 0 20px 0 20px;
     margin: 0;
-    // padding-top: 60%;
     font-weight: bold;
     text-shadow: 0 0 5px $main-text-color;
   }
