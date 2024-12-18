@@ -22,7 +22,7 @@ function HeaderFooterLayout() {
       <HelpYouComponent />
       <ServicesListComponent />
 
-      <IndustriesComponent />
+      {/* <IndustriesComponent /> */}
       <ContactUsComponent />
 
       <Outlet />

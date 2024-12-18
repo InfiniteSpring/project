@@ -3,101 +3,87 @@
 .intro-image {
     background: $intro-gradient-background-color;
     position: relative;
-    // padding-top: 100px;
     top: 0;
     width: 100%;
     height: 100vh;
     display: flex;
-    // background-color: $main-background-color;
 }
 .text-container {
     color: $main-text-color;
     width:70%;
     margin-top: 30vh;
     text-align: left;
-    font-size: 55px;
-    font-weight: 300px;
-    word-spacing: 10px;
-    line-height: 70px;
-    margin-left: 90px;
-    // text-shadow: 0 0 5px $main-text-color;
+    // word-spacing: 10px;
+    // line-height: 70px;
+    // margin-left: 90px;
+    word-spacing: 1.5dvh;
+    line-height: 8dvh;
+    // margin-left: 10dvh;
+    margin-left: 5%;
     .span-1 {
-        font-size: 70px;
+        // font-size: 70px;
+
+        font-size: 8dvh;
     }
     .span-2 {
-        margin-top: 20px;
-        // padding-top: 100px;
-        font-size: 60px;
+        // margin-top: 20px;
+        // font-size: 60px;
+
+        margin-top: 2dvh;
+        font-size: 8dvh;
+        line-height: 8dvh;
     }
     .improve {
-        // color: $important-text-color;
-        // text-shadow: 0 0 5px $important-text-color2;
-        font-weight: 500;
         background-image: $important-text-gradient-color;
         color: transparent;
         background-clip: text;
         font-family: 'Source-Code-Pro', sans-serif;
-        // font-family: 'Nunito', sans-serif;
     }
 }
 .right-part{
     width: 40%;
 }
-.VideoTag {
-    display: none;
-    position:absolute;
-    bottom: 15vh;
-    right: 10vw;
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-    background: $main-background-color;
-    border-radius: 1px;
-    height: 140px;
-    margin-top: 50px;
-    transition: all 0.3s ease;
-    // box-shadow: 0 0 10px $gray-text-color;
-    box-shadow: 0 0 10px $header-background-color;
-    // border: 1px solid white;
-}
 .lets-talk {
     margin-top: 60vh;
-    margin-left: 50px;
-    // width: 200px; 
     a {
-        // background: transparent;
-        box-shadow: 0px 0px 10px $main-text-color, inset 0 0 10px $main-text-color;
-        // box-shadow: 0px 0px 10px $important-text-color, inset 0 0 30px $important-text-color2;
-        border-radius: 200px;
-        text-shadow: 0px 0px 5px $main-text-color;
+        // box-shadow: 0px 0px 10px $main-text-color, inset 0 0 10px $main-text-color;
+        // text-shadow: 0px 0px 5px $main-text-color;
+        box-shadow: 0 0 1.5dvh $main-text-color, inset 0 0 1.5dvh $main-text-color;
+        text-shadow: 0 0 0.75dvh $main-text-color;
         color: $main-text-color;
-        padding: 60px 30px 60px 30px;
-        margin-left: 50px;
-        font-size: 20px;
+        margin-left: 7vw;
         transition: all 0.3s ease;
         animation-name: blinking;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
-        // filter: blur(1px);
+        
+        // border-radius: 200px;
+        // padding: 60px 30px 60px 30px;
+        // font-size: 20px;
+
+        border-radius: 10vw;
+        padding: 4.3vw 2vw 4.3vw 2vw;
+        font-size: 3dvh;
     }
     :hover {
         background-color: $main-text-color;
         color: black;
         cursor: pointer;
         animation-name: blinking-2;
-        // background-image: $important-text-gradient-color;
-        filter: brightness(0.3);
-        filter:blur(0px);
         color: black;
     }
 }
 @keyframes blinking {
     50% {
-        box-shadow: 0px 0px 50px $important-text-color2, inset 0 0 25px $important-text-color;
+        // box-shadow: 0px 0px 50px $important-text-color2, inset 0 0 25px $important-text-color;
+
+        box-shadow: 0 0 5dvh $important-text-color2, inset 0 0 2.5dvh $important-text-color;
     }
 }
 @keyframes blinking-2 {
     50% {
-        box-shadow: 0px 0px 35px $main-text-color;
+        // box-shadow: 0px 0px 35px $main-text-color;
+
+        box-shadow: 0px 0px 5dvh $main-text-color, inset 0 0 4dvh $main-text-color;
     }
 }
