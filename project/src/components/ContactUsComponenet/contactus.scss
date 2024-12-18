@@ -1,7 +1,8 @@
 @use "../../_colors.scss" as *;
 
 .contact-us-container {
-    box-shadow: inset 0 0 100px black;
+    // box-shadow: inset 0 0 100px black;
+    box-shadow: inset 0 0 100px black, inset 0 0 150px $main-background-color;
     padding-top: 100px;
     padding-bottom: 150px;
     width: 100%;

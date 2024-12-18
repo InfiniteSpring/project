@@ -4,9 +4,9 @@
     margin-top: 0;
     border-top: none;
     height: 70px;
-    // box-shadow: 0 0 50px black;
+    // height: 10vh;
     background-color: $header-background-color;
-    border-bottom: 1px solid $main-text-color;
+    box-shadow: 0 0 1px $main-text-color;
     backdrop-filter: blur(10px);
 }
         
@@ -44,9 +44,8 @@ header{
         }
     }
     .navigation{
-        // margin-left: 20%;
-        // margin-left: 15%;
         margin-right: 5%;
+        font-size: 100%;
         display: flex;
         justify-content: space-between;
         width: 50%;
