@@ -1,0 +1,38 @@
+$font1h: 3dvh;
+$font2h: 8dvh;
+$font1: 1.6dvw;
+$font2: 4.2dvw;
+
+$font1-del-2: calc($font1 / 2);
+$font1-del-4: calc($font1 / 4);
+$font2-del-4: calc($font2 / 4);
+
+
+
+// header
+$header-height: 10vh;
+$header-font-size: $font1;
+$header-margin-top-default: calc(1.5 * $font1);
+$header-box-shadow-size: calc($font1 / 10);
+$header-margin-left-right: 5vw; 
+$header-logo-letter-spacing: $font1-del-4;
+$header-contact-us-border-height: 0.2dvh;
+$padding-header-button-l-r: $font1-del-2;
+$padding-header-button-bottom: $font1-del-4;
+
+// intro
+$intro-text-margin-top: calc(10 * $font1h);
+$intro-text-line-height: $font2;
+$intro-text-line-space: $font2-del-4;
+$intro-word-spacing: $font1-del-2;
+
+$intro-lets-talk-margin-top: calc(2 * #{$intro-text-margin-top});
+$intro-lets-talk-box-shadow-size: $font1-del-2;
+$intro-lets-talt-text-shadow-size: $font1-del-4;
+$intro-lets-talk-a-m-l: 7vw;
+$intro-lets-talg-p-1: 4.3vw;
+$intro-lets-talk-p-2: 2vw;
+
+// chechpoints
+
+

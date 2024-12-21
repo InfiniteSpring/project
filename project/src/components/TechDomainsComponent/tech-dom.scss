@@ -1,4 +1,5 @@
 @use "../../_colors.scss" as *;
+@use "../../_dimensions.scss" as *;
 
 .tech-domains {
     background-color: $main-background-color;
@@ -9,26 +10,20 @@
     min-height: 100vh;
     overflow: hidden;
     .title {
-        margin-left: 5%;
-        font-size: 30px;
-        // text-shadow: 2px 2px 5px $main-text-color;
-        // text-shadow: 2px 2px 5px $important-text-color;
-        // background-image: $important-text-gradient-color;
-        // color: transparent;
-        // background-clip: text;
+        margin-left: $header-margin-left-right;
+        font-size: calc($font2h / 2);
     }
     .title::after {
         z-index: -1;
         content: "";
-        width: 150px;
-        height: 150px;
-        // background: white;
+        width: calc(2 * $font2h);
+        height: calc(2 * $font2h);
         background-image: $important-text-gradient-color;
-        border-radius: 100px;
-        filter: blur(70px);
+        border-radius: calc(4 * $font1h);
+        filter: blur(calc(4 * $font1h));
         position: absolute;
         left: 100%;
-        top: 250px;
+        top: calc(3 * $font2h);
         animation: move-back-shadow-block 45s infinite ease-in-out; 
     }
     .container {
@@ -42,10 +37,11 @@
             .tech-domain-names {
                 width: 80%;
                 margin-left: 20%;
+                position: relative;
             }
             
         }
-        .tech-domain-names::after {
+        .tech-domain-names-container::after {
             z-index: -1;
             content: "";
             width: 10%;
@@ -55,19 +51,19 @@
             filter: blur(60px);
             position: absolute;
             left: -10%;
-            bottom: 20%;
+            bottom: 30%;
             animation: move-back-shadow-block2 60s infinite ease-in-out; 
         }
         input {
-            // color: $main-text-color;
+            color: $main-text-color;
             width: auto;
-            height: 40px;
-            font-size: 20px;
+            height: calc(2 * $font1h);
+            font-size: calc($font1h / 1.2);
+            padding-left: $font1h;
             background: transparent;
             border: none;
             transition: all 0.3s ease;
-            padding-left: 20px;
-            border-left: 3px solid $main-background-color;
+            border-left: calc($font1-del-4 / 1.5) solid $transparent-color;
         }
         input:hover {
             outline: none;
@@ -75,13 +71,13 @@
             border-left: 2px solid $main-text-color;
 
             color: $important-text-color;
-            border-left: 3px solid $important-text-color;
+            border-left: calc($font1-del-4 / 1.5) solid $important-text-color;
         }
 
         .tech-description-container {
             width: 70%;
             height: 100%;
-            margin-top: 40px;
+            margin-top: calc(2 * $font1h);
             display: flex;
             flex-direction: column;
             justify-content: center;            
@@ -97,24 +93,24 @@
                     width: 100%;
                     height: 5%;
                     text-align: center;
-                    padding-left: 10px;
+                    padding-left: calc($font1 / 2);
                     h3 {
                         margin-right: 30%;
                         background-image: $important-text-gradient-color;
                         color: transparent;
                         background-clip: text;
-                        font-size: 35px;
+                        font-size: calc(1.5 * $font1h);
                         transition: all 0.3s ease;
                         margin-top: 0;
                     }
                 }
                 .options-container {
                     width: 100%;
-                    margin-top: 20px;
+                    margin-top: $font1h;
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 80px 50px;
-                    margin-top: 50px;
+                    gap: calc(4 * $font1h) calc(2.5 * $font1h);
+                    margin-top: calc(2.5 * $font1h);
                     transition: all 0.3s ease;
                     .option {
                         margin: 0;
@@ -128,7 +124,7 @@
                             border-bottom: 1px solid $important-text-color;
                         }
                         .option-underline {
-                            margin-top: 15px;
+                            margin-top: $font1h;
                         }
                         .option-btn {
                             justify-content: center;
@@ -143,13 +139,13 @@
                                 text-overflow: ellipsis;
                                 transition: all 0.3s ease;
                                 img {
-                                    // padding-right: 50px;
                                     transition: all 0.3s ease;
+                                    filter: hue-rotate($icons-hue-rotate);
                                 }
                                 h4 {
-                                    margin-left: 50px;
+                                    margin-left: calc(2 * $font1h);
                                     width: auto;
-                                    font-size: 22px;
+                                    font-size: $font1h;
                                     transition: all 0.3s ease;
                                     border-bottom: 1px solid transparent;
                                     margin-top: 0;
@@ -160,7 +156,6 @@
                             }
                             }
                             &:hover {
-                                // text-shadow: 0 0 5px $important-text-shadow-color;
                                 h4 {
                                     color: $important-text-color;
                                     
@@ -196,15 +191,25 @@
 }
 
 .tech-domain-names {
-    border-left: 1px solid $gray-text-color;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: $font1h;
+}
+.tech-domain-names::after {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: calc($font1-del-4 / 2); 
+    border-radius: calc($font1-del-4 / 1.5);
+    box-shadow: 0 0 3px $main-text-color;
+    transition: all 0.5s ease;
+
 }
 
 .active-option-input {
-    border-left: 3px solid $important-text-color;
-    color: $important-text-color;
-    text-shadow: 0 0 5px $important-text-color;
+    text-shadow: 0 0 $font1h $important-text-color;
+    padding-right: $font1h;
 }
 
 @keyframes turnOver {

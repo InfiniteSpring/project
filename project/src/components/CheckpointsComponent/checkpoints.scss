@@ -1,4 +1,5 @@
 @use "../../_colors.scss" as *;
+@use "../../_dimensions.scss" as *;
 
 .checkpoints {
     position: relative;
@@ -24,17 +25,15 @@
             justify-content: center;
             align-items: center;
             .number {
-                // font-size: 110px;
                 font-size: 15dvh;
-                // font-weight: bold;
-                // color: $main-text-color;
+                font-size: calc(2 * $font2h);
                 background-image: $important-text-gradient-color;
                 color: transparent;
                 background-clip: text;
             }
             .about {
                 // font-size: 20px;
-                font-size: 2.7dvh;
+                font-size: $font1h;
                 color: $main-text-color;
             }
         }

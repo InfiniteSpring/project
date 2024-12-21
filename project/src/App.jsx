@@ -3,8 +3,15 @@ import HeaderFooterComponent from './components/HeaderFooterComponent/HeaderFoot
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  
+  document.body.style.zoom = 1.0
 
-  if (window.innerWidth < 1440) {
+  // var scale = 'scale(1)';
+  // document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+  // document.body.style.msTransform =   scale;       // IE 9
+  // document.body.style.transform = scale;
+
+  if (window.innerWidth < 1000) {
     return (
       <div className="only-computer-error-container">
         <div className="only-computer-error">
@@ -14,6 +21,7 @@ function App() {
     )
   }
 
+ 
   return (
     <BrowserRouter>
       <Routes>

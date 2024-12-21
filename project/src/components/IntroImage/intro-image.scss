@@ -1,4 +1,5 @@
 @use "../../_colors.scss" as *;
+@use "../../_dimensions.scss" as *;
 
 .intro-image {
     background: $intro-gradient-background-color;
@@ -11,27 +12,18 @@
 .text-container {
     color: $main-text-color;
     width:70%;
-    margin-top: 30vh;
+    margin-top: $intro-text-margin-top;
     text-align: left;
-    // word-spacing: 10px;
-    // line-height: 70px;
-    // margin-left: 90px;
-    word-spacing: 1.5dvh;
-    line-height: 8dvh;
-    // margin-left: 10dvh;
-    margin-left: 5%;
+    word-spacing: $intro-text-line-space;
+    line-height: $intro-text-line-height;
+    margin-left: $header-margin-left-right;
     .span-1 {
-        // font-size: 70px;
-
-        font-size: 8dvh;
+        font-size: $intro-text-line-height;
     }
     .span-2 {
-        // margin-top: 20px;
-        // font-size: 60px;
-
-        margin-top: 2dvh;
-        font-size: 8dvh;
-        line-height: 8dvh;
+        margin-top: $intro-text-line-space;
+        font-size: $intro-text-line-height;
+        line-height: $intro-text-line-height;
     }
     .improve {
         background-image: $important-text-gradient-color;
@@ -44,26 +36,19 @@
     width: 40%;
 }
 .lets-talk {
-    margin-top: 60vh;
+    margin-top: $intro-lets-talk-margin-top;
     a {
-        // box-shadow: 0px 0px 10px $main-text-color, inset 0 0 10px $main-text-color;
-        // text-shadow: 0px 0px 5px $main-text-color;
-        box-shadow: 0 0 1.5dvh $main-text-color, inset 0 0 1.5dvh $main-text-color;
-        text-shadow: 0 0 0.75dvh $main-text-color;
+        box-shadow: 0 0 $intro-lets-talk-box-shadow-size $main-text-color, inset 0 0 1.5dvh $main-text-color;
+        text-shadow: 0 0 $intro-lets-talt-text-shadow-size $main-text-color;
         color: $main-text-color;
-        margin-left: 7vw;
+        margin-left: $intro-lets-talk-a-m-l;
         transition: all 0.3s ease;
         animation-name: blinking;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
-        
-        // border-radius: 200px;
-        // padding: 60px 30px 60px 30px;
-        // font-size: 20px;
-
-        border-radius: 10vw;
-        padding: 4.3vw 2vw 4.3vw 2vw;
-        font-size: 3dvh;
+        border-radius: calc(2 * #{$intro-lets-talk-a-m-l});
+        padding: $intro-lets-talg-p-1 $intro-lets-talk-p-2 $intro-lets-talg-p-1 $intro-lets-talk-p-2;
+        font-size: $font1;
     }
     :hover {
         background-color: $main-text-color;
@@ -75,15 +60,11 @@
 }
 @keyframes blinking {
     50% {
-        // box-shadow: 0px 0px 50px $important-text-color2, inset 0 0 25px $important-text-color;
-
         box-shadow: 0 0 5dvh $important-text-color2, inset 0 0 2.5dvh $important-text-color;
     }
 }
 @keyframes blinking-2 {
     50% {
-        // box-shadow: 0px 0px 35px $main-text-color;
-
         box-shadow: 0px 0px 5dvh $main-text-color, inset 0 0 4dvh $main-text-color;
     }
 }
