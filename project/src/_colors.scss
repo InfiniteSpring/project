@@ -1,15 +1,15 @@
-$transparent-color: rgba(0, 0, 0, 0);
+$main-text-color: white;
+$main-background-color: #000000bb;
 
-$main-background-color: #000000aa;
 $second-background-color: #000000c4;
 $main-foreground-color: #ffffff;
 
+$transparent-color: rgba(0, 0, 0, 0);
 
 $header-background-color2: hsla(0, 0%, 0%, 0.788);
 $header-background-color: #00000077;
 $footer-background-color: $main-background-color;
 
-$main-text-color: white;
 $gray-text-color: #acacac;
 
 
@@ -17,9 +17,13 @@ $icons-hue-rotate: 10deg;
 $important-text-color2: rgb(0, 162, 255);
 $important-text-color: rgb(0, 255, 200);
 
-// $icons-hue-rotate: 120deg;
-// $important-text-color2: rgb(234, 151, 255);
-// $important-text-color: rgb(154, 143, 255);
+// $icons-hue-rotate: 30deg;
+// $important-text-color2: rgb(0, 162, 255);
+// $important-text-color: rgb(0, 255, 242);
+
+$icons-hue-rotate: 120deg;
+$important-text-color: rgb(234, 151, 255);
+$important-text-color2: rgb(154, 143, 255);
 
 
 $important-text-gradient-color: linear-gradient(130deg, $important-text-color 0%, $important-text-color2 100%);

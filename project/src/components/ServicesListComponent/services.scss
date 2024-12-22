@@ -65,6 +65,7 @@
         }
         input:hover {
             outline: none;
+            text-shadow: 0 0 5px $important-text-shadow-color;
 
             color: $important-text-color;
             border-left: calc($font1-del-4 / 1.5) solid $important-text-color;
@@ -136,7 +137,7 @@
                                 }
                                 div {
                                     overflow-y: hidden;
-                                    font-size: 1.9dvh;
+                                    font-size: 2dvh;
                                 }
                             }
                             &:hover {
@@ -186,8 +187,9 @@
 
 }
 .active-option-input {
-    text-shadow: 0 0 $font1h $important-text-color;
+    text-shadow: 0 0 calc(.3 * $font2h) $main-text-color;
     padding-right: $font1h;
+    color: $important-text-color !important;
 }
 
 
