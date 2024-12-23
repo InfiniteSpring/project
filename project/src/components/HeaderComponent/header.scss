@@ -18,6 +18,10 @@ header{
     z-index: 10;
     left: 0;
     position: fixed;
+
+    // position: sticky;
+    // top:0;
+    
     width: 100%;
     height: $header-height;
     font-size: $header-font-size;
@@ -34,6 +38,7 @@ header{
         align-items: center;
         display: flex;
         width: 30%;
+        height: 10vh;
         img {
             height: 5vh;
             filter: hue-rotate($icons-hue-rotate - 30deg);
@@ -48,20 +53,22 @@ header{
         }
     }
     .navigation{
-        // margin-right: $header-margin-left-right;
         display: flex;
-        justify-content: space-around;
-        width: 30%;
-        // padding: 0 10%   ;
+        // justify-content: space-around;
+        // width: 30%;
         text-align: center;
         align-items: center;
-        font-size: $font1h / 1.2;
+        font-size: calc($font1h / 1.2);
         font-weight: bold;
         a {
+            margin-left: $font1;
             position: relative;
             color: $main-text-color;
             transition: all 0.2s ease;
             padding: 0 $padding-header-button-l-r $padding-header-button-bottom $padding-header-button-l-r;
+        }
+        a:nth-child(-n + 1) {
+            margin-left: 0;
         }
         a::after {
             content: "";
@@ -98,11 +105,11 @@ header{
         padding: 0 $padding-header-button-l-r $padding-header-button-bottom $padding-header-button-l-r;
     }
     .lng {
-        font-size: $font1h / 1.4;
+        font-size: calc($font1h / 1.4);
         font-weight: bold;
         // color: $important-text-color;
         color: $main-text-color;
-        margin-right: $font1h / 2;
+        margin-right: calc($font1h / 2);
         display: flex;
         align-items: center;
         &:hover {

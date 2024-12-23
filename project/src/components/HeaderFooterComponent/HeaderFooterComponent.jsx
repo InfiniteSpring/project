@@ -7,9 +7,9 @@ import CheckpointsComponent from "../CheckpointsComponent/CheckpointsComponent";
 import ServicesListComponent from "../ServicesListComponent/ServicesListComponent";
 import HelpYouComponent from "../HelpYouService/HelpYouComponent";
 import TechDomainsComponent from "../TechDomainsComponent/TechDomainsComponent";
-
-import IndustriesComponent from "../IndustriesComponent/IndustriesComponent";
 import ContactUsComponent from "../ContactUsComponenet/ContactUsComponent";
+
+import AboutComponent from "../AboutComponent/AboutComponent";
 
 function HeaderFooterLayout() {
   return (
@@ -22,7 +22,8 @@ function HeaderFooterLayout() {
       <HelpYouComponent />
       <ServicesListComponent />
 
-      {/* <IndustriesComponent /> */}
+      <AboutComponent />
+
       <ContactUsComponent />
 
       <Outlet />

@@ -1,5 +1,5 @@
 $main-text-color: white;
-$main-background-color: #000000bb;
+$main-background-color: #00000092;
 
 $second-background-color: #000000c4;
 $main-foreground-color: #ffffff;
@@ -13,12 +13,11 @@ $footer-background-color: $main-background-color;
 $gray-text-color: #acacac;
 
 
-$icons-hue-rotate: 10deg;
-$important-text-color2: rgb(0, 162, 255);
-$important-text-color: rgb(0, 255, 200);
+// $icons-hue-rotate: 10deg;
+// $important-text-color2: rgb(0, 162, 255);
+// $important-text-color: rgb(0, 255, 200);
 
 // $icons-hue-rotate: 30deg;
-// $important-text-color2: rgb(0, 162, 255);
 // $important-text-color: rgb(0, 255, 242);
 
 $icons-hue-rotate: 120deg;
@@ -27,9 +26,12 @@ $important-text-color2: rgb(154, 143, 255);
 
 
 $important-text-gradient-color: linear-gradient(130deg, $important-text-color 0%, $important-text-color2 100%);
+$important-text-gradient-color-reversed: linear-gradient(130deg, $important-text-color2 0%, $important-text-color 100%);
+
 $important-text-shadow-color: $important-text-color;
 $important-text-shadow-color2: $important-text-color2;
 
 $vanta-background-color: #11071f;
 
-$intro-gradient-background-color: linear-gradient(60deg, $main-background-color 0% 10%, rgba(0,0,0,0) 30% 40%, $main-background-color 80% 100%);
+// $intro-gradient-background-color: linear-gradient(60deg, $main-background-color 0% 10%, rgba(0,0,0,0) 30% 40%, $main-background-color 80% 100%);
+$intro-gradient-background-color: linear-gradient(20deg, $main-background-color 0% 10%, rgba(0,0,0,0) 40% 60%, $main-background-color 90% 100%);

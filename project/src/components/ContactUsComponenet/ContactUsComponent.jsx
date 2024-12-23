@@ -13,11 +13,11 @@ export default function ContactUsComponent() {
                 <div className="contact-us-form-content">
                     <div className="inputs">
 
-                    <div className="form-input">
+                    {/* <div className="form-input">
                         <input type="text" placeholder="Name" />
-                    </div>
+                    </div> */}
                     <div className="form-input">
-                        <input type="text" placeholder="Company" />
+                        <input type="text" placeholder="Company or name" />
                     </div>
                     <div className="form-input">
                         <input type="text" placeholder="Reply mail" />
@@ -34,7 +34,7 @@ export default function ContactUsComponent() {
                     </div>
                     <textarea name="needs-in-details" id="needs-in-details" placeholder='Describe your needs in details...'></textarea><br/>
                     <div className="btn-container">
-                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, voluptas, quia, doloremque, quos, repellendus, laborum, quisquam, voluptatem, aspernatur, consequuntur, fugiat, eaque.</span>
+                        <span>Please be informed that when you click the Send button Proxity will process your personal data in accordance with our Privacy Policy for the purpose of providing you with appropriate information.</span>
                         <button>Send</button>
                     </div>
                 </div>
@@ -46,9 +46,9 @@ export default function ContactUsComponent() {
                     </div>
                     <div className="content">
                         <ul>
-                            <li>1. Once we’ve received and processed your request, we’ll get back to you to detail your project needs and sign an NDA to ensure confidentiality.</li>
-                            <li>2. After examining your wants, needs, and expectations, our team will devise a project proposal with the scope of work, team size, time, and cost estimates.</li>
-                            <li>3. We’ll then get back to you with a quote for your project.</li>
+                            <li>1. As soon as we receive your request, we will roughly determine the conditions under which we can complete this project (price, terms).</li>
+                            <li>2. In our response we provide this information and invite you to contact us at your leisure.</li>
+                            <li>3. And finally, we discuss the details of the project, your wishes and other variables in more detail, and also discuss the conditions and start working.</li>
                         </ul>
                     </div>
                 </div>

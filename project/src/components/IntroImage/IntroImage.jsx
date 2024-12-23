@@ -1,8 +1,10 @@
 import "./intro-image.scss";
 
 const IntroImage = () => {
+
     return (
             <div className="intro-image">
+                <div className="mouse-circle"></div>
                 <div className="text-container">
                     <span className="span-1">
                         The best <span className="improve">IT community</span><br/>

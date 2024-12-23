@@ -30,9 +30,12 @@ export default function HeaderComponent() {
                 </div>
                 <div className="navigation">
                     <a href="/about">about us</a>
+                    {/* | */}
                     <a href="/services">services</a>
+                    {/* | */}
                     <a href="/domains">domains</a>
-                    <a href="/industries">industries</a>
+                    {/* | */}
+                    {/* <a href="/industries">industries</a> */}
                     {/* <a href="/portfolio">portfolio</a> */}
                 </div>
                 <div className="contacts">
