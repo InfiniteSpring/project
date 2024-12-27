@@ -32,7 +32,7 @@ export default function FooterComponent() {
                 <div className="upper-lower">
 
                 </div>
-            </div> */}
+            </div> */} 
             <div className="lower">
                 <div className="left-part">
                     <div className="text">
