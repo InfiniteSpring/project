@@ -87,7 +87,7 @@
                         font-size: calc($font1h / 1.2);
                         border: 1px solid transparent;
                         border-bottom: 1px solid $important-text-color;
-                        box-shadow: 0 0 1dvh black;
+                        box-shadow: 0 0 3dvh black;
                         &:hover {
                             border: 1px solid $important-text-color;
                             color: $important-text-color;
