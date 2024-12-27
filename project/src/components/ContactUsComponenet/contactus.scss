@@ -41,7 +41,8 @@
                 font-family: 'Source-Code-Pro', sans-serif;
                 margin-top: calc($font2h / 2);
                 font-size: calc($font1h / 1.2);
-                background-color: $main-background-color;
+                // background-color: $main-background-color;
+                background-color: $transparent-color;
                 border: 1px solid $main-background-color;
                 color: $important-text-color;
                 transition: all 0.3s ease;
