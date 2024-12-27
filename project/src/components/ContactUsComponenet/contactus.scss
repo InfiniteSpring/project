@@ -79,7 +79,8 @@
                         width: 15 * $font1;
                         width: 23vw;
 
-                        background-color: $main-background-color;
+                        // background-color: $main-background-color;
+                        background-color: $transparent-color;
                         border: 1px solid $main-background-color;
                         padding: calc($font1 / 2);
                         color: $important-text-color;
