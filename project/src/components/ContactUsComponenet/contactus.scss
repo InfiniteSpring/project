@@ -46,12 +46,10 @@
                 border: 1px solid $main-background-color;
                 color: $important-text-color;
                 transition: all 0.3s ease;
-                // max-width: calc(100% - 3 * $font1h);
-                // min-width: calc(100% - 3 * $font1h);
                 width: 52.8vw;
                 min-height: $font1h * 4;
                 border-bottom: 1px solid $important-text-color;
-                box-shadow: 0 0 1dvh black;
+                // box-shadow: 0 0 1dvh black;
                 &:hover {
                     border: 1px solid $important-text-color;
                     color: $important-text-color;
