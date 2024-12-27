@@ -85,9 +85,8 @@
                         color: $important-text-color;
                         transition: all 0.3s ease;
                         font-size: calc($font1h / 1.2);
-                        // border-radius: 9px;
                         border-bottom: 1px solid $important-text-color;
-                        box-shadow: 0 0 1dvh black;
+                        // box-shadow: 0 0 1dvh black;
                         &:hover {
                             border: 1px solid $important-text-color;
                             color: $important-text-color;
