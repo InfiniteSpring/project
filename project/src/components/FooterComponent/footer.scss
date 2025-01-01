@@ -7,7 +7,7 @@ footer {
         height: $header-height;
         color: $main-text-color;
         background-color: $main-background-color;
-        box-shadow: 0 0 $header-box-shadow-size $main-text-color;
+        // box-shadow: 0 0 $header-box-shadow-size $main-text-color;
         display: flex;
         justify-content: space-between;
         .left-part {
@@ -39,17 +39,19 @@ footer {
                 justify-content: space-around;
                 .twitter, .linkedin, .telegram, .reddit {
                     svg {
+                        cursor: pointer;
                         width: calc($font1h);
                         height: calc($font1h);
                         transition: all 0.3s ease;
                         // box-shadow: 0 0 $font1h $important-text-color;
                         color: $main-text-color;
                         padding: 1.5dvh;
+                        padding: 1dvh;
                         border-radius: 50%;
                         &:hover {
                             // color: $important-text-color2;
                             // transform: scale(1.1);
-                            box-shadow: 0 0 calc($font1h / 2) $important-text-color, inset 0 0 calc($font1h / 2) $important-text-color2;
+                            box-shadow: 0 0 calc($font1h / 4) $main-text-color, inset 0 0 calc($font1h / 2) $main-text-color;
                         }
                     }
                 }

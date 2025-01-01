@@ -55,7 +55,7 @@ const TechDomainsComponent = () => {
     }
 
     return (
-        <div className="tech-domains">
+        <div id="tech-domains" className="tech-domains">
             <div className="title"> 
                 <h2>Tech Domains</h2>
             </div>

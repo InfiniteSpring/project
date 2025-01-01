@@ -33,7 +33,7 @@ export default function FooterComponent() {
 
                 </div>
             </div> */} 
-            <div className="lower">
+            <div id="footer-component" className="lower">
                 <div className="left-part">
                     <div className="text">
                         <div className="copy-year">

@@ -47,6 +47,22 @@
   overflow-x: hidden;
 
   overscroll-behavior: none;
+
+  --gradient-shadow: linear-gradient(
+		15deg,
+		rgb(234, 151, 255),
+    rgb(154, 143, 255),
+    rgb(234, 151, 255),
+    rgb(154, 143, 255),
+    rgb(234, 151, 255),
+    rgb(154, 143, 255),
+    rgb(234, 151, 255),
+    rgb(154, 143, 255),
+    rgb(234, 151, 255),
+    rgb(154, 143, 255),
+    rgb(234, 151, 255),
+    rgb(154, 143, 255)
+	);
 }
 
 #vanta-anchor {

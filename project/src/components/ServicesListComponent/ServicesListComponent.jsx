@@ -31,7 +31,7 @@ const ServicesListComponent = () => {
     }
 
     return (
-        <div className="services-list">
+        <div id="services-list" className="services-list">
             <div className="title">
                 <h2>Services</h2>
             </div>

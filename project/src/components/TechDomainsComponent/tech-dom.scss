@@ -209,14 +209,8 @@
 }
 
 .active-option-input {
-    // text-shadow: 0 0 $font1-del-2 $important-text-color;
-    text-shadow: 0 0 calc(.3 * $font2h) $main-text-color;
     padding-right: $font1h;
     color: $important-text-color !important;
-
-    // border-top-right-radius: $font1;
-    // border-bottom-right-radius: $font1-del-4;
-    // box-shadow: inset 0 0 5px $important-text-color, 0 0 10px $important-text-color;
 }
 
 @keyframes turnOver {

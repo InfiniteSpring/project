@@ -4,8 +4,8 @@
   box-shadow: inset 0 0 15dvh black, inset 0 0 22.5dvh $main-background-color;
   
   color: $main-text-color;
-  padding-top: 15dvh;
-  padding-bottom: 22.5dvh;
+  padding-top: 20dvh;
+  padding-bottom: 25dvh;
   width: 100vw;
   justify-content: center;
   align-items: center;
@@ -16,14 +16,18 @@
     
     width: 100%;
     font-size: 7dvh;
-    text-shadow: 0 0 5px $main-text-color;
-    text-shadow: 0 0 0.75dvh $main-text-color;
+    // text-shadow: 0 0 5px $main-text-color;
+    // text-shadow: 0 0 0.75dvh $main-text-color;
     .main-text {
         margin-left: 10%;
         width: 70%;
         .improve {
-            color: $important-text-color;
-            text-shadow: 0 0 4.5dvh $important-text-shadow-color2;
+            // color: $important-text-color;
+            // text-shadow: 0 0 4.5dvh $important-text-shadow-color2;
+            background-image: $important-text-gradient-color;
+            color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 10px $important-text-color2;
         }
     }
   }

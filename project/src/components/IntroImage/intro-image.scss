@@ -17,6 +17,7 @@
     word-spacing: $intro-text-line-space;
     line-height: $intro-text-line-height;
     margin-left: $header-margin-left-right;
+    word-spacing: calc($font1 / 1.2);
     .span-1 {
         font-size: $intro-text-line-height;
     }
@@ -29,7 +30,11 @@
         background-image: $important-text-gradient-color;
         color: transparent;
         background-clip: text;
-        font-family: 'Source-Code-Pro', sans-serif;
+        text-shadow: 0 0 10px $important-text-color2;
+        // font-family: 'Source-Code-Pro', sans-serif;
+        // word-spacing: ;
+        // letter-spacing: 7px;
+        // word-spacing: calc($font1 / 2);
     }
 }
 .right-part{

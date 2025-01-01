@@ -2,16 +2,81 @@
 @use "../../_dimensions.scss" as *;
 
 .sticky {
-    margin-top: 0;
+    // margin-top: 0;
+    // border-top: none;
+    // height: $header-height;
+    // background-color: $header-background-color;
+    // box-shadow: 0 0 $header-box-shadow-size $main-text-color;
+    // backdrop-filter: blur($font1-del-2);
+
+    margin-top: $font1h;
     border-top: none;
-
     height: $header-height;
+    z-index: 10;
+    transition: all 0.3s ease;
+    
+    .navigation {
+        position: relative;
+        background: black;
+        padding: 0 $font1 0 $font1;
+        border-radius: .5dvw;
+        height: $header-height;
+    }
+    
+    .navigation:before,
+    .navigation:after {
+        content: "";
+        opacity: .2;
+        position: absolute;
+        // background: var(--gradient-shadow);
+        background: var(--gradient-shadow);
 
-    background-color: $header-background-color;
-    box-shadow: 0 0 $header-box-shadow-size $main-text-color;
-    // box-shadow: 0 0 $header-box-shadow-size $main-text-color, 0 0 5dvh black, 0 0 10dvh $main-background-color;
+        background-size: 400%;
+        z-index: -1;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // height: calc($header-height / 2);
+        border-radius: .5dvw;
+        animation: animate 45s linear infinite;
 
-    backdrop-filter: blur($font1-del-2);
+        opacity: 0;
+    }
+    .navigation:after {
+        filter: blur(5px);
+        opacity: .5;    
+    }
+    
+    .logo, .contacts {
+        opacity: 0;
+
+    }
+    .logo::before {
+        z-index: -1;
+        content: "";
+        width: 20vw;
+        height: $header-height;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-bottom-right-radius: .5dvw;
+        // background-color: $main-background-color;
+        backdrop-filter: blur($font1-del-4);
+        // box-shadow: 0 0 $header-box-shadow-size $main-text-color;
+    }
+    .contacts::before {
+        z-index: -1;
+        content: "";
+        width: 20vw;
+        height: $header-height;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-bottom-left-radius: .5dvw;
+        // background-color: $main-background-color;
+        backdrop-filter: blur($font1-del-4);
+        // box-shadow: 0 0 $header-box-shadow-size $main-text-color;
+    }
 }
         
 header{
@@ -39,13 +104,17 @@ header{
         display: flex;
         width: 30%;
         height: 10vh;
+        transition: all 0.3s ease;
         img {
             height: 5vh;
-            filter: hue-rotate($icons-hue-rotate - 30deg);
+            filter: hue-rotate($icons-hue-rotate - 40deg);
         }
-        h2 {
+        div {
             margin-left: $header-logo-letter-spacing;
-            letter-spacing: $header-logo-letter-spacing;;
+            letter-spacing: $header-logo-letter-spacing;
+
+            font-size: calc($font1h * 1.5);
+            font-weight: 500;
         }
         :hover {
             cursor: pointer;
@@ -59,7 +128,8 @@ header{
         text-align: center;
         align-items: center;
         font-size: calc($font1h / 1.2);
-        font-weight: bold;
+        // font-weight: bold;
+        transition: all 0.3s ease;
         a {
             margin-left: $font1;
             position: relative;
@@ -81,13 +151,18 @@ header{
             transition: all 0.3s ease;
             transform: scaleX(0);
             // transform-origin: left;
+
+            // background-image: $transparent-color;
+            // height: 5px;
+            box-shadow: 0 0 3px $important-text-color2;
         }
         a:hover::after {
             transform: scaleX(1);
         }
         :hover {
             cursor: pointer;
-            text-shadow: 0px 0px $padding-header-button-bottom $main-text-color;
+            // color: $important-text-color;
+            // text-shadow: 0px 0px $padding-header-button-bottom $main-text-color;
         }
         
     }
@@ -98,6 +173,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: right;
+    transition: all 0.3s ease;
     a {
         position: relative;
         color: $main-text-color;
@@ -106,12 +182,13 @@ header{
     }
     .lng {
         font-size: calc($font1h / 1.4);
-        font-weight: bold;
+        // font-weight: bold;
         // color: $important-text-color;
         color: $main-text-color;
         margin-right: calc($font1h / 2);
         display: flex;
         align-items: center;
+        font-size: calc($font1h / 1.2);
         &:hover {
             color: $important-text-color;
             // text-shadow: 0 0 $font1h / 5 $main-text-color;
@@ -122,10 +199,32 @@ header{
         border-image: $important-text-gradient-color 1;
         border-width: 1px;
         border-style: solid;
+        cursor: pointer;
         &:hover {
             color: black;
             background-color: $main-text-color;
             box-shadow: 0 0 $font1-del-2 $main-text-color;
         }
+    }
+}
+
+@keyframes animate {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 300% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+@keyframes appearence {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

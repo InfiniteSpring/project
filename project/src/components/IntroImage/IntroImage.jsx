@@ -2,8 +2,15 @@ import "./intro-image.scss";
 
 const IntroImage = () => {
 
+    
+    function scrollToElement() {
+        const element = document.getElementById("footer-component");
+        element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    }
+    
+
     return (
-            <div className="intro-image">
+            <div id="intro-image-component" className="intro-image">
                 <div className="mouse-circle"></div>
                 <div className="text-container">
                     <span className="span-1">
@@ -17,7 +24,8 @@ const IntroImage = () => {
                 </div>
                 <div className="right-part">
                     <div className="lets-talk">
-                        <a href="/contact">Let's talk</a>
+                        {/* <a href="/contact">Let's talk</a> */}
+                        <a onClick={scrollToElement}>Let's talk</a>
                     </div>
                 </div>
             </div>
